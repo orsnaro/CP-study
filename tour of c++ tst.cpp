@@ -13,15 +13,7 @@ using namespace std;
 
 int main(  )
 {
-int *p ;
-int  &s=*p;
-int   x=1;
-
-
-*p=1;
-cout<<p<<'\t';
-cout<<*p<<'\t';
-
+//try const refrence in other function and modify it + the actual variable (pg12)
 
     return (0);
 }
