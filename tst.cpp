@@ -8,12 +8,35 @@
 //INCLUDES
 
 
-#include <map>
-#include <string>
 #include <iostream>
- using namespace std ;
+using namespace std;
+
 int main(  )
 {
+int *p ;
+int  &s=*p;
+int   x=1;
+
+
+*p=1;
+cout<<p<<'\t';
+cout<<*p<<'\t';
+
+//p=1;
+cout<<p<<'\t';
+cout<<*p<<'\t';
+
+*p=x;
+cout<<p<<'\t';
+cout<<*p<<'\t';
+
+//*p=&x;
+cout<<p<<'\t';
+cout<<*p<<'\t';
+//p=x;
+cout<<p<<'\t';
+cout<<*p<<'\t';
+ p=&x;
 
     return (0);
 }
