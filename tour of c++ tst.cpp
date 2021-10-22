@@ -13,7 +13,7 @@ using namespace std;
 
 int main(  )
 {
-//try const refrence in other function and modify it + the actual variable (pg12)
+//1)try const refrence in other function and modify it + the actual variable (pg12 2nd star)
 
     return (0);
 }
