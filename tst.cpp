@@ -11,10 +11,10 @@
 #include <map>
 #include <string>
 #include <iostream>
-
+ using namespace std ;
 int main(  )
 {
 
-
+cout<< "oamr"<< '\n';
     return (0);
 }
