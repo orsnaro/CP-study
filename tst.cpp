@@ -5,7 +5,7 @@
 // Copyright   : Your copyright notice (<3)
 // Description : solving cpp4kids H.Ws (functions) C++, Ansi-style
 //============================================================================
-//INCLUDES
+
 
 
 #include <iostream>
@@ -22,21 +22,6 @@ int   x=1;
 cout<<p<<'\t';
 cout<<*p<<'\t';
 
-//p=1;
-cout<<p<<'\t';
-cout<<*p<<'\t';
-
-*p=x;
-cout<<p<<'\t';
-cout<<*p<<'\t';
-
-//*p=&x;
-cout<<p<<'\t';
-cout<<*p<<'\t';
-//p=x;
-cout<<p<<'\t';
-cout<<*p<<'\t';
- p=&x;
 
     return (0);
 }
