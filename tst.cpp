@@ -15,6 +15,5 @@
 int main(  )
 {
 
-cout<< "oamr"<< '\n';
     return (0);
 }
