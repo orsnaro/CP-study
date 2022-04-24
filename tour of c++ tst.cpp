@@ -1,9 +1,9 @@
 //============================================================================
-// Name        : cpp4kids_s7(functions)....
+// Name        : Tour of CPP sheet
 // Author      : Omar.R.S
 // Version     :
 // Copyright   : Your copyright notice (<3)
-// Description : solving cpp4kids H.Ws (functions) C++, Ansi-style
+// Description : solving and  exercising learned things from "Tour of C++"
 //============================================================================
 
 
