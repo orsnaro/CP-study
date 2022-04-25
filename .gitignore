@@ -8,3 +8,9 @@
 *.db-wal
 *.opendb
 *.json
+*.sln
+*.vcxproj
+*.filters
+*.user
+*.ipch
+*.suo
