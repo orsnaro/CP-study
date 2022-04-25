@@ -6,6 +6,7 @@
 // Description : solving cpp4kids H.Ws (arrays) C++, Ansi-style
 //============================================================================
 //#include <stdio.h>
+
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -13,6 +14,8 @@
 using namespace std;
 
 int main() {
+	cout << 'H' << endl;
+	
 	//---------------------------------------------------------------------------------
 					//h.w1 cpp4kids 20#
 /*
@@ -54,8 +57,8 @@ int main() {
 					//h.w4 cpp4kids 20#
 	/*
 
-// 1st solution: i will iterate more than once :) but not with the main array !! XD
-// O(n)=n^2 approx
+// 1st solution: i will iterate more than once :) but not with the main array !! xd
+// o(n)=n^2 approx
 
 	int mains, scnd_ary[300];
 
@@ -100,7 +103,6 @@ int main() {
 	int mains, st_lwst = 10000, nd_lwst = 10001, rd_lwst = 10002;
 
 	cin >> mains; //input section
-	if (mains < 3)
 		return 0;
 
 	int nms_ary[mains];
@@ -137,9 +139,9 @@ int main() {
 
 
 
-	//---------------------------------------------------------------------------------
-					//h.w7 cpp4kids 20#
-	//course solution is 24 lines mine is 40 approx :(
+//---------------------------------------------------------------------------------
+				//h.w7 cpp4kids 20#
+//course solution is 24 lines mine is 40 approx :(
 /*
 	int mx_nm, freq_ary[770] = { 0 }, freq_copy[770] = { 0 };
 
@@ -186,45 +188,45 @@ int main() {
 
 
 
-	//---------------------------------------------------------------------------------
-					//h.w10 cpp4kids 20#
-	/*
-	int mx_nm, sub_dgt, ndx[2]={0}, sub_sum = 0;
+//---------------------------------------------------------------------------------
+				//h.w10 cpp4kids 20#
+/*
+int mx_nm, sub_dgt, ndx[2]={0}, sub_sum = 0;
 
-	cin >> sub_dgt;
-	cin >> mx_nm;
-	//int sub_ary[sub_dgt] = { 0 };
-	int main_ary[mx_nm];
+cin >> sub_dgt;
+cin >> mx_nm;
+//int sub_ary[sub_dgt] = { 0 };
+int main_ary[mx_nm];
 
-	for (int i = 0; i < mx_nm; ++i) {
-		cin >> main_ary[i];
+for (int i = 0; i < mx_nm; ++i) {
+	cin >> main_ary[i];
+}
+
+for (int i = 0, temp = 0; i < mx_nm; ++i) {
+
+	if (mx_nm - i <= sub_dgt - 1) ///not to take smaller than wanted sub array
+		break;
+
+	for (int j = 0; j < sub_dgt; ++j)
+		temp += (main_ary[i + j]);
+
+	if (i == 0) {
+		sub_sum = temp;
+		ndx[0] = 0;
+		ndx[1] = sub_dgt-1;
+
 	}
 
-	for (int i = 0, temp = 0; i < mx_nm; ++i) {
-
-		if (mx_nm - i <= sub_dgt - 1) ///not to take smaller than wanted sub array
-			break;
-
-		for (int j = 0; j < sub_dgt; ++j)
-			temp += (main_ary[i + j]);
-
-		if (i == 0) {
-			sub_sum = temp;
-			ndx[0] = 0;
-			ndx[1] = sub_dgt-1;
-
-		}
-
-		else if (sub_sum < temp) {
-			sub_sum = temp;
-			ndx[0] = i;
-			ndx[1] = i + (sub_dgt-1);
-		}
-		temp = 0;
+	else if (sub_sum < temp) {
+		sub_sum = temp;
+		ndx[0] = i;
+		ndx[1] = i + (sub_dgt-1);
 	}
+	temp = 0;
+}
 
-	cout << ndx[0] << ndx[1] << "\t" << sub_sum;
-	//try later with one loop. (they claim two ways available but hard)
+cout << ndx[0] << ndx[1] << "\t" << sub_sum;
+//try later with one loop. (they claim two ways available but hard)
 */
 
 
@@ -232,8 +234,8 @@ int main() {
 
 
 
-	//---------------------------------------------------------------------------------
-					//h.w13 cpp4kids 20# **//h.w12 is more fun and real day problem
+//---------------------------------------------------------------------------------
+				//h.w13 cpp4kids 20# **//h.w12 is more fun and real day problem
 /*
 	int mx_ppl, steps;
 
@@ -281,7 +283,7 @@ int main() {
 			break;
 	}
 	*/
-//yaaay u did most of 20# h.ws.(u can go back later to solve h.w9 "recaman's". looks fun).
+	//yaaay u did most of 20# h.ws.(u can go back later to solve h.w9 "recaman's". looks fun).
 
 
 
@@ -299,30 +301,30 @@ int main() {
 
 
 
-	//###################################  <<<<<.23#.>>>>>##############################################
+		//###################################  <<<<<.23#.>>>>>##############################################
 
-	//---------------------------------------------------------------------------------
-			//h.w1 cpp4kids 23#
-/*
-	// NOTE: maineric value of white space is 0 ==> (int)whitespace = 0
-	char main_str[200], is_prfx[200] = { 0 };
-	cin >> main_str >> is_prfx;
+		//---------------------------------------------------------------------------------
+				//h.w1 cpp4kids 23#
+	/*
+		// NOTE: maineric value of white space is 0 ==> (int)whitespace = 0
+		char main_str[200], is_prfx[200] = { 0 };
+		cin >> main_str >> is_prfx;
 
-	int i, cntr;
-	for (i = 0, cntr = 0; is_prfx[i] != ' '; ++i) {//another condition i < (int)is_prfx.size()
+		int i, cntr;
+		for (i = 0, cntr = 0; is_prfx[i] != ' '; ++i) {//another condition i < (int)is_prfx.size()
 
-		if (main_str[i] == is_prfx[i])
-			cntr++;
+			if (main_str[i] == is_prfx[i])
+				cntr++;
+			else
+				break;
+		}
+
+		if (cntr == i && cntr != 0)
+			cout << "YES";
 		else
-			break;
-	}
+			cout << "NO";
 
-	if (cntr == i && cntr != 0)
-		cout << "YES";
-	else
-		cout << "NO";
-
-*/
+	*/
 
 
 
@@ -366,9 +368,9 @@ int main() {
 // (NULL = char'\0'= 0) and maybe equal to whitespace  char' '.
 */
 
-	//---------------------------------------------------------------------------------
-					//h.w6 cpp4kids 23#
-	//checked it 25/9/2021 suddenly doesn't work but its easy  to remade
+//---------------------------------------------------------------------------------
+				//h.w6 cpp4kids 23#
+//checked it 25/9/2021 suddenly doesn't work but its easy  to remade
 /*
 	char main_string[200] = { 0 }, grouped_str[200] = { 0 };
 
@@ -403,10 +405,10 @@ int main() {
 
 
 
-	//---------------------------------------------------------------------------------
-					//h.w9 cpp4kids 23#
-	//course made waay shorter
-	/*
+//---------------------------------------------------------------------------------
+				//h.w9 cpp4kids 23#
+//course made waay shorter
+/*
 //NOTES TO ME!
 
 	// from string to int  use stoi()
@@ -556,8 +558,8 @@ int main() {
 */
 
 
-	//---------------------------------------------------------------------------------
-					//h.w10 cpp4kids 23# (1ST PPROGRAM!)
+//---------------------------------------------------------------------------------
+				//h.w10 cpp4kids 23# (1ST PPROGRAM!)
 
 //maybe in a separated source(if many lines )
 //then we call it here as  a func :D? ""maybe"".
@@ -603,9 +605,9 @@ int main() {
 
 */
 
-	//---------------------------------------------------------------------------------
-					//h.w3 cpp4kids 26#
-	//can use direc arra also but 3rd 8 steps loop will be there insted of 8 if statement
+//---------------------------------------------------------------------------------
+				//h.w3 cpp4kids 26#
+//can use direc arra also but 3rd 8 steps loop will be there insted of 8 if statement
 /*
 	int a, b;
 	cin >> a >> b;
@@ -663,8 +665,8 @@ int main() {
 
 
 
-	//---------------------------------------------------------------------------------
-					//h.w4 cpp4kids 26#
+//---------------------------------------------------------------------------------
+				//h.w4 cpp4kids 26#
 
 /*
 	//I can run the 2 nested loops  by printing and  checking every 2 rounds (x plays o plays = 2 rounds)
@@ -838,8 +840,8 @@ for (int i = 0; i < m; ++i) {
 
 */
 
-	//---------------------------------------------------------------------------------
-						//h.w8 cpp4kids 26#
+//---------------------------------------------------------------------------------
+					//h.w8 cpp4kids 26#
 //I hate who says 1 is not prime number , ***%$!@* change PRIME to any other word!
 	//done one try + less lines + I guess not complex than course solution :D not the only one though!
 
@@ -888,6 +890,6 @@ for (int i = 0; i < m; ++i) {
 	return (0);
 }
  */
-
+}
 //hurray finished ur s6 homeworks !!! :D (actually project missing but u will do similar later on)
 
