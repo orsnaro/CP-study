@@ -14,3 +14,11 @@
 *.user
 *.ipch
 *.suo
+*.log
+/Debug/cpp_comp_vs.exe
+*.recipe
+*.ilk
+*.pdb
+*.tlog
+*.obj
+/Debug/vc142.idb
