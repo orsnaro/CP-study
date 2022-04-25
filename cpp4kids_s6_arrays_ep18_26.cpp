@@ -889,5 +889,5 @@ for (int i = 0; i < m; ++i) {
 }
  */
 
-//hurray finished ur s6 homeworks !!! :D (actually ppproject missing but u will do similar later on)
+//hurray finished ur s6 homeworks !!! :D (actually project missing but u will do similar later on)
 

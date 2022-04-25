@@ -32,7 +32,7 @@ using namespace std;
 	//---------------------------------------------------------------------------------
 	//h.w6 cpp4kids 29#
 
-
+/*
 bool is_prime(int n) {
 
 	int m = 0;
@@ -72,6 +72,8 @@ int nth_prime(int n) {
 
 	return (i-1);
 }
+
+*/
 
 
 
