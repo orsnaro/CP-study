@@ -128,5 +128,5 @@ ctrl+# = commit
 
 ctr+shift+l= shortcut menu
 
-################VS Studio#############IMPORATANT only
+################VS Studio#############IMPORTANT only
 
