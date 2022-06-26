@@ -33,7 +33,7 @@
 
 'g++ filname.cpp -o filename.exe' ; .\filename.exe'
 
---> ***POWER SHELL ONLY!*** (compile and run filname.exe in one statement)(filename.exe could be written only filname)
+--> ***POWER SHELL ONLY!*** (compile and run filname.exe in one statement)(filename.exe could be written only filename)
 --> to do same in cmd in one command use '&&' instead of ';' (.\filename --> here'\' is NOT interchangable with '/')
 
 ====> for more cpp commands in cmd : https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
