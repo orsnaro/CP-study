@@ -153,3 +153,4 @@ ctr+shift+l= shortcut menu
 
 ################VS Studio#############IMPORTANT only
 
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
