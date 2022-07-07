@@ -4,6 +4,9 @@ shift + ctrl + alt + f (fetch or one mouse button using xmouse)
 shift + ctrl + alt + c (commit all to local or one mouse button using xmouse)
 shift + p (push all to remote)
 
+ctrl+p   (switch tap)
+ctrl+b (close side bar )
+ctr+`  (close terminal side)
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 
 
