@@ -11,7 +11,7 @@ Ctrl + Shift + Tab : Switch to previous tab
 Ctrl + #Number : Switch to tab #Number
 Alt + Enter: Fullscreen
 
-*Shell
+*Shell  
 Ctrl + Alt + U : Traverse up in directory structure (lovely feature!)
 End, Home, Ctrl : Traversing text with as usual on Windows
 Ctrl + R : History search
