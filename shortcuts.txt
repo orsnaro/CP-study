@@ -1,3 +1,13 @@
+################VS Studio#############IMPORTANT only
+
+shift + ctrl + alt + f (fetch or one mouse button using xmouse)
+shift + ctrl + alt + c (commit all to local or one mouse button using xmouse)
+shift + p (push all to remote)
+
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
+
+
 ################ (Cmder) ############# IMPORTANT only
 
 
@@ -151,6 +161,3 @@ ctrl+# = commit
 
 ctr+shift+l= shortcut menu
 
-################VS Studio#############IMPORTANT only
-
-https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
