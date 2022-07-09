@@ -1,5 +1,5 @@
-################VS Studio#############IMPORTANT only
-
+################VS code#############IMPORTANT only
+ctr+ shift+ p (all shortcuts vs code)
 shift + ctrl + alt + f (fetch or one mouse button using xmouse)
 shift + ctrl + alt + c (commit all to local or one mouse button using xmouse)
 shift + p (push all to remote)
@@ -7,12 +7,21 @@ shift + p (push all to remote)
 ctrl+p   (switch tap)
 ctrl+b (close side bar )
 ctr+`  (close terminal side)
-https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
+--> for more  https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 
 
 
 ################ (Cmder) ############# IMPORTANT only
 
+ctrl +c   OR   q
+----> terminate current operation
+
+command | clip   OR clip < filename.txt
+--->   copy terminal o\p or any .txt to the clipboard
+
+start filename.exe (
+--> (open any exe in directory)
 
 *Tab manipulation
 Ctrl + T : New tab dialog (maybe you want to open cmd as admin?)
@@ -31,10 +40,23 @@ Ctrl + R : History search
 Shift + Mouse : Select and copy text from buffer
 
 
+################ (Git bash) ############# IMPORTANT only
+
+all important commands r here :
+https://dev.classmethod.jp/articles/git-bash-commands/
+
 
 
 ################ (CMD & power shell) ############# IMPORTANT only
+
+
 *note:  using '/' or '\' is interchangable in cmd -most if time- also 'tab' will autocomplete ur command
+
+start filename.exe 
+--> (open any exe in directory)
+
+command |clip   OR    clip <filename.txt
+---> copy terminal o\p or any .txt to t
 
 'cd .\folder1\folder2'                 
  --> change directory to a one inside ur current directory (dont miss dot in begining)
@@ -114,7 +136,7 @@ very usefull explanation for c functions at : https://www.ibm.com/support/knowle
 
 ################GIT#############IMPORTANT only
 
-…or create a new repository on the command line
+ΓÇªor create a new repository on the command line
 echo "# study_compatitive_oop_cpp" >> README.md
 git init
 git add README.md
@@ -122,7 +144,7 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/orsnaro/study_compatitive_oop_cpp.git
 git push -u origin main
-…or push an existing repository from the command line
+ΓÇªor push an existing repository from the command line
 git remote add origin https://github.com/orsnaro/study_compatitive_oop_cpp.git
 git branch -M main
 git push -u origin main
@@ -164,5 +186,5 @@ ctrl+# = commit
 
 ctr+shift+l= shortcut menu
 
-################VS Studio#############IMPORTANT only  
-ctr+ shift+ p (all shortcuts vs code)  
+
+  
