@@ -45,6 +45,9 @@ Shift + Mouse : Select and copy text from buffer
 
 ################ (Git bash) ############# IMPORTANT only
 
+create-shortcut "source path" "destination path"
+--> create a shortcut (must apend destination path with "ShortcutName.lnk")
+
 all important commands r here :
 https://dev.classmethod.jp/articles/git-bash-commands/
 
