@@ -20,6 +20,9 @@ ctrl +c   OR   q
 command | clip   OR clip < filename.txt
 --->   copy terminal o\p or any .txt to the clipboard
 
+CHDIR /d  drive: path
+--> (to change to another partion or drive)
+
 start filename.exe (
 --> (open any exe in directory)
 
@@ -66,6 +69,9 @@ command |clip   OR    clip <filename.txt
 
 'cd ..'                              
   --> go back in directory only one location ( too location would be 'cd ..\..')
+
+CHDIR /d  drive: path
+--> (to change to another partion or drive)
 
 'mkdir .\foldername'                   
 --> make new folder inside current directory
