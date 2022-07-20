@@ -12,7 +12,9 @@ ctr+`  (close terminal side)
 shift + d    (delete line)
 ctrl + /     (comment lines)
 shift + alt + up/down   (duplicate selected lines)
-ctrl + alt (edit highlighted)
+SHIFT + K (edit highlighted)
+ctrl + space (suggestions
+)
 --> for more  https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 
 
