@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <conio.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -24,6 +25,11 @@ int main()
 
     cout << "file is bad ";
     fileio.close();
+
+
+
+
+
 
 
 
