@@ -1,41 +1,34 @@
 #include <iostream>
 #include <fstream>
+#include <conio.h>
 
 using namespace std;
-
-
-
 
 int main()
 {
 
+    ofstream fileio("text.txt", ios::out | ios::app);
 
-ofstream fileio ("text.txt",ios::out | ios::app );
+    while (fileio.is_open())
+    {
+        string line;
 
-while(fileio.is_open())
-{
-string line ;
+        fileio << "\tmy name is omar\t";
+        fileio << "\tmy name is omar\t";
 
-fileio<< "\tmy name is omar\t";
-fileio<< "\tmy name is omar\t";
+        ifstream("text.txt");
 
-ifstream("text.txt");
+        while (getline(fileio, line))
+            cout << line;
+    }
 
-while ( getline( fileio ,line))
-cout << line ;
+    cout << "file is bad ";
+    fileio.close();
 
 
 
+
+
+getch();
+return 0;
 }
-
-
-cout<< "file is bad ";
-
-
-
-
-fileio.close();
-
-    return 0;
-}
-                        
