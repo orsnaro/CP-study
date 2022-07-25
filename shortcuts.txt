@@ -9,6 +9,7 @@ ctrl+b (close side bar )
 ctr+`  (close terminal side)
 
 
+shift+ctrl+/ (jmp to matching bracket)
 shift + d    (delete line)
 ctrl + /     (comment lines)
 shift + alt + up/down   (duplicate selected lines)
