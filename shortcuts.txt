@@ -124,6 +124,10 @@ CHDIR /d  drive: path
 'cls'
 --> clears all cmd screen
 
+'Measure-Command {start-process 'FILE U WANT TO EXECUTE no qoutes!' -Wait}'
+----> to calc execution time taken in this .exe file runtime.
+
+
 ====> for more usefull  general 'power shell' and 'cmd' commands : https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
 
 
