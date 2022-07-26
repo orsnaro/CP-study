@@ -1,48 +1,51 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
-vector<int> rotateLeft(int d, vector<int> arr);
-
 int main()
 {
-    int n = 0, d = 0;
-    cin >> n >> d;
-    vector<int> arr(n);
+     ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     
-    arr = rotateLeft(d, arr);
+    deque<int> dq_contnr;
+    string query;
+    int Q, N = 0;
 
-    for (int i = 0; i < n; i++)
+    scanf("%d", &Q);
+    while (Q--)
     {
-        cout << arr[i] << ' ';
-    }
-
-    return 0;
-}
-
-
-vector<int> rotateLeft(int d, vector<int> arr)
-{
-
-    int n = arr.size();
-
-    for (int i = 0; i < n; ++i)
-    {
-        cin >> arr[i];
-    }
-
-    for (int i = 0; i < d; i++)
-    {
-
-        int temp = arr[0];
-
-        for (int j = 0; j < n; j++)
+        cin >> query;
+        if (query == "back")
         {
-            arr[j] = arr[j + 1];
+            if (!dq_contnr.empty())
+            {
+                cout << dq_contnr.back() << '\n';
+                dq_contnr.pop_back();
+            }
+            else
+                cout << "No job for Ada?" << '\n';
         }
-
-        arr[(n - 1)] = temp;
+        else if (query == "front")
+        {
+            if (!dq_contnr.empty())
+            {
+                cout << dq_contnr.front() << '\n';
+                dq_contnr.pop_front();
+            }
+            else
+                cout << "No job for Ada?" << '\n';
+        }
+        else if (query == "reverse")
+        {
+            reverse(dq_contnr.begin(), dq_contnr.end());
+        }
+        else if (query == "push_back")
+        {
+            scanf("%d", &N);
+            dq_contnr.push_back(N);
+        }
+        else
+        {
+            scanf("%d", &N);
+            dq_contnr.push_front(N);
+        }
     }
-
-    return arr;
-}
+    return 0;}
