@@ -6,28 +6,34 @@ int main() {
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  vector <int> v;
-  int n; cin>> n;
-  int ath;
+  multiset <int> myst;
+  int tc; cin >> tc;
 
-  while(n--){
-    int squad; cin >> squad;
+  while(tc--){
+    int n,d;
+    cin >> n >> d;
+    bool all_valid=1;
+    int temp;
 
-    for(int i =0 ; i<squad; ++i){
-      cin >> ath;
-      v.push_back(ath);
+    for (int i=0 ; i<n ; ++i){
+      cin >> temp;
+
+      if(temp > d)
+        all_valid=0;
+
+
+      myst.emplace(temp);
     }
-    sort(v.begin(),v.end());
 
-    int sz= v.size();
-    int min_dif=1e9;
-    for(int i=1 ; i< sz ; ++i ){
-      if((v[i]-v[i-1]) < min_dif){
-        min_dif = v[i]-v[i-1];
-      }
+
+    if( all_valid==1 ||  (*myst.begin() + *(++myst.begin()) <= d) ){
+      cout << "YES\n";
     }
-    v.clear();
-    cout << min_dif << '\n';
+    else cout << "NO\n";
+
+    myst.clear();
+
   }
-    return 0;
+
+  return 0;
 }
