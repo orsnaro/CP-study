@@ -1,39 +1,43 @@
 #include <bits/stdc++.h>
 using namespace std;
-//sheet 3 prob I
+using ll =long long ;
+
+ll arr[1000000];
+
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  multiset <int> myst;
-  int tc; cin >> tc;
 
+  int tc;cin >> tc;
   while(tc--){
-    int n,d;
-    cin >> n >> d;
-    bool all_valid=1;
-    int temp;
+    int cntr=0;
+    int n; cin >> n;
+    int first, second;
+    for(int i=0 ; i < n; ++i){
+      int big ,small;
+      second = first;
+      cin >> first;
+      if(i<1)
+        continue;
 
-    for (int i=0 ; i<n ; ++i){
-      cin >> temp;
+      if(first -second < 0 ){
+        big=second; small =first;
+      }
+      else if (first -second > 0){
+        big=first; small=second;
+      }
 
-      if(temp > d)
-        all_valid=0;
+      if( ((float)big/small)> 2) {
+        while((float)big/small > 2){
+          cntr++;
+          small*=2;
+        }
+      }
 
-
-      myst.emplace(temp);
     }
-
-
-    if( all_valid==1 ||  (*myst.begin() + *(++myst.begin()) <= d) ){
-      cout << "YES\n";
-    }
-    else cout << "NO\n";
-
-    myst.clear();
-
+      cout << cntr <<'\n';
   }
-
   return 0;
 }
