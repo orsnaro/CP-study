@@ -7,89 +7,69 @@ using ll =long long ;
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
+  cin.tie(nullptr);
   cout.tie(nullptr);
+  
+  
+  cout << fixed << setprecision(1); 
+  multiset <ll,greater<>> l ;
+  multiset <ll> r ;
 
-  cout << fixed << setprecision(1);
+  int n ; cin >> n;
+  char c ;
+  ll x;
+  while(n--){
+    cin >> c >> x;
 
-  vector <int> v;
-  bool is_odd=0,sorted=0;
 
-  int tc; cin >> tc;
-  while(tc--){
-    ll  median=0;
-    char op;cin >> op;
-    int x;
-
-    cin >> x;
-    if(op =='r'){
-      if(v.empty() or find(v.begin(),v.end() ,x) ==v.end()){
-        cout << "Wrong!\n";continue;
-      }
-      else if (find(v.begin(),v.end() ,x) !=v.end()){
-        auto  temp = find(v.begin(),v.end() ,x);
-        v.erase(temp);
-        if(v.empty()){ //cuz u erased median now random val is there
-          cout << "Wrong!\n";continue;
+    if(c== 'a'){
+      if(l.empty() or x <= *l.begin()){
+        l.insert(x);
+        if(l.size() > r.size()+1){
+          r.insert(*l.begin());
+          l.erase(l.begin());
         }
 
-        is_odd=!is_odd;
-        // sort(v.begin(),v.end());
-
-        if(is_odd)
-          median=v[v.size()/2];
-        else
-          median=v[(v.size()/2)-1] +v[v.size()/2];
-      }
-    }
-
-    if(op =='a'){
-      v.push_back(x);
-      is_odd=!is_odd;
-
-      if (v.size() ==2 && v[0]<v[1]){
-        sorted=1;
-        if(is_odd)
-          median=v[v.size()/2];
-        else
-          median=v[(v.size()/2)-1] +v[v.size()/2];
-      }
-
-
-      if(v.size()>=3 && sorted ){
-        if(v[v.size()-2] > v.back())
-          sort(v.begin(),v.end());
-        if(is_odd)
-          median=v[v.size()/2];
-        else
-          median=v[(v.size()/2)-1] +v[v.size()/2];
-
-        if(v[v.size()-2] < v.back()){
-          if(is_odd)
-            median=v[v.size()/2];
-          else
-            median=v[(v.size()/2)-1] +v[v.size()/2];
         }
-      }
-
-      else{
-        sort(v.begin(),v.end());
-
-        if(is_odd)
-          median=v[v.size()/2];
-        else
-          median=v[(v.size()/2)-1] +v[v.size()/2];
+        else {
+          r.insert(x);
+          if(r.size() > l.size()){
+            l.insert(*r.begin());
+            r.erase(r.begin());
+          }
       }
     }
-
-
-    if ((median &1) and !is_odd)
-      cout << median/ 2.0 << '\n';
-    else if(!(median &1) and !is_odd )
+    else if (l.find(x)==l.end() and r.find(x) == r.end()){
+      cout << "Wrong!"<< '\n';continue;
+    }
+    else if(l.find(x) != l.end() ){
+      l.erase(l.find(x));
+      if( l.size()< r.size()){
+        l.insert(*r.begin());
+        r.erase(r.begin());
+      }
+        
+    }
+    else{
+      r.erase(r.find(x));
+      if(l.size() > r.size()+1){
+        r.insert(*l.begin());
+        l.erase(l.begin());
+      }    
+    }
+    if(l.empty()){
+      cout << "Wrong!"<<'\n';
+      continue;
+    }
+    if(l.size()==r.size()){
+      ll median = *l.begin() + *r.begin();
+      if(median &1)
+      cout <<median/2.0<<'\n';
+      else
       cout << median/2 << '\n';
-    else if (median &1 and is_odd )
-      cout << median <<'\n';
-    else
-      cout << (int)median  << '\n';
+    }
+    else cout << *l.begin() << '\n';
+
   }
   return 0;
 }
