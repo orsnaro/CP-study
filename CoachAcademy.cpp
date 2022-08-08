@@ -1,75 +1,36 @@
 #include <bits/stdc++.h>
-using namespace std;
-using ll =long long ;
 
-// ll arr[1000000];
+using namespace std;
+
+using ll = long long;
+const ll N = 1e9;
+int arr[N];
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
   cin.tie(nullptr);
   cout.tie(nullptr);
-  
-  
-  cout << fixed << setprecision(1); 
-  multiset <ll,greater<>> l ;
-  multiset <ll> r ;
 
-  int n ; cin >> n;
-  char c ;
-  ll x;
-  while(n--){
-    cin >> c >> x;
+  multiset < pair < ll, ll >> mst;
+  int n;
+  cin >> n;
+  int m = n;
+  ll moves = 0;
 
-
-    if(c== 'a'){
-      if(l.empty() or x <= *l.begin()){
-        l.insert(x);
-        if(l.size() > r.size()+1){
-          r.insert(*l.begin());
-          l.erase(l.begin());
-        }
-
-        }
-        else {
-          r.insert(x);
-          if(r.size() > l.size()){
-            l.insert(*r.begin());
-            r.erase(r.begin());
-          }
-      }
-    }
-    else if (l.find(x)==l.end() and r.find(x) == r.end()){
-      cout << "Wrong!"<< '\n';continue;
-    }
-    else if(l.find(x) != l.end() ){
-      l.erase(l.find(x));
-      if( l.size()< r.size()){
-        l.insert(*r.begin());
-        r.erase(r.begin());
-      }
-        
-    }
-    else{
-      r.erase(r.find(x));
-      if(l.size() > r.size()+1){
-        r.insert(*l.begin());
-        l.erase(l.begin());
-      }    
-    }
-    if(l.empty()){
-      cout << "Wrong!"<<'\n';
-      continue;
-    }
-    if(l.size()==r.size()){
-      ll median = *l.begin() + *r.begin();
-      if(median &1)
-      cout <<median/2.0<<'\n';
-      else
-      cout << median/2 << '\n';
-    }
-    else cout << *l.begin() << '\n';
+  while (n--) {
+    pair < ll, ll > pr;
+    cin >> pr.second;
+    pr.first = abs(m - pr.second);
+    mst.insert(pr);
 
   }
+
+  for (int i = m, j = 0; i != 0; ++j, --i) {
+    moves = moves + ((mst.begin() -> first) - j);
+    mst.erase(mst.begin());
+  }
+  
+  cout << moves << '\n';
   return 0;
 }
