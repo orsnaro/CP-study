@@ -3,34 +3,27 @@
 using namespace std;
 
 using ll = long long;
-const ll N = 1e9;
-int arr[N];
+// const ll N = 1e5;
+// int arr[N],prefix[N]{0};
 
+// greedy sheet prob D 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  multiset < pair < ll, ll >> mst;
-  int n;
-  cin >> n;
-  int m = n;
-  ll moves = 0;
+  int x ; cin >> x;
+  int sumpos=0, sumneg=0;
 
-  while (n--) {
-    pair < ll, ll > pr;
-    cin >> pr.second;
-    pr.first = abs(m - pr.second);
-    mst.insert(pr);
+  for( int i=0 ; i<x ; ++i){
+    int n ; cin >> n ;
+    if(n < 0)
+      sumneg+=n;
+    else sumpos+=n;
+  }   
 
-  }
-
-  for (int i = m, j = 0; i != 0; ++j, --i) {
-    moves = moves + ((mst.begin() -> first) - j);
-    mst.erase(mst.begin());
-  }
+  cout << sumpos - sumneg << '\n';
   
-  cout << moves << '\n';
   return 0;
 }

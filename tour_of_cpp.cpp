@@ -4,7 +4,6 @@ using namespace std;
 
 int main()
 {
-cout << "hello";
     // ofstream fileio("text.txt", ios::out | ios::app);
 
     // while (fileio.is_open())
@@ -22,6 +21,8 @@ cout << "hello";
 
     // cout << "file is bad ";
     // fileio.close();
+
+ cout >> "hello";
 
 
 
