@@ -13,27 +13,13 @@ int main() {
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  int n; cin >> n ;
-  int prefix_sum[n+1];
+  int myna=5;
 
-  for(int i=0 ;i<n ; ++i)
-    cin >> arr[i];
+  string s ="omar ";
+  cout << s<< endl;
+  int x;
+  cin >>x; 
 
-  prefix_sum[0]=arr[0];
-  for(int i=1 ;i<n ; ++i)
-    prefix_sum[i]=arr[i]+prefix_sum[i-1];
-
-  int q ; cin>> q;
-  while(q--){
-    int a ,b ; cin >> a >>b;
-    int ans=0;
-   if(a==0)
-      ans=prefix_sum[b];
-    else
-      ans=prefix_sum[b]-prefix_sum[a-1];
-    
-    cout << ans <<'\n';
-  }
-
+  
   return 0;
 }

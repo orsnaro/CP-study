@@ -22,7 +22,12 @@ int main()
     // cout << "file is bad ";
     // fileio.close();
 
- cout >> "hello";
+
+
+    string s ="omar";
+    cout << "enter ur name please : \n";
+    cin >> s;
+    cout << "hello"<<' '<<s<< endl;
 
 
 
