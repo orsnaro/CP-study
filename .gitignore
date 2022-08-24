@@ -23,3 +23,4 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.obj
 /Debug/vc142.idb
 /cmder
+/ctesting
