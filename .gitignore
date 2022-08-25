@@ -21,6 +21,7 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.pdb
 *.tlog
 *.obj
+CoachAcademy.exe
 /Debug/vc142.idb
 /cmder
 /ctesting
