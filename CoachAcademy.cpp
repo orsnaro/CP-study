@@ -3,42 +3,51 @@
 using namespace std;
 using ll = long long;
 
-// const int N = 100;
-// int arr[N];
+const int N = 15;
+char arr[N];
+char arr2[N];
 
-// bitmasks  prob : E
+// bitmasks  prob : F
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  int x;
-  cin >> x;
-  vector<ll> sprlky;
-  for (int msk = 0; msk < (1 << 10); ++msk) {
-    ll temp = 0;
-    int cntr = 0;
-    for (int i = 0; i < 10; ++i) {
-      if (msk & (1 << i)) { // 0b =4 and 1b =7
-        temp *= 10;
-        temp += 7;
-        cntr++;
-      } else {
-        temp *= 10;
-        temp += 4;
-        cntr--;
-      }
-      if (cntr == 0)
-        sprlky.push_back(temp);
-    }
+  string sent, rec;
+	cin >> sent >> rec;
+  int cntr = 0 , cntr2 =0 , notsure=0;
+	
+  for (int i = 0; i < sent.size(); ++i) {
+    if (sent[i] == '+')
+      ++cntr;
+    else
+      --cntr;
+    if (rec[i] == '+')
+      ++cntr2;
+    else if (rec[i] == '-')
+      --cntr2;
+    else
+      ++notsure;
   }
-  sort(sprlky.begin(), sprlky.end());
-  for (int i = 0; i < sprlky.size(); ++i) {
-    if (sprlky[i] >= x) {
-      cout << sprlky[i] << '\n';
-      return 0;
+
+  int success = 0;
+  double couldhe = 0;
+
+  for (int msk = 0; msk < (1 << notsure); ++msk) {
+      int temp = cntr2;
+    for (int i = 0; i < notsure ; ++i) {
+      if (msk & (1 << i)) // let 1b='+' and  0b='-'
+        temp++;
+      else
+        temp--;
     }
+    if (temp == cntr)
+      ++success;
   }
+
+  couldhe = success / (double)(1 << notsure);
+  cout << fixed << setprecision(12) << couldhe << '\n';
+
   return 0;
 }
