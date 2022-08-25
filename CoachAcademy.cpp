@@ -3,39 +3,50 @@
 using namespace std;
 using ll = long long;
 
-const int N = 25;
+const int N = 1e6;
 int arr[N];
+ll unsorted[N];
+ll sorted[N];
 
-void ans(){
-  int n, p;
-    scanf("%d %d",&n , &p);
+// SRQ  prob : D this sheet will end T_T
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
 
-    for (int i = 0; i < p; ++i) {
-      scanf("%d", &arr[i]);
-    }
-    bool valid = 0;
-    for (int msk = 0; msk < (1 << p); ++msk) {
-      int sum = 0;
-      for (int i = 0; i < p; ++i) {
-        if (msk & (1 << i))  // or (msk>>i) & 1
-          sum += arr[i];
-      }
-      valid |= (sum == n); //nice bit-wise technique 1st time using this;
-    }
-      if (valid) 
-        printf("YES\n");
-      else
-        printf("NO\n");
+  int n;
+  cin >> n;
+  for (int i = 0; i < n; ++i) {
+    cin >> arr[i];
+    // mset.insert(arr[i]);
+    // mp.insert({arr[i],i});
   }
 
+  unsorted[0] = arr[0];
+  for (int i = 1; i < n; ++i) {
+    unsorted[i] = unsorted[i - 1] + arr[i];
+  }
+  sort(arr, arr + n);
+  sorted[0] = arr[0];
+  for (int i = 1; i < n; ++i) {
+    sorted[i] = sorted[i - 1] + arr[i];
+  }
 
-// bitmasks  prob : C
-int main() {
-  int t;
-  // cin >> t;
-  scanf("%d",&t);
-  while (t--) ans();
-    
+  int m;
+  cin >> m;
+  while (m--) {
+    int type, l, r;
+    cin >> type >> l >> r;
+    switch (type) {
+    case 1:
+      cout << unsorted[r - 1] - unsorted[l - 2] << '\n';
+      break;
+    case 2:
+      cout << sorted[r - 1] - sorted[l - 2] << '\n';
+      break;
+    }
+  }
 
   return 0;
 }
