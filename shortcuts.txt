@@ -7,6 +7,8 @@ ctr+ shift+ p (all shortcuts vs code)
 ctrl+p   (switch tap)
 ctrl+b (close side bar )
 alt+`  (close terminal side)
+ctrl + g (go to line X)
+ctrl + 0 ( go outside bracket)
 
 
 shift+ctrl+/ (jmp to matching bracket)
