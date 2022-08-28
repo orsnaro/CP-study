@@ -3,35 +3,29 @@
 using namespace std;
 using ll = long long;
 
-const int N = 100;
-int arr[N];
-// bitmasks prob : B
+// const int N = 1e6;
+// int arr[N];
+// STLs II prob : C
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
   cin.tie(nullptr);
   cout.tie(nullptr);
-  int n;
-  cin >> n;
-  int mxlen = -1;
-  for (int i = 0; i < n; ++i)
-    cin >> arr[i];
-  for (int msk = 0; msk < (1 << n); msk++) {
-    int mxval = -1;
-    vector<int> vec;
-    int prev = -1;
-    for (int i = 0; i < n; ++i) {
-      bool iszero = !(msk & ((1 << n - 1) >> i));
-      if (iszero) {
-        if (prev < arr[i]) {
-          prev = arr[i];
-          vec.push_back(prev);
-        }
-      }
+  int N; cin>> N;
+  while(N--){
+    unordered_set <int> uno_st;
+    int ans=0;
+    int n,m; cin >> n >> m ;
+    for(int i =0; i < n; ++i){
+      int temp; cin >> temp;
+      uno_st.emplace(temp);
     }
-    int vsz = vec.size();
-    mxlen = max(mxlen, vsz);
+    for(int i =0; i < m; ++i){
+      int temp; cin >> temp;
+      if(uno_st.count(temp))
+        ans++;
+    }
+    cout << ans << '\n';
   }
-  cout << mxlen << endl;
   return 0;
 }
