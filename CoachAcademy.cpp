@@ -3,27 +3,34 @@
 using namespace std;
 using ll = long long;
 
-// const int N = 1e6;
-// int arr[N];
+const int N = 110;
+int arr[N];
 
-// stls II prob : E
+int summation(int n) {
+
+  if (n == 0)
+    return arr[0];
+
+  return (arr[n]+ summation(n-1));
+}
+
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
   cout.tie(nullptr);
 
+  int t;
+  cin >> t;
+  int cntr = 1;
+  while (t--) {
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; ++i) 
+      cin >> arr[i];
 
-  string ref("qwertyuiopasdfghjkl;zxcvbnm,./");
-  char n; cin >> n;
-  string s; cin >> s;
-
-  int sz = s.size();
-  if (n == 'R') {
-    for (int i = 0; i < sz; ++i)
-      cout << ref[(ref.find(s[i])) - 1];
-  } else {
-    for (int i = 0; i < sz; ++i)
-      cout << ref[(ref.find(s[i])) + 1];
+    cout << "Case " << cntr << ": "  << summation(n - 1) << '\n';
+    memset(arr, 0, N);
+    ++ cntr;
   }
 
   return 0;
