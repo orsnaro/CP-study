@@ -1,35 +1,27 @@
 #include <bits/stdc++.h>
-
+#define fastread      (ios_base:: sync_with_stdio(false),cin.tie(NULL));
 using namespace std;
-
-int main()
-{
-    // ofstream fileio("text.txt", ios::out | ios::app);
-
-    // while (fileio.is_open())
-    // {
-    //     string line;
-
-    //     fileio << "\tmy name is omar\t";
-    //     fileio << "\tmy name is omar\t";
-
-    //     ifstream("text.txt");
-
-    //     while (getline(fileio, line))
-    //         cout << line;
-    // }
-
-    // cout << "file is bad ";
-    // fileio.close();
+using ll = long long;
 
 
+const int N = 1e6;
+ll arr[N];
 
-    string s ="omar";
-    cout << "enter ur name please : \n";
-    cin >> s;
-    cout << "hello"<<' '<<s<< endl;
+// bitmasks  prob : K bitmasking
+    fastread;
+
+    int n; cin >> n;
+    int sm =0 ;
+    for (int i = 0 ; i < n; ++i){
+        cin >> arr[i];
+        sm=sm^arr[i];
+    }
+    
+    for(int i = 0; i < n ; ++i)
+        cout << (sm^arr[i]) << ' ';
+    
 
 
 
-return 0;
+  return 0;
 }
