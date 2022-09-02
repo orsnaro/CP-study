@@ -81,8 +81,17 @@ code
 start filename.exe 
 --> (open any exe in directory)
 
+start/min filename.exe 
+--> (start any exe minimized)
+
 command |clip   OR    clip <filename.txt
----> copy terminal o\p or any .txt to t
+---> copy terminal  or any .txt to clip board
+
+type nul > filename.txt
+---> to make new .txt file
+---> to write to file use (@echo "ur text" >> filename.txt) '>>' to append not to overwrite
+---> also check cat command and cp or copy on alzero crash course (link is down).
+
 
 'cd .\folder1\folder2'                 
  --> change directory to a one inside ur current directory (dont miss dot in begining)
@@ -136,7 +145,7 @@ CHDIR /d  drive: path
 
 ====> for more usefull  general 'power shell' and 'cmd' commands : https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
 
-
+====> crash CLI course : https://youtube.com/playlist?list=PLDoPjvoNmBAxzNO8ixW83Sf8FnLy_MkUT
 
 
 ################CODELITE#############IMPORTANT only
