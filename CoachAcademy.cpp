@@ -2,42 +2,41 @@
 
 using namespace std;
 using ll = long long;
+#define fastio   (ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL));                                                                 
 
-const int N = 1e6;
-int arr[N];
 
-int is_multiple (int x ,int target , int cntr){
-  if(target <= x){
-  if(target*3 == x or target*2 == x)
-    return --cntr;
-  else if (target == x)
-  return cntr;
+// const int N = 1e6;
+// int arr[N];
+ll x, target, cntr;
+
+int is_mul(int x, int cntr) {
+
+  if (x == target)
+    return cntr;
+  // if( (target/2.0)-(target/2) != 0 or (target/3.0)-(target/3) != 0  )
+  //   return -1;
+
+  if (target)
+    if (target == x) {
+      return cntr;
+    } else if (target < x)
+      return -1;
+
+  int x2 = is_mul(x * 2, cntr + 1);
+  int x3 = is_mul(x * 3, cntr + 1);
+
+  if (x2 == -1)
+    return x3;
   else
-  return -1;
-  }
-  
-
-
-  return is_multiple(x,target/6,cntr+2);
+    return x2;
 }
 
-
-// bitmasks  prob : D backtacking
+// bitmasks  prob : E backtacking
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(nullptr);
-  cin.tie(nullptr);
-  cout.tie(nullptr);
+  fastio;
 
-int x,y,cntr = 0; 
-cin >> x >> y;
-
-// if (x>y){
-//   cout << -1  << endl;
-//   reutrn 0;
-// }
-
-cout << is_multiple(x,y,cntr) << '\n';
+  cin >> x >> target;
+  cout << is_mul(x, cntr) << '\n';
 
   return 0;
 }
