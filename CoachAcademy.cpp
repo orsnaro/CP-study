@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define fastio                                                                 \
   (ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL));
-// backtacking   prob : F (didnt use backtracking)
+// backtacking   prob : J (didnt use backtracking)
 using namespace std;
 using ll = long long;
 
@@ -17,49 +17,33 @@ int main() {
 
   int target, n;
 
-  while (true) {
-  set <string , greater<string>> st;
-    cin >> target >> n;
+  while (cin >> target >> n) {
     int arr[N] = {0};
-    if(!n)
-      break;
-      
-
     for (int i = 0; i < n; ++i)
       cin >> arr[i];
 
-    cout << "Sums of " << target << ":\n";
-    for (ll msk = 0; msk < (1ll << n*1ll); msk++) {
+    vector<int> vec2;
+    int mx = -1;
+    for (ll msk = 0; msk < (1ll << n * 1ll); msk++) {
       int sum = 0;
-      vector <int> vec;
+      vector<int> vec;
 
       for (int i = 0; i < n; ++i) {
-        if (msk & (1ll << i*1ll)) {
-          sum += arr[i];
+        ll sz = 1 << (n - 1);
+        if (msk & (sz >> i * 1ll)) {
           vec.push_back(arr[i]);
+          sum += arr[i];
         }
       }
-      sort ( vec.begin() , vec.end() , greater<int>());
-      if (sum == target) {
-        string temp;
-        for (int i = 0; i < vec.size(); ++i){
-          if(i)
-            temp.append("+");
-
-          temp.append(to_string(vec[i]));
-        }
-        st.emplace(temp);
-
+      if (sum <= target) {
+        mx = max(sum, mx);
+        if (sum >= mx)
+          vec2.swap(vec);
       }
-
     }
-      if (st.empty())
-        cout << "NONE\n";
-      else{
-        for(string x : st)
-          cout << x << '\n';
-      }
-
+      for (int &x : vec2)
+        cout << x << ' ';
+      cout << "sum:" << mx << '\n';
   }
 
   return 0;

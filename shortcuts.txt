@@ -72,6 +72,12 @@ https://dev.classmethod.jp/articles/git-bash-commands/
 
 ################ (CMD & power shell) ############# IMPORTANT only
 
+help <ur command> 
+or <ur command> /? 
+or <ur command>  --help
+--> to read documentaion for the command u want (last one for cmder and linux only)
+
+to use help in cmd 
 
 *note:  using '/' or '\' is interchangable in cmd -most if time- also 'tab' will autocomplete ur command
 
@@ -89,7 +95,7 @@ command |clip   OR    clip <filename.txt
 
 type nul > filename.txt
 ---> to make new .txt file
----> to write to file use (@echo "ur text" >> filename.txt) '>>' to append not to overwrite
+---> to write to file use (@echo ur text >> filename.txt) '>>' to append in new line not to overwrite
 ---> also check cat command and cp or copy on alzero crash course (link is down).
 
 
