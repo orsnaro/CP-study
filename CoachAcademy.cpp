@@ -1,64 +1,99 @@
 #include <bits/stdc++.h>
 #define fastio                                                                 \
   (ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL));
-// backtacking   prob : H (didnt use backtracking)
+// backtacking   prob : H (with recursion)
 using namespace std;
 using ll = long long;
 
-const int N = 12;
-int arr[N] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37};
-// ll x, target, cntr;
 
-// int is_mul(int x, int cntr) {
+set<vector<string>> vst;
+void ring(int x);
+void sol();
+void permuter(int b, int e);
+bool prime_find(int p);
 
-// }
-bool prime_find(int p) {
-    for(int i = 2; i <= sqrt(p); i++)
-        if(p % i == 0) return false;
-    return true;
-}
+const int N = 1e5;
+int arr[N];
+// vector<int> v;
+int b, e;
+int target, cntr = 0;
 
 int main() {
   // fastio;
+  while (scanf("%d", &target) != EOF){
+    vst.clear();
+    sol();
+  }
 
-  int target, cntr = 0;
-  while (scanf("%d",&target) != EOF) {
-    vector<int> vec;
-    for (int i = 0; i < target; ++i) 
-      vec.push_back(i+1);
-    
+  return 0;
+}
 
-    cntr++;
-    if (cntr >1)
-      // cout<<'\n';
-      printf("\n");
+void sol() {
 
-    printf("Case %d:\n",cntr);
-    // cout << "Case " << cntr << ':' << '\n';
-    for (int i = 0; ; ++i) {
-      bool is_prime = 0;
-      for (int j = 1; j < target; ++j) {
-        int temp2 = vec[j - 1] + vec[j];
-        is_prime = prime_find(temp2);
-        if (!is_prime)
+  fill(arr, arr + N, 0);
+
+  for (int i = 0; i < target; ++i)
+    arr[i] = i + 1;
+
+  cntr++;
+  if (cntr > 1)
+    printf("\n");
+  printf("Case %d:\n", cntr);
+
+  permuter(1, target - 1);
+
+  for (auto &x : vst) {
+    for (auto &y : x)
+      cout << y;
+  }
+}
+
+void permuter(int b, int e) {
+  int x = e + 1; // size of vector 'v'
+
+  if (b == e)
+    return;
+
+  for (int i = b; i <= e; ++i) {
+    swap(arr[b], arr[i]);
+    ring(x);
+    permuter(b + 1, e);
+    swap(arr[b], arr[i]);
+  }
+}
+
+void ring(int x) {
+
+  if (x == 1) {
+    int cycle = 1 + arr[target - 1];
+
+    if (prime_find(cycle)) {
+      vector<string> tempv;
+      for (int i = 0; i < target; ++i) {
+        string temp2 = to_string(arr[i]);
+        tempv.emplace_back(temp2);
+        // printf("%d", arr[i]);
+        if (i + 1 == target)
           break;
+        tempv.emplace_back(" ");
+        // printf(" ");
       }
-      if (is_prime & prime_find(vec[target - 1] + vec[0])) {
-        for (int i = 0 ; i < target; ++i){
-          // cout << vec[i];
-          printf ("%d",vec[i]);
-          if(i+1 == target)
-            break;
-          // cout << ' ';
-          printf (" ");
-        }
-        printf ("\n");
-        // cout << '\n';
-      }
-      bool there_permutaion = next_permutation(vec.begin()+1, vec.end());
-      if (!there_permutaion)
-        break;
+      tempv.emplace_back("\n");
+      vst.insert(tempv);
+      return;
     }
   }
-  return 0;
+
+  bool isprime = prime_find(arr[x - 1] + arr[x - 2]);
+  if (isprime)
+    ring(x - 1);
+  else
+    return;
+}
+
+bool prime_find(int p) {
+  for (int i = 2; i <= (p / i); i++)
+    if (p % i == 0)
+      return false;
+  return true;
 }
