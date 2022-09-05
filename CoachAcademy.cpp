@@ -2,69 +2,41 @@
 #define fastio                                                                 \
   (ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL));
 
-// num. theory I   prob : B
+// num. theory I   prob : B no i doesnt OF. it TLEs -_-)
 using namespace std;
 using ll = long long;
 
-const int N = 1e6;
-int arr[N];
-vector<int> v;
-
-void sol_seive(int max) {
-  arr[1] = 1;
-
-  for (int i = 0; i < max; ++i)
-    arr[i] = i;
-  for (int i = 4; i < max; i += 2)
-    arr[i] = 2;
-
-  bool prime[n + 1];
-  fill(prime, prime + n + 1, true);
-
-  for (ll p = 3; p <= n / p; p++) {
-
-    if (arr[i] == i) {
-      for (ll i = p * p; i <= n; i += p)
-        if (arr[j] == j)
-          arr[j] = i;
-    }
+// const int N = 1e6;
+// int arr[N];
+unordered_map <ll,int> mp;
+vector <ll> v; 
+void sol_t_seive(ll max) {
+  for (ll p = 2; p <= max ; p++) {
+      for (ll i = p + p; i <= max; i += p){
+        bool is_wanted = mp.count(i);
+        if (is_wanted)
+          ++mp[i];
+      }
   }
+  for ( auto &x : v){
+      if(mp[x] == 3)
+        cout << "YES\n";
+      else cout << "NO\n";
+  }
+  return;
 }
 
-void t_prime(int x) {
-  int sz = v.size();
-  for (int i = 0; i < sz; ++i) {
-    int temp = v[i];
-    cntr = 0;
-    while (temp != 1) {
-      cntr++;
-      temp = temp / arr[temp];
-    }
-    if (cntr == x) // the num of prime divisor u want to filter accoridingly;
-      cout << "num :" << v[i] << " has dist. num. of prime div. u wanted\n";
-    else
-    cout << v[i] << " doesnt have" << x << "dis. prime div.\n";
-  }
-}
-
-int main() {
+int main() { 
   fastio;
-  int n;
-  cin >> n;
-  int k = n;
-  int mx = -1;
-  while (n--) {
-    int temp;
-    cin >> temp;
+  int n; cin >> n;
+  ll mx = -1;
+
+  for ( int i = 0 ; i < n; ++i){
+    ll temp; cin >> temp;
     v.push_back(temp);
-    mx = max(v[k - n + 1], mx);
+    mp[temp] = 2;
+    mx = max(temp, mx);
   }
-
-  sol_seive(mx);
-
-  int x;
-  cin >> x; // number of  distinct prime divisor  including 1
-  t_prime(x);
-
+  sol_t_seive(mx);
   return 0;
 }
