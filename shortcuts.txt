@@ -1,12 +1,14 @@
 ################VS code#############IMPORTANT only
 ctr+ shift+ p (all shortcuts vs code)
-shift + ctrl + alt + f (fetch or one mouse button using xmouse)
-shift + ctrl + alt + c (commit all to local or one mouse button using xmouse)
-shift + p (push all to remote)
+(NOT DEFAULT) shift + ctrl + alt + f (fetch or one mouse button using xmouse)
+(NOT DEFAULT)shift + ctrl + alt + c (commit all to local or one mouse button using xmouse)
+(NOT DEFAULT)shift + p (push all to remote)
 
 ctrl+p   (switch tap)
 ctrl+b (close side bar )
-ctr+`  (close terminal side)
+alt+`  (close terminal side)
+ctrl + g (go to line X)
+ctrl + 0 ( go outside bracket)
 
 
 shift+ctrl+/ (jmp to matching bracket)
@@ -14,8 +16,12 @@ shift + d    (delete line)
 ctrl + /     (comment lines)
 shift + alt + up/down   (duplicate selected lines)
 SHIFT + K (edit highlighted)
-ctrl + space (suggestions
-)
+ctrl + space (suggestions)
+(NOT DEFAULT) win+F5  (to use vscode debugger <build>)
+(NOT DEFAULT) win+F6   ( to use vscode debugger <run>)
+ctrl + alt + N (to build and run  using code runner in terminal <no debugging> )
+
+
 --> for more  https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 
 
@@ -66,6 +72,12 @@ https://dev.classmethod.jp/articles/git-bash-commands/
 
 ################ (CMD & power shell) ############# IMPORTANT only
 
+help <ur command> 
+or <ur command> /? 
+or <ur command>  --help
+--> to read documentaion for the command u want (last one for cmder and linux only)
+
+to use help in cmd 
 
 *note:  using '/' or '\' is interchangable in cmd -most if time- also 'tab' will autocomplete ur command
 
@@ -75,8 +87,17 @@ code
 start filename.exe 
 --> (open any exe in directory)
 
+start/min filename.exe 
+--> (start any exe minimized)
+
 command |clip   OR    clip <filename.txt
----> copy terminal o\p or any .txt to t
+---> copy terminal  or any .txt to clip board
+
+type nul > filename.txt
+---> to make new .txt file
+---> to write to file use (@echo ur text >> filename.txt) '>>' to append in new line not to overwrite
+---> also check cat command and cp or copy on alzero crash course (link is down).
+
 
 'cd .\folder1\folder2'                 
  --> change directory to a one inside ur current directory (dont miss dot in begining)
@@ -130,7 +151,7 @@ CHDIR /d  drive: path
 
 ====> for more usefull  general 'power shell' and 'cmd' commands : https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
 
-
+====> crash CLI course : https://youtube.com/playlist?list=PLDoPjvoNmBAxzNO8ixW83Sf8FnLy_MkUT
 
 
 ################CODELITE#############IMPORTANT only
