@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
+#define fastio ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
 using namespace std;
 using ll =long long ;
 
 const int  N = 1e6;
 // char arr[N];
 set <ll> st;
+
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(nullptr);
-  cout.tie(nullptr);
+  fastio;
   ll a ,b ; cin >> a >> b ;
   ll diff = abs (a -b);
   for ( int i = 1 ; i <= diff/i ; ++i){
