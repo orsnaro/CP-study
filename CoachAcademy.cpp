@@ -1,54 +1,57 @@
 #include <bits/stdc++.h>
-// num. theory II prob : B (my modified method yay)
+// num. theory II prob : M
 #define fastio                                                                 \
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(nullptr);                                                            \
   cout.tie(nullptr);
+
 using namespace std;
 using ll = long long;
 
-const int N = 1e6;
+// const int N = 1e6;
 // char arr[N];
-set<ll> st;
 
+int dif2, dif3, dif5;
 int main() {
   fastio;
 
-  ll a, b;
+  int a, b;
   cin >> a >> b;
-  ll diff = abs(a - b);
+
   if (a == b) {
-    for (int i = 1; i <= a / i; ++i) {
-      if (a % i == 0) {
-        st.insert(-i);
-        st.insert(-(a / i));
-      }
-    }
-  } else {
-    for (int i = 1; i <= diff / i; ++i) {
-      if (diff % i == 0 and a % i == 0 and b % i == 0) 
-        st.insert(-i);
-
-      if ((a % (diff / i)) == 0 and (b % (diff / i)) == 0)
-        st.insert(-(diff / i));
-      }
-    }
-
-    int t;
-    cin >> t;
-    while (t--) {
-      ll l, h;
-      cin >> l >> h;
-      bool done = 0;
-      for (auto &x : st) {
-        if (-x <= h and -x >= l) {
-          cout << -x << '\n';
-          done = 1;
-          break;
-        }
-      }
-      if (!done)
-        cout << "-1\n";
-    }
+    cout << 0 << endl;
     return 0;
   }
+
+  while (a % 2 == 0) {
+    dif2++;
+    a /= 2;
+  }
+  while (a % 3 == 0) {
+    dif3++;
+    a /= 3;
+  }
+  while (a % 5 == 0) {
+    dif5++;
+    a /= 5;
+  }
+  while (b % 2 == 0) {
+    dif2--;
+    b /= 2;
+  }
+  while (b % 3 == 0) {
+    dif3--;
+    b /= 3;
+  }
+  while (b % 5 == 0) {
+    dif5--;
+    b /= 5;
+  }
+
+  if (a != b)
+    cout << -1 << endl;
+  else
+    cout << abs(dif2) + abs(dif3) + abs(dif5) << endl;
+
+  return 0;
+}
