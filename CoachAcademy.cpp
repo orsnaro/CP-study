@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-// num. theory II prob : D 
+// num. theory II prob : G
 #define fastio                                                                 \
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(nullptr);                                                            \
@@ -19,34 +19,26 @@ int main() {
   while (t--) {
     int n;
     cin >> n;
+    int temp = (N + 1);
+
     for (int i = 0; i < n; ++i) {
       cin >> arr[i];
-      if (arr[i] > arr[0]) {
-        int temp;
+      if (arr[i] < temp)
         temp = arr[i];
-        arr[i] = arr[0];
-        arr[0] = temp;
-      }
-    }
-    int mx_gcd = __gcd(0, arr[0]);
-    cout << mx_gcd << " ";
-    for (int i = 1; i < n; ++i) {
-      int ngcd = -1;
-      int indx = -1;
-      for (int j = i; j < n; ++j) {
-        if (__gcd(mx_gcd, arr[j]) >= ngcd) {
-          ngcd = __gcd(mx_gcd, arr[j]);
-          indx = j;
-        }
-      }
-      int temp = arr[i];
-      arr[i] = arr[indx];
-      arr[indx] = temp;
-      mx_gcd = ngcd;
-      cout << arr[i] << ' ';
     }
 
-    cout << '\n';
+    int k = 0;
+
+    for (int i = 0; i < n; ++i) {
+      if (arr[i] == temp)
+        continue;
+      k = __gcd(k, arr[i] - temp);
+    }
+
+    if (!k)
+      cout << -1 << '\n';
+    else
+      cout << k << '\n';
   }
 
   return 0;
