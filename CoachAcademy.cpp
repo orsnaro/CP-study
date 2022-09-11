@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-// num. theory II prob : M
+// num. theory II prob : D 
 #define fastio                                                                 \
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(nullptr);                                                            \
@@ -8,50 +8,46 @@
 using namespace std;
 using ll = long long;
 
-// const int N = 1e6;
-// char arr[N];
+const int N = 1e6;
+int arr[N];
 
-int dif2, dif3, dif5;
 int main() {
   fastio;
 
-  int a, b;
-  cin >> a >> b;
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; ++i) {
+      cin >> arr[i];
+      if (arr[i] > arr[0]) {
+        int temp;
+        temp = arr[i];
+        arr[i] = arr[0];
+        arr[0] = temp;
+      }
+    }
+    int mx_gcd = __gcd(0, arr[0]);
+    cout << mx_gcd << " ";
+    for (int i = 1; i < n; ++i) {
+      int ngcd = -1;
+      int indx = -1;
+      for (int j = i; j < n; ++j) {
+        if (__gcd(mx_gcd, arr[j]) >= ngcd) {
+          ngcd = __gcd(mx_gcd, arr[j]);
+          indx = j;
+        }
+      }
+      int temp = arr[i];
+      arr[i] = arr[indx];
+      arr[indx] = temp;
+      mx_gcd = ngcd;
+      cout << arr[i] << ' ';
+    }
 
-  if (a == b) {
-    cout << 0 << endl;
-    return 0;
+    cout << '\n';
   }
-
-  while (a % 2 == 0) {
-    dif2++;
-    a /= 2;
-  }
-  while (a % 3 == 0) {
-    dif3++;
-    a /= 3;
-  }
-  while (a % 5 == 0) {
-    dif5++;
-    a /= 5;
-  }
-  while (b % 2 == 0) {
-    dif2--;
-    b /= 2;
-  }
-  while (b % 3 == 0) {
-    dif3--;
-    b /= 3;
-  }
-  while (b % 5 == 0) {
-    dif5--;
-    b /= 5;
-  }
-
-  if (a != b)
-    cout << -1 << endl;
-  else
-    cout << abs(dif2) + abs(dif3) + abs(dif5) << endl;
 
   return 0;
 }
