@@ -2,6 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 cpp_comp_vs.vcxproj.FileListAbsolute.txt
+*.exe
 *.sqlite
 *.db
 *.db-shm
@@ -15,13 +16,12 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.ipch
 *.suo
 *.log
-/Debug/cpp_comp_vs.exe
+/Debug
 *.recipe
 *.ilk
 *.pdb
 *.tlog
 *.obj
 CoachAcademy.exe
-/Debug/vc142.idb
 /cmder
 /ctesting
