@@ -1,31 +1,18 @@
 #include <bits/stdc++.h>
-using namespace std;
-using ll =long long ;
-
-const int  N = 1e6;
-// char arr[N];
-set <ll> st;
-int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(nullptr);
+// num. theory II prob :
+#define fastio                                                                 \
+  ios_base::sync_with_stdio(false);                                            \
+  cin.tie(nullptr);                                                            \
   cout.tie(nullptr);
-  ll a ,b ; cin >> a >> b ;
-  ll diff = abs (a -b);
-  for ( int i = 1 ; i <= diff/i ; ++i){
-    if ( diff % i == 0 and a % i == 0 and b % i == 0){
-      st.insert(-i);
-    }
-  }
+using namespace std;
+using ll = long long;
 
 
-  int t; cin >> t;
-  while (t--){
-    ll l,h; cin >> l >> h;
-    for ( auto &x : st){
-      if (-x <= h and -x >=l)
-        cout  << -x << '\n';
-      break;
-    }
-  }
+// const int N = 1e6;
+// int arr[N];
+
+int main() {
+  fastio;
+
   return 0;
 }
