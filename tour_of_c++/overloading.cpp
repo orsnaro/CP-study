@@ -4,6 +4,21 @@ using namespace std;
 class co_rdinates {
     pair<int, int> location;
   public :
+  //CONSTRUCTORS
+    //bad way which add overhead to compilation a constructor
+        // co_rdinates(int x , int y){
+        //   location.first = x;
+        //   location.second = y;
+        // }
+
+    //better way 
+    co_rdinates(int x , int y ) : location(x,y) {}
+    //its called Member Initializer List (a bookmark have more data)
+
+    co_rdinates(){ // same with this u can use Member Initializer List 
+          location= {0,0};
+    }
+    //OPERATOR OVERLOADING
     co_rdinates operator+(co_rdinates right_hand_new_cord) {
       co_rdinates final_cord;
       final_cord.location.first = location.first + right_hand_new_cord.location.first;
@@ -17,18 +32,7 @@ class co_rdinates {
     }
 
     friend ostream &operator << (ostream & output, co_rdinates &instance);
-    //there is reason why is must  friend function not a  member function!
-    
-    
-
-//constructors
-    co_rdinates(int x , int y){
-      location.first = x;
-      location.second = y;
-    }
-    co_rdinates(){
-      location= {0,0};
-    }
+    //there is reason why is must be friend function  defined out side not a  member function!
 };
   
 ostream &operator << (ostream &output, co_rdinates &instance){
@@ -38,24 +42,28 @@ ostream &operator << (ostream &output, co_rdinates &instance){
 
 
 int main() {
-  co_rdinates loc1,loc2(10,7);//ex0 constructor to assign pair member auto
+  //EX0 constructor to assign pair member auto
+
+  co_rdinates loc1,loc2(10,7);
   co_rdinates fnl_loc;
   // fnl_loc.location.first = 10;// wont work if location is private
   // fnl_loc.location.second = 9;
 
-  // first example overload '+': //
+  // FIRST example overload '+': //
+
   // loc2.location = {10, 0};
   // fnl_loc = loc1 + loc2;
   // cout << fnl_loc.location.first <<" "<< fnl_loc.location.second;
 
-  // // second example overload '&=' : //
+  // // SECOND example overload '&=' : //
+
   //  loc1 &= fnl_loc;
   //  cout << loc1.location.first <<' '<< loc1.location.second;
 
-  //  3rd example == overload //
+  //  3RD example == overload //
 
 
-  //4rth example << to output first , second pair member in class auto;
+  //4TH example << to output first , second pair member in class auto;
   cout << loc2;
 
   
