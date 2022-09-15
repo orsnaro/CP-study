@@ -31,8 +31,8 @@ class co_rdinates {
       location.second =  right_hand_overwrite.location.second;
     }
 
-    friend ostream &operator << (ostream & output, co_rdinates &instance);
-    //there is reason why is must be friend function  defined out side not a  member function!
+    friend ostream &operator << (ostream &output, co_rdinates &instance);
+    //there is reason why it must be friend function  defined out side. not a  member function!
 };
   
 ostream &operator << (ostream &output, co_rdinates &instance){
