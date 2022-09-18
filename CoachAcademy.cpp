@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-// sorting II prob : H
+// sorting II prob : J
 #define fastio                                                                 \
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(nullptr);                                                            \
@@ -9,51 +9,59 @@ using namespace std;
 using ll = long long;
 
 const int N = 1e6;
-int arr[N];
-vector <int> v;
+
+bool comp(int a, int b)
+{
+ return (a < b);
+}
 
 int main() {
   fastio;
-  int n; cin >> n;
-  for (int i = 0; i < n; ++i)
-    cin >> arr[i];
 
-  ll ssum[n],unsum[n];
-  // ssum[n]= 0;
-  // unsum[n] = 0;
-
-  unsum[0] = arr[0];
-  for ( int i = 1; i <n; ++i ){
-    if (unsum[i] == 0)
-      break;
-    unsum[i] = arr[i] + unsum[i - 1];
-  }
-
-  sort (arr , arr + n);
-  ssum[0] = arr[0];
-  for ( int i = 1; i <n; ++i ){
-    if (ssum[i] == 0)
-      break;
-    ssum[i] = arr[i] + ssum[i - 1];
-  }
-
-  int m; cin >> m;
-  while(m--){
-    int t,l,r; cin >> t >> l >> r;
-    if (t == 1){
-      if ( l == 1)
-        cout << unsum[r - 1];
-      else
-        cout << unsum[r - 1] - unsum[l - 2];
+  int t; cin >> t;
+  while ( t-- ){
+    // int temp[100000+5] = {0};
+    int arr[100000 + 10] = {0};
+    int ans = 1;
+    int n; cin >> n;
+    bool neg = 1, pve = 1;
+    for (size_t i = 0; i < n; i++){
+      cin >> arr[i];
+      if ( arr[i] >= 0)
+        neg = 0;
+      else pve = 0;
     }
-    else{ // type = 2 sorted
-      if(l == 1)
-        cout << ssum[r - 1];
-      else
-        cout << ssum[r - 1] - ssum[l - 2];
+    sort(arr, arr+n, [](int i, int j) { return abs(i) > abs(j); });
+    if ( n == 5 ){
+      cout << arr[0]*arr[1]*arr[2]*arr[3]*arr[4] << '\n';
+      continue;
     }
-    if (m)
-      cout << '\n';
+    else if (neg){
+      continue;
+      cout << arr[n-5]*arr[n-4]*arr[n-3]*arr[n-2]*arr[n-1] << '\n';
+    }else if (pve){
+      cout << arr[0]*arr[1]*arr[2]*arr[3]*arr[4] << '\n';
+      continue;
+    }else {
+      ans = arr[0]*arr[1]*arr[2]*arr[3]*arr[4];
+      if ( ans < 0){
+        int mx = ans;
+        int temp = ans;
+        for (int i = 4; i >= 0; --i){
+          ans = temp;
+          ans /= arr[i];
+          for (size_t j = 5; j < n; j++) {
+            ans *= arr[j];
+            mx = max (ans , mx);
+            ans /= arr[j];
+          }
+        }
+          cout << mx << '\n';
+      }
+      else cout << ans << '\n';
+    }
+
+
   }
   return 0;
 }
