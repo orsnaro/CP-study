@@ -1,11 +1,12 @@
+// sorting II prob : F
 #include <bits/stdc++.h>
 // sorting II prob : J
 #define fastio                                                                 \
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(nullptr);                                                            \
   cout.tie(nullptr);
-
-using namespace std;
+#define f first
+#define s second
 using ll = long long;
 
 const int N = 1e6;
