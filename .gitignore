@@ -24,3 +24,4 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.obj
 CoachAcademy.exe
 /cmder
+!/cmder/config/user_aliases.cmd
