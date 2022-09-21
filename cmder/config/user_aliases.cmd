@@ -47,3 +47,4 @@ adda= git add --all
 upa= git push --all  
 remote= start https://github.com/orsnaro/CPP_bgnrCOMP_Study  
 com= git commit -a -m"# $*"  
+allgit= git add --all $t git commit -m "# $*" $t git push  

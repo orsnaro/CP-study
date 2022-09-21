@@ -13,7 +13,7 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.vcxproj
 *.filters
 *.user
-*.ipch
+*.ipchits
 *.suo
 *.log
 *.recipe
@@ -22,7 +22,7 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.tlog
 *.obj
 Debug/
-#comming lines just to ignore /cmder but only track user_aliases.cmd
+#comming lines just to ignore /cmder but  'track user_aliases.cmd' only
 #tried shortcuts but this only worked
 cmder/bin
 cmder/config/*
