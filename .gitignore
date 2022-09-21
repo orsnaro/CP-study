@@ -16,12 +16,11 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.ipch
 *.suo
 *.log
-/Debug
 *.recipe
 *.ilk
 *.pdb
 *.tlog
 *.obj
-CoachAcademy.exe
-/cmder
-!*/cmder/config/user_aliases.cmd
+/Debug
+!/cmder/config
+!/cmder/config/user_aliases.cmd
