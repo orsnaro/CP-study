@@ -22,6 +22,5 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.tlog
 *.obj
 Debug/
-cmder/*
-
-!*cmder/config/user_aliases.cmd
+cmder/*/*
+!cmder/config/user_aliases.cmd
