@@ -12,10 +12,7 @@ using ll = long long;
 // int arr[N];
 
 class LinkedList {
-  node *head = nullptr;
-  node *tail = nullptr;
-  int sz = 0;
-puplic:
+
   struct node {
     int val = 0;
     node *nxt;
@@ -24,7 +21,11 @@ puplic:
       nxt = nullptr;
     }
   };
+  node *head = nullptr;
+  node *tail = nullptr;
+  int sz = 0;
 
+public:
   void push_back(int v) {
     node *new_node = new node(v);
     ++sz;
@@ -41,13 +42,13 @@ puplic:
     if (head == nullptr)
     return;
     ++sz;
-    //IN END
+    // END
     
 
 
 
 
-    //IN MIDDLE
+    //MIDDLE
     node *new_node = node(v);
     new_node -> nxt = cur -> nxt;
     cur -> nxt = new_node;
