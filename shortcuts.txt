@@ -34,6 +34,12 @@ code
 ctrl +c   OR   q
 ----> terminate current operation
 
+$t
+----> seperate mutliple commands in alias
+
+$*
+---> get all parameters in alias  ( u can get only one parameter $1)
+
 command | clip   OR clip < filename.txt
 --->   copy terminal o\p or any .txt to the clipboard
 
