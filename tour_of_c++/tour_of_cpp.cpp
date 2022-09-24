@@ -2,6 +2,10 @@
 
 using namespace std;
 
+class Foo {
+
+};
+
 int main()
 {
 

@@ -7,7 +7,6 @@ using ll = long long;
 const int N = 1e6;
 
 int main() {
-
   int t; cin >> t;
   while ( t-- ){
     // int temp[100000+5] = {0};
