@@ -34,6 +34,12 @@ code
 ctrl +c   OR   q
 ----> terminate current operation
 
+$t
+----> seperate mutliple commands in alias
+
+$*
+---> get all parameters in alias  ( u can get only one parameter $1)
+
 command | clip   OR clip < filename.txt
 --->   copy terminal o\p or any .txt to the clipboard
 
@@ -133,9 +139,11 @@ CHDIR /d  drive: path
 --> will list all content -files and folders- inside current directory 
 
 'g++ filname.cpp -o filename.exe' ; .\filename.exe'
-
 --> ***POWER SHELL ONLY!*** (compile and run filname.exe in one statement)(filename.exe could be written only filename)
 --> to do same in cmd in one command use '&&' instead of ';' (.\filename --> here'\' is NOT interchangable with '/')
+
+'g++ -c filname.cpp -o filename.exe' ; .\filename.exe'
+---> '-c' to just only compile filname not link it (output file is filename.o)
 
 ====> for more cpp commands in cmd : https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
 
