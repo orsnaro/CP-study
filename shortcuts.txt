@@ -28,6 +28,9 @@ ctrl + alt + N (to build and run  using code runner in terminal <no debugging> )
 
 ################ (Cmder) ############# IMPORTANT only
 
+
+
+
 code
 --> opens vs code
 
@@ -48,6 +51,12 @@ CHDIR /d  drive: path
 
 start filename.exe (
 --> (open any exe in directory)
+
+
+dir  "\*part_of_filename*"  /s
+--> searches for ur file (for linux and cmder u can use 'find' also try find --help)
+-->The backslash tells dir to search from the root directory of the current drive.
+
 
 *Tab manipulation
 Ctrl + T : New tab dialog (maybe you want to open cmd as admin?)
