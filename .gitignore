@@ -26,7 +26,7 @@ Debug/
 #tried shortcuts but this only worked
 cmder/bin
 cmder/config/*
-cmder/opt 
+cmder/opt
 cmder/icons
 cmder/vendor
 cmder/cmder.exe
@@ -34,4 +34,3 @@ cmder/license
 cmder/Version 1.3.19.1181
 cmder/vlc-help.txt
 !cmder/config/user_aliases.cmd
-
