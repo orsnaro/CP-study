@@ -41,3 +41,5 @@ crn= g++ $* -Wall -o active $t @echo active.exe is runing . $t active.exe $t del
 in= cat input.txt  
 en=@echo $*  
 cprn=g++ CoachAcademy.cpp -o CP.exe $t @echo  CP.exe is runing .. $t CP.exe  $t del CP.exe  
+what= "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk"  
+wh= "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk"  
