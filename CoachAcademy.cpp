@@ -4,75 +4,54 @@
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
     cin.tie(nullptr);                                                          \
-    cout.tie(nullptr);4
-
+    cout.tie(nullptr);                                                         \
+    4
 
 using namespace std;
 using ll = long long;
 
 const int N = 1e6;
 int arr[N];
-typedef pair<int,int> pa;
+struct athelete {
+    int index;
+    int races[5];
+
+    bool operator<(const athelete &other) const {
+        int cnt = 0;
+        for (int i = 0; i < 5;
+             ++i) { // sorting assending .back() is best athlete ;
+            cnt += (races[i] >
+                    other.races[i]); // higher placment means bad athelete means
+                                     // goes to first when sorting
+        }
+        return cnt > 2; // if this ath is bad in 3 or more then he is bad than
+                        // (other) then this comes before
+    }
+};
 
 int main() {
     fastio;
     int t = 1;
     cin >> t;
     while (t--) {
-        priority_queue <pa, vector <pa>, greater<pa>> pq1,pq2,pq3,pq4,pq5;
-        unordered_map<int, int> cntmp;
-
         int n;
         cin >> n;
+        vector<athelete> as(n);
         for (size_t i = 0; i < n; i++) {
-            for (size_t j = 0; j < 5; j++) {
-                int tmp;
-                cin >> tmp;
-
-                if (j == 0)
-                    pq1.push({tmp, i + 1});
-                else if (j == 1)
-                    pq2.push({tmp, i + 1});
-                else if (j == 2)
-                    pq3.push({tmp, i + 1});
-                else if (j == 3)
-                    pq4.push({tmp, i + 1});
-                else if (j == 4)
-                    pq5.push({tmp, i + 1});
-            }
-        }
-
-        for (size_t i = 0; i < 5; i++) {
-            pair <int,int> tmp;
-            if (i == 0){
-                tmp = pq1.top();
-                cntmp[tmp.second] = 1;
-            }
-            else if (i == 1){
-                tmp = pq2.top();
-                cntmp[tmp.second] ++;
-            }
-            else if (i == 2){
-                tmp = pq3.top();
-                cntmp[tmp.second] ++;
-            }
-            else if (i == 3){
-                tmp = pq4.top();
-                cntmp[tmp.second] ++;
-            }
-            else if (i == 4){
-                tmp = pq5.top();
-                cntmp[tmp.second] ++;
-            }
-        }
-
-        pair<int,int> mx({-1,-1});
-        for ( auto &x : cntmp) 
-            if ( mx.second < x.second and x.second >= 3)
-                mx = x; 
-            else continue;
+            as[i].index = i + 1;
+            for (size_t k = 0; k < 5; k++) 
+                cin >> as[i].races[k];
             
-        cout << mx.first << '\n';
+        }
+        sort(as.begin(), as.end());
+        int ans = as.back().index;
+        for (size_t i = 0; i + 1 < n; i++) 
+            if ( not (as[i] < as.back())){
+                ans = -1; 
+                break;
+            }
+        cout << ans << '\n';
+
     }
     return 0;
 }
