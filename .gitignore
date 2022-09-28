@@ -25,7 +25,6 @@ Debug/
 #comming lines just to ignore /cmder but  'track user_aliases.cmd' only
 #tried shortcuts but this only worked
 cmder/bin
-cmder/config/*
 cmder/opt
 cmder/icons
 cmder/vendor
@@ -33,4 +32,5 @@ cmder/cmder.exe
 cmder/license
 cmder/Version 1.3.19.1181
 cmder/vlc-help.txt
-!cmder/config/user_aliases.cmd
+cmder/config/*
+!cmder/config/*.cmd
