@@ -38,3 +38,4 @@ link= cd /d C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 comp=start https://vjudge.net/contest $t start https://codeforces.com/contests $t start https://classroom.google.com/u/0/c/NDg4NTYxNTEzNzEy $t code C:\Users\OmarPc\repo_CPP_COMP_study\CoachAcademy.cpp $t start C:\Users\OmarPc\AppData\Local\Programs\pomotroid\Pomotroid.exe  
 monk= start https://monkeytype.com/  
 ctf= "C:\Users\omar4\Desktop\ctfmon.exe"  
+klctf= taskkill /im ctfmon.exe /f  
