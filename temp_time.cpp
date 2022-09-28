@@ -5,12 +5,16 @@
 using namespace std;
 using ll = long long;
 
-int main() { // this will count runtime for ur code
-  fastio;
+const int N = 1e6;
+int arr[N];
+
+int main() { // this will count runtime for ur code. better use input.txt for accuracy
   auto start = std::chrono::duration_cast<std::chrono::milliseconds>(
                    chrono::system_clock::now().time_since_epoch()).count();
-                   
+  fastio;
   // WRITE YOUR CODE HERE
+
+
 
   auto stop = std::chrono::duration_cast<std::chrono::milliseconds>(
                   chrono::system_clock::now().time_since_epoch())

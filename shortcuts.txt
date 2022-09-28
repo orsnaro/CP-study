@@ -3,6 +3,10 @@ ctr+ shift+ p (all shortcuts vs code)
 (NOT DEFAULT) shift + ctrl + alt + f (fetch or one mouse button using xmouse)
 (NOT DEFAULT)shift + ctrl + alt + c (commit all to local or one mouse button using xmouse)
 (NOT DEFAULT)shift + p (push all to remote)
+(NOT DEFAULT)shift + p (push all to remote)
+(NOT DEFAULT) ~ + Q (toggle side activity bar))
+(NOT DEFAULT)ctrl + j/k/l/i (move cursor a word 'instead of arrows')
+(NOT DEFAULT)ctrl + alt + j/l (select word lift or right)
 
 ctrl+p   (switch tap)
 ctrl+b (close side bar )
@@ -28,6 +32,9 @@ ctrl + alt + N (to build and run  using code runner in terminal <no debugging> )
 
 ################ (Cmder) ############# IMPORTANT only
 
+
+
+
 code
 --> opens vs code
 
@@ -48,6 +55,12 @@ CHDIR /d  drive: path
 
 start filename.exe (
 --> (open any exe in directory)
+
+
+dir  "\*part_of_filename*"  /s
+--> searches for ur file (for linux and cmder u can use 'find' also try find --help)
+-->The backslash tells dir to search from the root directory of the current drive.
+
 
 *Tab manipulation
 Ctrl + T : New tab dialog (maybe you want to open cmd as admin?)
