@@ -1,33 +1,16 @@
-// sheet : genral 2 (13)  prob: C
+// sheet : general  (13)  prob: E
 #include <bits/stdc++.h>
 
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
     cin.tie(nullptr);                                                          \
-    cout.tie(nullptr);                                                         \
-    4
+    cout.tie(nullptr);
 
 using namespace std;
 using ll = long long;
 
 const int N = 1e6;
 int arr[N];
-struct athelete {
-    int index;
-    int races[5];
-
-    bool operator<(const athelete &other) const {
-        int cnt = 0;
-        for (int i = 0; i < 5;
-             ++i) { // sorting assending .back() is best athlete ;
-            cnt += (races[i] >
-                    other.races[i]); // higher placment means bad athelete means
-                                     // goes to first when sorting
-        }
-        return cnt > 2; // if this ath is bad in 3 or more then he is bad than
-                        // (other) then this comes before
-    }
-};
 
 int main() {
     fastio;
@@ -36,22 +19,18 @@ int main() {
     while (t--) {
         int n;
         cin >> n;
-        vector<athelete> as(n);
+        ll sum = 0, ans = 0;
+        int smdtrc, equal;
         for (size_t i = 0; i < n; i++) {
-            as[i].index = i + 1;
-            for (size_t k = 0; k < 5; k++) 
-                cin >> as[i].races[k];
-            
+            int tmp;
+            cin >> tmp;
+            sum += tmp;
         }
-        sort(as.begin(), as.end());
-        int ans = as.back().index;
-        for (size_t i = 0; i + 1 < n; i++) 
-            if ( not (as[i] < as.back())){
-                ans = -1; 
-                break;
-            }
+        smdtrc = sum % n;
+        int smdtrc2 = smdtrc;
+        equal = (sum - smdtrc) / n;
+        ans = 1ll*(n - smdtrc2) * smdtrc2;
         cout << ans << '\n';
-
     }
     return 0;
 }
