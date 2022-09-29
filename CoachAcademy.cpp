@@ -15,37 +15,35 @@ int arr[N];
 int main() {
     fastio;
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--) {
-      int n; cin >> n;
-      ll  psum[n + 10] = {0};
-      multiset <int, greater<int>> mst;
-      ll sum = 0;
-      for ( int i = 0; i < n; i++){
-        int tmp; cin >> tmp;
-        sum += tmp;
-        mst.insert(tmp);
+      string s1,s2; cin >> s1 >> s2;
+      int sz1 = s1.size();
+      int sz2 = s2.size();
+      if ( s1 == s2 ){
+        cout << 0 << '\n';
+        return 0;
+      }
+      if ( sz1 == 0 or sz2 == 0){
+        cout << (sz1 != 0 ? sz1 : sz2);
+        return 0;
       }
 
-      if ( sum == 0 ){
-        cout << "NO\n";
-        continue;
-      }
-
-      psum[0] = *mst.begin();
-      auto base1_itr = mst.begin();
-      base1_itr ++;
-      auto eitr = mst.end();
-      for (int i = 1; base1_itr != eitr; ++base1_itr , ++i){
-        psum[i] = *base1_itr + psum[i - 1];
-        if( sum - psum[i] < psum[i] ){
-          if ( i + 1 < n - 1 -i)
-          cout << "YES\n";
-          else cout << "NO\n";
-
-          break;
+      int mx = max ( sz2 ,sz1);
+      int cntr =  sz1 + sz2;
+      for (size_t i = 0; i < mx; i++) {
+        if ( s1[sz1 - 1 - i] != s2[sz2 - 1 - i]  and sz1 - 1 -i > -1 and sz2 - 1 - i > -1){
+          cntr -= 2*i;
+          cout << cntr << '\n';
+          return 0;
+        }else if ( sz2 -1 - i <= -1 or sz1 - 1 - i <= -1 ){
+          sz2 > sz1 ? cntr = (sz2 -i) : cntr = (sz1 - i);
+          cout << cntr << '\n';
+          return 0 ;
         }
+        cntr -= 2;
       }
+      cout << 0 << '\n';
     }
     return 0;
 }
