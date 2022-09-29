@@ -1,4 +1,4 @@
-// sheet : general  (16)  prob: A
+// sheet : general  (16)  prob: B
 #include <bits/stdc++.h>
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
@@ -15,32 +15,37 @@ int arr[N];
 int main() {
     fastio;
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--) {
-      vector <int> v;
       int n; cin >> n;
-      int cntr = 1, prev = -1 , crnt = -1;
-      for (size_t i = 0; i < n; i++) {
+      ll  psum[n + 10] = {0};
+      multiset <int, greater<int>> mst;
+      ll sum = 0;
+      for ( int i = 0; i < n; i++){
         int tmp; cin >> tmp;
-        if ( i == 0)
-          prev = crnt = tmp;
+        sum += tmp;
+        mst.insert(tmp);
+      }
 
-        prev = crnt ;
-        crnt = tmp;
+      if ( sum == 0 ){
+        cout << "NO\n";
+        continue;
+      }
 
-        if ( tmp == 1 and i != 0 ){
-          cntr++;
-          v.push_back(prev);
-        }
+      psum[0] = *mst.begin();
+      auto base1_itr = mst.begin();
+      base1_itr ++;
+      auto eitr = mst.end();
+      for (int i = 1; base1_itr != eitr; ++base1_itr , ++i){
+        psum[i] = *base1_itr + psum[i - 1];
+        if( sum - psum[i] < psum[i] ){
+          if ( i + 1 < n - 1 -i)
+          cout << "YES\n";
+          else cout << "NO\n";
 
-        if  ( i == n -1 ){
-          v.push_back(tmp);
           break;
         }
       }
-      cout << cntr << '\n';
-      for (auto &x : v)
-        cout << x <<' ';
     }
     return 0;
 }
