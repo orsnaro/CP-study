@@ -1,4 +1,4 @@
-// sheet : 10  prob: H
+// sheet : 9  prob: I
 #include <bits/stdc++.h>
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
@@ -8,57 +8,43 @@
 #define F first
 #define S second
 using namespace std;
-using ll = long long;
+using ll = long long int;
 const int N = 1e6, M = 1e7;
-int arr[N];
-ll fact(int x) {
+// int arr[N];
+bitset<M> prime;
+void seive() {
+    prime[0] = 1; // 1 is not prime 0 is
 
-    if (x == 1)
-        return 1;
-    return x * fact(x - 1);
-}
-ll nCr(int z_cnt) {
-    if (z_cnt == 0)
-        return 1;
-
-    ll nfact = fact(z_cnt + 1);
-    ll rfact = fact(z_cnt);
-    int dnrfact = 1;
-
-    ll _ncr = nfact / (rfact * dnrfact);
-
-    return _ncr;
+    for (size_t i = 2; i <= 1200 / i; i++) {
+        if (!prime[i])
+            for (size_t j = i * i; j <= 1200; j += i)
+                prime[j] = 1;
+    }
+    return;
 }
 
 int main() {
     fastio;
     int t = 1;
     // cin >> t;
-    while (t--) {
-        bool cnt_on = 0, fnd1 = 0;
-        int cnt_0 = 0;
-        int n;
-        ll ans = 1;
-        cin >> n;
-        int tmp, prev;
-        for (size_t i = 0; i < n; i++) {
-            prev = tmp;
-            cin >> tmp;
-            if (i == 0)
-                prev = tmp;
+    string tmp;
+    seive();
+    while (true) {
+        cin >> tmp;
+        if (cin.eof()) break;
 
-            if (tmp == 1) {
-                fnd1 = 1;
-                ans *= 1ll * nCr(cnt_0);
-                cnt_0 = 0;
-            } else if (!tmp and fnd1)
-                cnt_0++;
+        int sz = tmp.size(), sum = 0;
+        for (size_t i = 0; i < sz; i++) {
+            if ((int)tmp[i] > 96)
+                sum += ((int)tmp[i] - 96);
+            else 
+                sum += ((int)tmp[i] - 38);
         }
-        if (!fnd1)
-            cout << "0\n";
+        bool is_prime = prime[sum]; // WE ASSUME 1 IS NOT PRIME SO PRIME[1] = 1;
+        if (!is_prime)
+            cout << "It is a prime word.\n";
         else
-        cout << ans << '\n';
+            cout << "It is not a prime word.\n";
     }
-
     return 0;
 }
