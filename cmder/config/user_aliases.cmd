@@ -45,3 +45,5 @@ sound= start https://soundcloud.com
 cprn=g++ CP.cpp -o CP.exe $t @echo  CP.exe is runing .. $t CP.exe  $t del CP.exe  
 spot= start https://open.spotify.com/search  
 comp=start https://vjudge.net/contest $t start https://codeforces.com/contests $t code C:\Users\OmarPc\repo_CPP_COMP_study\CP.cpp $t start C:\Users\OmarPc\AppData\Local\Programs\pomotroid\Pomotroid$t start https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg  
+ctf=  C:\Users\omar4\Desktop\ctfmon.exe  
+klctf= taskkill /im ctfmon.exe /f  
