@@ -34,7 +34,6 @@ desk= chdir /d c:\Users\OmarPc\Desktop\ $t explorer .
 games= cd /d "C:\Users\OmarPc\Documents\game fast\" $t explorer .  
 link= cd /d C:\ProgramData\Microsoft\Windows\Start Menu\Programs  
 monk= start https://monkeytype.com/  
-purgsmem="E:\programs\list maneger\ISLC v1.0.2.8\Intelligent standby list cleaner ISLC.exe"  
 bye= shutdown /s  
 crn= g++ $* -Wall -o active $t @echo active.exe is runing . $t active.exe $t del active.exe  
 in= cat input.txt  
@@ -47,3 +46,6 @@ spot= start https://open.spotify.com/search
 comp=start https://vjudge.net/contest $t start https://codeforces.com/contests $t code C:\Users\OmarPc\repo_CPP_COMP_study\CP.cpp $t start C:\Users\OmarPc\AppData\Local\Programs\pomotroid\Pomotroid$t start https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg  
 ctf=  C:\Users\omar4\Desktop\ctfmon.exe  
 klctf= taskkill /im ctfmon.exe /f  
+svid= start https://www.youtube.com/results?search_query="$*"  
+stub= start https://www.youtube.com/results?search_query="$*"  
+standmem= "E:\programs\list maneger\ISLC v1.0.2.8\Intelligent standby list cleaner ISLC.exe"  
