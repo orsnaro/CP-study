@@ -1,4 +1,4 @@
-// sheet : 9  prob: I
+// sheet : 9  prob: G
 #include <bits/stdc++.h>
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
@@ -9,42 +9,60 @@
 #define S second
 using namespace std;
 using ll = long long int;
-const int N = 1e6, M = 1e7;
-// int arr[N];
-bitset<M> prime;
-void seive() {
-    prime[0] = 1; // 1 is not prime 0 is
+const int N = 1e6 + 30, M = 1e7;
+int spf [N];
+int arr[N];
 
-    for (size_t i = 2; i <= 1200 / i; i++) {
-        if (!prime[i])
-            for (size_t j = i * i; j <= 1200; j += i)
-                prime[j] = 1;
+void seive(){
+    for (size_t i = 0; i < N; i++){
+        spf[i] = i;
+        if ( !(i & 1) )
+            spf[i] = 2;
     }
+    
+    for (size_t i = 3; i < N / i; i++){
+        if ( spf[i] == i ){
+            for (ll j = 1ll * i * i; j < N; j += i)
+                if ( spf[j] == j )
+                    spf [j] = i;
+        }
+    }
+    
     return;
+}
+
+int  do_fact( int x ){
+    fill ( arr ,arr + N ,0);
+    int mxspf = -1 ;
+    while ( x != 1){
+        mxspf = max ( mxspf , spf[x]);
+        arr[spf[x]]++;
+        x = x / spf[x];
+    }   
+
+    int cnt = 1;
+    for  (int i = 0; i <= mxspf ; ++i)
+        cnt *= (arr[i] + 1) ;
+    
+    return cnt;
 }
 
 int main() {
     fastio;
     int t = 1;
     // cin >> t;
-    string tmp;
     seive();
-    while (true) {
-        cin >> tmp;
-        if (cin.eof()) break;
-
-        int sz = tmp.size(), sum = 0;
-        for (size_t i = 0; i < sz; i++) {
-            if ((int)tmp[i] > 96)
-                sum += ((int)tmp[i] - 96);
-            else 
-                sum += ((int)tmp[i] - 38);
-        }
-        bool is_prime = prime[sum]; // WE ASSUME 1 IS NOT PRIME SO PRIME[1] = 1;
-        if (!is_prime)
-            cout << "It is a prime word.\n";
-        else
-            cout << "It is not a prime word.\n";
+    while (t--) {
+        ll sum = 0;
+        int  a,b,c; cin >> a >> b >> c;
+        for (size_t ai = 1; ai <= a; ai++)
+            for (size_t bi = 1; bi <= b; bi++)
+                for (size_t ci = 1; ci <= c; ci++){
+                    int tmp = ai * bi * ci;
+                    sum += do_fact(tmp);
+                }
+        ll ans = sum % 1073741824;
+        cout << ans << '\n';
     }
     return 0;
 }
