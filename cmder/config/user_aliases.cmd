@@ -38,13 +38,12 @@ crn= g++ $* -Wall -o active $t @echo active.exe is runing . $t active.exe $t del
 in= cat input.txt  
 en=@echo $*  
 what= "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk"  
-wh= "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk"  spot= start https://open.spotify.com/search  
 sound= start https://soundcloud.com  
 spot= start https://open.spotify.com/search  
 comp=start https://vjudge.net/contest $t start https://codeforces.com/contests $t code C:\Users\OmarPc\repo_CPP_COMP_study\CP.cpp $t start C:\Users\OmarPc\AppData\Local\Programs\pomotroid\Pomotroid$t start https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg  
 ctf=  C:\Users\omar4\Desktop\ctfmon.exe  
 klctf= taskkill /im ctfmon.exe /f  
-stub= start https://www.youtube.com/results?search_query="$*"  
 standmem= "E:\programs\list maneger\ISLC v1.0.2.8\Intelligent standby list cleaner ISLC.exe"  
 cprn=g++ CP.cpp -o CP.exe $t @echo  CP.exe is running .. $t CP.exe  $t del CP.exe  
 log= git log --all --graph --decorate  
+stube=start https://www.youtube.com/results?search_query=$*  
