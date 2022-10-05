@@ -84,9 +84,15 @@ Shift + Mouse : Select and copy text from buffer
 create-shortcut "source path" "destination path"
 --> create a shortcut (must apend destination path with "ShortcutName.lnk")
 
+git checkout   "something"
+
+--> move head (ure current snapshot) to older snapshot of ur dir 
+--> or move head to another local branch
+
 all important commands r here :
 https://dev.classmethod.jp/articles/git-bash-commands/
-
+https://www.youtube.com/watch?v=2sjqTHE0zok
+https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAKWClAD_iKpNC0bGHxGhcx
 
 
 ################ (CMD & power shell) ############# IMPORTANT only
