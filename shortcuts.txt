@@ -60,7 +60,9 @@ start filename.exe (
 dir  "\*part_of_filename*"  /s
 --> searches for ur file (for linux and cmder u can use 'find' also try find --help)
 -->The backslash tells dir to search from the root directory of the current drive.
-
+--> to search for a dit not a file use:
+ dir "\*part_of_dir_name*" /AD /S 
+--> /A- Displays files with specified attributes. D-May the attribute be Directories
 
 *Tab manipulation
 Ctrl + T : New tab dialog (maybe you want to open cmd as admin?)
@@ -84,7 +86,7 @@ Shift + Mouse : Select and copy text from buffer
 create-shortcut "source path" "destination path"
 --> create a shortcut (must apend destination path with "ShortcutName.lnk")
 
-git checkout   "something"
+git checkout   "hash or branch name"
 
 --> move head (ure current snapshot) to older snapshot of ur dir 
 --> or move head to another local branch
