@@ -18,10 +18,8 @@ ps=powershell
 cmderr=cd /d "%CMDER_ROOT%"
 hdd=cd /d E:  
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
-origin=cd /d C:\Users\OmarPc\repo_CPP_COMP_study  
 adda= git add --all  
 upa= git push --all  
-remote= start https://github.com/orsnaro/CPP_bgnrCOMP_Study  
 allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 com= git commit -m"# $*"  
@@ -47,3 +45,5 @@ standmem= "E:\programs\list maneger\ISLC v1.0.2.8\Intelligent standby list clean
 cprn=g++ CP.cpp -o CP.exe $t @echo  CP.exe is running .. $t CP.exe  $t del CP.exe  
 log= git log --all --graph --decorate  
 stube=start https://www.youtube.com/results?search_query=$*  
+cporg=cd /d C:\Users\OmarPc\repo_CPP_COMP_study  
+cpremote=start https://github.com/orsnaro/CPP_bgnrCOMP_Study  
