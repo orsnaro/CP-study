@@ -47,3 +47,4 @@ klctf= taskkill /im ctfmon.exe /f
 stub= start https://www.youtube.com/results?search_query="$*"  
 standmem= "E:\programs\list maneger\ISLC v1.0.2.8\Intelligent standby list cleaner ISLC.exe"  
 cprn=g++ CP.cpp -o CP.exe $t @echo  CP.exe is running .. $t CP.exe  $t del CP.exe  
+log= git log --all --graph --decorate  
