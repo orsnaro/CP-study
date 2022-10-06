@@ -91,6 +91,14 @@ git checkout   "hash or branch name"
 --> move head (ure current snapshot) to older snapshot of ur dir 
 --> or move head to another local branch
 
+
+git rebase -i head~(number of commits before current that you want to delete)
+--> will open an editor jsut put 'd' before any commit u want to delete
+--> after that save and close editor 
+git push -f to update the commit histroy 
+-- > all commits u done 'd' before them gone for ever !
+
+
 all important commands r here :
 https://dev.classmethod.jp/articles/git-bash-commands/
 https://www.youtube.com/watch?v=2sjqTHE0zok

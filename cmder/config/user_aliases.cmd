@@ -22,7 +22,6 @@ adda= git add --all
 upa= git push --all  
 allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
-com= git commit -m"# $*"  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
 fb= start https://www.facebook.com/  
@@ -48,4 +47,6 @@ stube=start https://www.youtube.com/results?search_query=$*
 cporg=cd /d C:\Users\OmarPc\repo_CPP_COMP_study  
 cpremote=start https://github.com/orsnaro/CPP_bgnrCOMP_Study  
 remote2= start https://github.com/orsnaro/CRAFTING_INTERPRETERS_study  
-origin2= cd /d C:\Users\OmarPc\repo_CRAFTING_INTERPRETERS_study  
+com=git commit -m"# $*"  
+org2= cd c:\Users\OmarPc\repo_CRAFTING_INTERPRETERS_study\  
+chk=git checkout $*  
