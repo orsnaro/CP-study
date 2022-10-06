@@ -1,4 +1,4 @@
-// sheet : 9  prob: E
+// sheet : 9  prob: j
 #include <bits/stdc++.h>
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
@@ -9,37 +9,33 @@
 #define S second
 using namespace std;
 using ll = long long int;
-const int N = 1e8 + 3, M = 1e7;
-bool prime[N];
-void seive(){
-    prime[0] = prime[1] = 1; 
-
-    
-    for (int i = 2; i <= N / i; ++i)
-        if (!prime[i]){
-            for ( ll j = 1ll * i * i; j <= N; j += i )
-                prime[j] = 1; 
-        }else continue;
-
-    return;           
-}
+const int N = 1e6, M = 1e8, mod = 1e9 + 7;
+// int arr[N];
+int pfreq[N];
 
 int main() {
     fastio;
     int t = 1;
     // cin >> t;
-    seive();
     while (t--) {
-        int cnt = 0; 
-        for (int i = 2; i < N; i++){
-            if (prime[i])
-                continue;
-            
-            ++cnt;
-            if ( cnt % 100 == 1)
-                cout << i << '\n';
+        int n;
+        cin >> n;
+        int ans = 1;
+        for (size_t i = 1; i <= n; i++) {
+            int tmp = i;
+            for (int j = 2; j <= n / j; ++j)
+                while (tmp % j == 0) {
+                    tmp /= j;
+                    pfreq[j]++;
+                }
+            if (tmp > 1)
+                pfreq[tmp]++;
         }
-        
+
+        for (size_t i = 2; i <= n; i++)
+            ans = (ans * 1ll * (pfreq[i] + 1)) % mod;
+
+        cout << ans << '\n';
     }
     return 0;
 }
