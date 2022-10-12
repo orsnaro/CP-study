@@ -1,4 +1,4 @@
-// sheet : sort 1  prob: C
+// sheet : sort 1  prob: G
 #include <bits/stdc++.h>
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
@@ -19,22 +19,23 @@ int main() {
     while (t--) {
         int n;
         cin >> n;
-        multiset<int> mst;
+        vector<pair<int, int>> v;
         for (size_t i = 0; i < n; i++) {
-            int tmp;
-            cin >> tmp;
-            mst.insert(tmp);
+            pair<int, int> tmp;
+            cin >> tmp.F >> tmp.S;
+            v.push_back({tmp.F, tmp.S});
         }
-
-        int mx = *(--mst.end());
-        int mn = *mst.begin();
-        auto eitr = --mst.end();
-        auto bitr = ++mst.begin();
-        cout << mx << ' ';
-        for (; bitr != eitr; bitr++) 
-            cout << *bitr << ' ';
-        
-        cout << mn << ' ';
+        sort(v.begin(), v.end());
+        int ans = -1;
+        for (size_t i = 0; i < n; i++) {
+            int a ,b ;
+            tie ( a , b) = v[i]; // put a in v.F  b in v.S;
+            if ( ans <= b)
+                ans = b;
+            else 
+                ans = a;
+        }
+        cout << ans << '\n';
     }
     return 0;
 }
