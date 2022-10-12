@@ -10,30 +10,43 @@
 using namespace std;
 using ll = long long int;
 const int N = 1e6 + 5, M = 1e8;
-int arr[N];
+// int arr[N];
 
 int main() {
     fastio;
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--) {
-        int n;
-        cin >> n;
-        vector<pair<int, int>> v;
-        for (size_t i = 0; i < n; i++) {
-            pair<int, int> tmp;
-            cin >> tmp.F >> tmp.S;
-            v.push_back({tmp.F, tmp.S});
+        int n, k;
+        cin >> n >> k;
+        deque<int> a;
+        deque<int> b;
+        for (int i = 0; i < n; ++i){
+            int tmp; cin >> tmp;
+            a.push_back(tmp);
         }
-        sort(v.begin(), v.end());
-        int ans = -1;
-        for (size_t i = 0; i < n; i++) {
-            int a ,b ;
-            tie ( a , b) = v[i]; // put a in v.F  b in v.S;
-            if ( ans <= b)
-                ans = b;
-            else 
-                ans = a;
+        for (int i = 0; i < k; ++i){
+            int tmp; cin >> tmp;
+            b.push_back(tmp);
+        }
+
+        sort(a.begin(), a.end());   // from smallest
+        sort(b.rbegin(), b.rend()); // from biggest
+
+        ll ans = 0;
+        while (!b.empty() and b.back() == 1) {
+            ans += 2ll * a.back();
+            a.pop_back();
+            b.pop_back();
+        }
+        for (size_t i = 0; i < b.size(); i++) {
+            ans += a.back();
+            a.pop_back();
+            ans += a.front();
+            a.pop_front();
+
+            for (int j = 0; j < b[i] - 2; j++)
+                a.pop_front();
         }
         cout << ans << '\n';
     }
