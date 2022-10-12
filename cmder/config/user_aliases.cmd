@@ -43,10 +43,11 @@ klctf= taskkill /im ctfmon.exe /f
 standmem= "E:\programs\list maneger\ISLC v1.0.2.8\Intelligent standby list cleaner ISLC.exe"  
 cprn=g++ CP.cpp -o CP.exe $t @echo  CP.exe is running .. $t CP.exe  $t del CP.exe  
 log= git log --all --graph --decorate  
-stube=start https://www.youtube.com/results?search_query=$*  
 cporg=cd /d C:\Users\OmarPc\repo_CPP_COMP_study  
 cpremote=start https://github.com/orsnaro/CPP_bgnrCOMP_Study  
 remote2= start https://github.com/orsnaro/CRAFTING_INTERPRETERS_study  
 com=git commit -m"# $*"  
 org2= cd c:\Users\OmarPc\repo_CRAFTING_INTERPRETERS_study\  
 chk=git checkout $*  
+stube=start https://www.youtube.com/results?search_query="$*"  
+hdl=start C:\Aldec\Active-HDL-Student-Edition\BIN\avhdl.exe  
