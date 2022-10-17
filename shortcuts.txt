@@ -46,6 +46,9 @@ $t
 
 $*
 ---> get all parameters in alias  ( u can get only one parameter $1)
+-->OR u can use up to 10 parameters in terminl from $1 to $9
+--> SOME TERMINALS CAN ACCEPT MORE USING ${NUM OF PARAMS}
+
 
 command | clip   OR clip < filename.txt
 --->   copy terminal o\p or any .txt to the clipboard
