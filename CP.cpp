@@ -1,4 +1,3 @@
-// problem link : Codeforces Round #827 (Div. 4) : e
 #include <bits/stdc++.h>
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
@@ -13,10 +12,11 @@ const int N = 1e6, M = 1e8;
 ll arr[N];
 
 int main() {
-    // fastio;
+    fastio;
     int t = 1;
     cin >> t;
     while (t--) {
+        
     }
     return 0;
 }
