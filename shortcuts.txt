@@ -30,7 +30,7 @@ ctrl + alt + N (to build and run  using code runner in terminal <no debugging> )
 
 
 
-################ (Cmder) ############# IMPORTANT only
+################ (Cmder ( bash + CMD + powershell) ############# IMPORTANT only
 
 
 
@@ -67,6 +67,11 @@ dir  "\*part_of_filename*"  /s
  dir "\*part_of_dir_name*" /AD /S 
 --> /A- Displays files with specified attributes. D-May the attribute be Directories
 
+xxd filename.extention 
+--> to memory view the file in hexadecimal dump (for bash only + cmder)
+xxd filename.extention | vim - 
+--> same as previous put to open it inside vim
+
 *Tab manipulation
 Ctrl + T : New tab dialog (maybe you want to open cmd as admin?)
 Ctrl + W : Close tab
@@ -84,7 +89,7 @@ Ctrl + R : History search
 Shift + Mouse : Select and copy text from buffer
 
 
-################ (Git bash) ############# IMPORTANT only
+################ (Git) ############# IMPORTANT only
 
 create-shortcut "source path" "destination path"
 --> create a shortcut (must apend destination path with "ShortcutName.lnk")
@@ -225,23 +230,6 @@ very usefull explanation for c functions at : https://www.ibm.com/support/knowle
 'ctrl+f' find and replace (ATOM)
 
 ======> more ATOM  shortcuts https://github.com/nwinkler/atom-keyboard-shortcuts
-
-################GIT#############IMPORTANT only
-
-ΓÇªor create a new repository on the command line
-echo "# study_compatitive_oop_cpp" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/orsnaro/study_compatitive_oop_cpp.git
-git push -u origin main
-ΓÇªor push an existing repository from the command line
-git remote add origin https://github.com/orsnaro/study_compatitive_oop_cpp.git
-git branch -M main
-git push -u origin main
-
-=====>for more: https://dev.classmethod.jp/articles/git-bash-commands/
 
 ################ECLIPSE#############IMPORTANT only
 
