@@ -1,4 +1,4 @@
-// PROB : https://codeforces.com/contest/670/problem/D1
+// PROB :https://codeforces.com/problemset/problem/372/A
 #include <bits/stdc++.h>
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
@@ -10,48 +10,33 @@
 using namespace std;
 using ll = long long int;
 const int N = 1e5, M = 1e8;
-int arr[N], arrb[N];
-
-bool is_valid(int x, int k , int n) {
-    ll tmp = k;
-    for (int i = 0; i < n; i++) {
-        ll need = 1ll * arr[i] * x;
-        if (need > arrb[i]) {
-            tmp -= (1ll * need - arrb[i]);
-        }
-        if (tmp < 0)
-            return false;
-    }
-        return true;
-}
-
+int arr[N];
+vector<int> v;
 int main() {
     fastio;
     int t = 1;
     // cin >> t;
     while (t--) {
-        int n, k;
-        cin >> n >> k;
-
-        for (size_t i = 0; i < n; i++) {
-            cin >> arr[i];
-        }
-        for (size_t i = 0; i < n; i++) {
-            cin >> arrb[i];
+        int n, t;
+        cin >> n >> t;
+        for (int i = 0; i < n; ++i) {
+            int tmp; cin >> tmp;
+            v.push_back(tmp);
         }
 
-        int ans = 0;
-        int l = 1, h = 2e9 + 1; // 'l' will store low bound and ans also
-        while (l <= h) {         // binary search on max answer
-            int md = (1ll * l + h) / 2 ;
-            if (is_valid(md, k, n)){
-                ans = md;
-                l = md + 1;
+        int cnt = 0 , j = 0 ,sum = 0;
+        for ( int i = 0; i < n; ++i){
+            sum += v[i];
+            if ( sum <= t )
+                cnt ++;
+            else{
+                sum -= v[j];
+                j++;
             }
-            else
-                h = md - 1;
-        }
-        cout << ans << '\n';
+        
+        } 
+        cout << cnt << '\n';
+
     }
     return 0;
 }
