@@ -24,6 +24,7 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 Debug/
 #comming lines just to ignore /cmder but  'track user_aliases.cmd' only
 #tried shortcuts but this only worked
+tempCodeRunnerFile.java
 cmder/bin
 cmder/opt
 cmder/icons
