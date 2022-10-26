@@ -1201,3 +1201,4 @@ tele=  "C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe"
 stube=start https://www.youtube.com/results?search_query=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t start  https://codeforces.com/contests $t code cp.cpp $t start  C:\Users\OmarPc\AppData\Local\Programs\pomotroid\Pomotroid $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t calc  
 crn=g++ "$*cpp" -Wall -Wextra -g -o active $t @echo active.exe is runing .. $t active.exe $t del active.exe  
+py=python -u $*  
