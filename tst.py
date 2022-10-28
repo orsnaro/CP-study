@@ -1,4 +1,4 @@
-
+#prob link : https://www.hackerrank.com/challenges/the-minion-game/problem?isFullScreen=false
 def minion_game(string):
     strsz = len(string)
     vowls = ['I', 'O', 'U', 'A', 'E']
