@@ -1,4 +1,4 @@
-#prob link : https://www.hackerrank.com/challenges/the-minion-game/problem?isFullScreen=false
+# prob link : https://www.hackerrank.com/challenges/the-minion-game/problem?isFullScreen=false
 def minion_game(string):
     strsz = len(string)
     vowls = ['I', 'O', 'U', 'A', 'E']
@@ -9,9 +9,9 @@ def minion_game(string):
     for i in range(0, strsz, 1):
         is_vowl = False
         if vowls.count(string[i]) == 1:
-            Kevin += strsz -i
+            Kevin += strsz - i
         else:
-            Stuart += strsz - i 
+            Stuart += strsz - i
 
     # print (allsubs) , print ( len(allsubs))
     if Kevin > Stuart:
