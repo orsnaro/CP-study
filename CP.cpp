@@ -1,4 +1,4 @@
-// PROB :
+// prob:  
 #include <bits/stdc++.h>
 #define fastio                                                                 \
     ios_base::sync_with_stdio(false);                                          \
@@ -8,8 +8,8 @@
 #define F first
 #define S second
 using namespace std;
-using ll = long long int;
-const int N = 1e5, M = 1e8;
+using ll = long long;
+const int N = 1e6, M = 1e8;
 // int arr[N];
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
     int t = 1;
     // cin >> t;
     while (t--) {
-
+     
     }
     return 0;
 }
