@@ -1203,3 +1203,4 @@ comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t start  https://codeforces.com/
 crn=g++ "$*cpp" -Wall -Wextra -g -o active $t @echo active.exe is runing .. $t active.exe $t del active.exe  
 py=python -u $*.py  
 hddf=cd /d F:gamesF  
+cpp=g++ "$*cpp" -Wall -Wextra -g -o active $t @echo active.exe is runing .. $t active.exe $t del active.exe  

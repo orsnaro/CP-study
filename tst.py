@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def print_rangoli(size):
 	# a = 97  z = 122
 	# 27 + x = 122 -- > x = 95  shift value
@@ -38,3 +39,15 @@ def print_rangoli(size):
 if __name__ == '__main__':
 	n = int(input())
 	print_rangoli(n)
+=======
+
+
+# prob link :
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+numpy.set_printoptions(legacy='1.13')
+
+n,m = [input(x) for x in input().split()]
+print (numpy.eye(int(n),int(m),k = 0))
+
+>>>>>>> d8a465884fe518b527b8191a259c866bf19a4ea6
