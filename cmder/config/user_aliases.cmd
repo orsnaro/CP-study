@@ -1206,3 +1206,5 @@ cpp=g++ $* -Wall -Wextra -g -o active $t @echo active.exe is runing .. $t active
 bmpremote= start https://github.com/orsnaro/Static_chroma_bmp  
 bmporg= cd c:\users\omarpc\repo_chroma_bmp_proj\  
 interporg=cd c:\Users\OmarPc\repo_CRAFTING_INTERPRETERS_study\  
+msporg= cd c:\Users\OmarPc\repo_MSP_ML_study  
+cpprn=g++ "$*.cpp" -Wall -Wextra -g -o active $t @echo active.exe is runing .. $t active.exe $t del active.exe  
