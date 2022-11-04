@@ -20,7 +20,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -70,7 +69,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -120,7 +118,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -170,7 +167,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -220,7 +216,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -270,7 +265,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -320,7 +314,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -370,7 +363,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -420,7 +412,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -470,7 +461,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -520,7 +510,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -570,7 +559,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -620,7 +608,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -670,7 +657,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -720,7 +706,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -770,7 +755,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -820,7 +804,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -870,7 +853,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -920,7 +902,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -970,7 +951,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -1020,7 +1000,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -1070,7 +1049,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -1120,7 +1098,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -1170,7 +1147,6 @@ hdd=cd /d E:
 shorts=start C:\Users\OmarPc\repo_CPP_COMP_study\shortcuts.txt  
 adda= git add --all  
 upa= git push --all  
-allgit= git add --all $t git commit -m "# $*" $t git push  
 g= git $*  
 gl=git log --oneline --all --graph --decorate  $*cexe= g++ $1 -Wall -o active $t active.exe  
 a= alias $*  
@@ -1208,3 +1184,6 @@ bmporg= cd c:\users\omarpc\repo_chroma_bmp_proj\
 interporg=cd c:\Users\OmarPc\repo_CRAFTING_INTERPRETERS_study\  
 msporg= cd c:\Users\OmarPc\repo_MSP_ML_study  
 cpprn=g++ "$*.cpp" -Wall -Wextra -g -o active $t @echo active.exe is runing .. $t active.exe $t del active.exe  
+team=C:\Users\OmarPc\AppData\Local\Microsoft\Teams\Update.exe --processStart "Teams.exe"  
+allgit=git add --all $t git commit -m "# $*" $t git push  
+allgitall=cd c:\Users\OmarPc\repo_MSP_ML_study $t git add --all $t git commit -m "# $*" $t git push $t cd c:\Users\OmarPc\repo_CPP_COMP_study $t git add --all $t git commit -m "# $*" $t git push $t cd c:\Users\OmarPc\repo_CHROMA_BMP_proj allgit=git add --all $t git commit -m "# $*" $t git push  
