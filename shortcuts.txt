@@ -59,6 +59,9 @@ CHDIR /d  drive: path
 start filename.exe (
 --> (open any exe in directory)
 
+ctrl + r 
+--> reverse search command histroy ( if ur wanted command is before found one just PRESS ctr + r again until u found it )
+ 
 
 dir  "\*part_of_filename*"  /s
 --> searches for ur file (for linux and cmder u can use 'find' also try find --help)
