@@ -110,6 +110,18 @@ git rebase -i head~(number of commits before current that you want to delete)
 --> will open an editor jsut put 'd' before any commit u want to delete
 --> after that save and close editor 
 
+git branch -vv 
+--> to view all current branches data
+
+git reflog
+--> view some important data on your head and branches changes 
+
+git branch -b ur_local_branch_name
+--> to make new local branch in your local repo (copying all from current branch as default)
+
+git push -u  ur_local_branch_name
+--> to make new remote branch for your new local branch
+
 git push -f to final update the commit histroy at remote  
 -- > all commits u done 'd' before them gone for ever !
 
