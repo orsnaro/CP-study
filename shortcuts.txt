@@ -110,13 +110,16 @@ git rebase -i head~(number of commits before current that you want to delete)
 git push -f to final update the commit histroy at remote  
 -- > all commits u done 'd' before them gone for ever !
 
+--> to copy already made local repo to already made remote repo please use either gh commands or github desktop
+--> PLEASE DONT MAKE LOCAL AND REMOTE BRANCHES WITH DIFF NAMES PLEASE!! 
+.....THIS IS NOT GIT DEFAULT AND CAUSESE MAMY HEADEACHES LATER ON IF U MANAGED TO DO IT IN FIRST PLACE
 
 all important commands r here :
 https://dev.classmethod.jp/articles/git-bash-commands/
 https://www.youtube.com/watch?v=2sjqTHE0zok
 https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAKWClAD_iKpNC0bGHxGhcx
-
-
+https://www.atlassian.com/git/tutorials/using-branches/git-checkout#:~:text=New%20Branches&text=The%20git%20branch%20command%20can,to%20switch%20to%20that%20branch.
+https://www.w3docs.com/snippets/git.html
 ################ (CMD & power shell) ############# IMPORTANT only
 
 help <ur command> 
