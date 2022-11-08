@@ -1187,3 +1187,4 @@ cpprn=g++ "$*.cpp" -Wall -Wextra -g -o active $t @echo active.exe is runing .. $
 team=C:\Users\OmarPc\AppData\Local\Microsoft\Teams\Update.exe --processStart "Teams.exe"  
 allgit=git add --all $t git commit -m "# $*" $t git push  
 allgitall=cd c:\Users\OmarPc\repo_MSP_ML_study $t git add --all $t git commit -m "# $*" $t git push $t cd c:\Users\OmarPc\repo_CPP_COMP_study $t git add --all $t git commit -m "# $*" $t git push $t cd c:\Users\OmarPc\repo_CHROMA_BMP_proj $t git add --all $t git commit -m "# $*" $t git push  
+mspremote= start https://github.com/orsnaro/MSP-MachineLearning-tasks  
