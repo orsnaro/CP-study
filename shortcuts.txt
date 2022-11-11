@@ -135,6 +135,9 @@ https://www.youtube.com/watch?v=2sjqTHE0zok
 https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAKWClAD_iKpNC0bGHxGhcx
 https://www.atlassian.com/git/tutorials/using-branches/git-checkout#:~:text=New%20Branches&text=The%20git%20branch%20command%20can,to%20switch%20to%20that%20branch.
 https://www.w3docs.com/snippets/git.html
+
+
+
 ################ (CMD & power shell) ############# IMPORTANT only
 
 help <ur command> 
@@ -205,6 +208,9 @@ CHDIR /d  drive: path
 ---> '-c' to just only compile filname not link it (output file is filename.o)
 
 ====> for more cpp commands in cmd : https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
+
+for /l %x in (1, 1, 100) do echo %x
+--> for loop that works in cmer for more type for /?
 
 'notepad'
 --> open standard notepad
