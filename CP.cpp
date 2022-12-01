@@ -14,10 +14,10 @@ const int N = 1e6, M = 1e8;
 
 int main() {
     fastio;
-    int t = 1;
+    int t = 100;
     // cin >> t;
     while (t--) {
-     
+        cout << "omar";
     }
     return 0;
 }
