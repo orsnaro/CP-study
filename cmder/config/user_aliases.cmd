@@ -1120,3 +1120,5 @@ allgitall=cd c:\Users\%USERNAME%\repo_MSP_ML_study $t git add --all $t git commi
 comp=cd /d c:\users\%USERNAME%\repo_CPP_COMP_study $t start  https://codeforces.com/contests $t code cp.cpp $t start  C:\Users\%USERNAME%\AppData\Local\Programs\pomotroid\Pomotroid $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t calcshift+ctrl+/ (jmp to matching bracket  
 py=python -u $*.py  
 jptopdf= jupyter-nbconvert --to pdfviahtml $*  
+jp= jupyter-lab  
+jpn= jupyter notebook  
