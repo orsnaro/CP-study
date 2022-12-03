@@ -1122,3 +1122,4 @@ py=python -u $*.py
 jptopdf= jupyter-nbconvert --to pdfviahtml $*  
 jp= jupyter-lab  
 jpn= jupyter notebook  
+allcode= E:\omar-work\all_loc_repo_vscode_workspace.code-workspace  
