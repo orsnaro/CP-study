@@ -8,6 +8,7 @@ ctr+ shift+ p (all shortcuts vs code)
 (NOT DEFAULT)ctrl + j/k/l/i (move cursor a word 'instead of arrows')
 (NOT DEFAULT)ctrl + alt + j/l (select word lift or right)
 
+ctrl + k + release ctrl + o (separate vs code in totally diff windows)
 ctrl+p   (switch tap)
 ctrl+b (close side bar )
 alt+`  (close terminal side)
