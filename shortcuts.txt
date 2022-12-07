@@ -67,7 +67,7 @@ ctrl + r
 dir  "\*part_of_filename*"  /s
 --> searches for ur file (for linux and cmder u can use 'find' also try find --help)
 -->The backslash tells dir to search from the root directory of the current drive.
---> to search for a dit not a file use:
+--> to search for a dir not a file use:
  dir "\*part_of_dir_name*" /AD /S 
 --> /A- Displays files with specified attributes. D-May the attribute be Directories
 
