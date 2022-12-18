@@ -1123,3 +1123,4 @@ allcode= E:\omar-work\all_loc_repo_vscode_workspace.code-workspace
 bmporg= cd /d C:\Users\%USERNAME%\repo_CHROMA_BMP_proj  
 msporg=cd /d C:\Users\%USERNAME%\repo_MSP_ML_study  
 interporg=cd /d C:\Users\%USERNAME%\repo_CRAFTING_INTERPRETERS_study  
+tree= tree /f  
