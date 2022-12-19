@@ -1124,3 +1124,5 @@ bmporg= cd /d C:\Users\%USERNAME%\repo_CHROMA_BMP_proj
 msporg=cd /d C:\Users\%USERNAME%\repo_MSP_ML_study  
 interporg=cd /d C:\Users\%USERNAME%\repo_CRAFTING_INTERPRETERS_study  
 tree= tree /f  
+hex=xxd -c 16 $*  
+chex=xxd -c 16 -i $*  
