@@ -1,4 +1,4 @@
-################VS code#############IMPORTANT only
+g ################VS code#############IMPORTANT only
 ctr+ shift+ p (all shortcuts vs code)
 (NOT DEFAULT) shift + ctrl + alt + f (fetch or one mouse button using xmouse)
 (NOT DEFAULT)shift + ctrl + alt + c (commit all to local or one mouse button using xmouse)
@@ -8,7 +8,7 @@ ctr+ shift+ p (all shortcuts vs code)
 (NOT DEFAULT)ctrl + j/k/l/i (move cursor a word 'instead of arrows')
 (NOT DEFAULT)ctrl + alt + j/l (select word lift or right)
 
-ctrl + k + release ctrl + o (separate vs code in totally diff windows)
+ctrl + k + release + o (separate vs code in totally diff windows)
 ctrl+ tab   (switch between "active" tabs)
 alt + left/right (navigate between active tabs)
 ctrl+b (close side bar )
