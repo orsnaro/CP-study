@@ -21,7 +21,12 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.pdb
 *.tlog
 *.obj
+
+#dirs
 Debug/
+.ipynb_checkpoints/
+
+
 #comming lines just to ignore /cmder but  'track user_aliases.cmd' only
 #tried shortcuts but this only worked
 tempCodeRunnerFile.java
