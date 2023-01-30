@@ -7,6 +7,7 @@ ctr+ shift+ p (all shortcuts vs code)
 (NOT DEFAULT) ~ + Q (toggle side activity bar))
 (NOT DEFAULT)ctrl + j/k/l/i (move cursor a word 'instead of arrows')
 (NOT DEFAULT)ctrl + alt + j/l (select word lift or right)
+(NOT DEFAULT) Alt + T (toggle whitespaces render) 
 
 ctrl + k + release + o (separate vs code in totally diff windows)
 ctrl+ tab   (switch between "active" tabs)
