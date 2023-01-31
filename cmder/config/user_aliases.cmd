@@ -1126,3 +1126,4 @@ interporg=cd /d C:\Users\%USERNAME%\repo_CRAFTING_INTERPRETERS_study
 tree= tree /f  
 hex=xxd -c 16 $*  
 chex=xxd -c 16 -i $*  
+cpplng= clang++ -Wall  $* -o active.exe $t active.exe $t rm active.exe  
