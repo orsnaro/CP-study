@@ -13,7 +13,7 @@ ctrl + k + release + o (separate vs code in totally diff windows)
 ctrl+ tab   (switch between "active" tabs)
 alt + left/right (navigate between active tabs)
 ctrl+b (close side bar )
-alt+`  (close terminal side)
+win+`  (close terminal side)
 ctrl + g (go to line X)
 ctrl + 0 ( go outside bracket)
 

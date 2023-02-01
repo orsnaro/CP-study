@@ -1055,7 +1055,6 @@ chk=git checkout $*
 bye=git push $t shutdown /s  
 tele=  "C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe"  
 stube=start https://www.youtube.com/results?search_query=$1+$2+$3+$4+$5+$6+$7+$8+$9  
-cpp=g++ $* -Wall -Wextra -g -o active $t @echo active.exe is runing .. $t active.exe $t del active.exe  
 bmpremote= start https://github.com/orsnaro/Static_chroma_bmp  
 allgit=git add --all $t git commit -m "# $*" $t git push  
 mspremote= start https://github.com/orsnaro/MSP-MachineLearning-tasks  
@@ -1076,4 +1075,5 @@ tree= tree /f
 hex=xxd -c 16 $*  
 chex=xxd -c 16 -i $*  
 gl=git log --oneline --all --graph --decorate  
-cpplng= clang++ -Wall -Wextra $* -g -o active.exe $t active.exe $t rm active.exe  
+cpp= g++ $* -Wall -Wextra -g -o active $t C:\Users\OmarPc\repo_CPP_COMP_study\cmder\config\check_file_exist.bat  
+cpplng=clang++ $* -Wall -Wextra -g -o active $t C:\Users\OmarPc\repo_CPP_COMP_study\cmder\config\check_file_exist.bat  
