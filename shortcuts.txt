@@ -46,6 +46,9 @@ ctrl + alt + N (to build and run  using code runner in terminal <no debugging> )
 code
 --> opens vs code
 
+code .
+--> open all current dir on vs code as current workspace
+
 ctrl +c   OR   q
 ----> terminate current operation
 
