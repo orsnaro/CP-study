@@ -55,6 +55,11 @@ ctrl +c   OR   q
 $t
 ----> seperate mutliple commands in alias
 
+ $b
+ --> used when making alias that has '|' pipe char in it  replace the pipe wiht $back
+ (also $t is used to to multiple commands in alias, replaces '&&' or ';'  )
+
+
 $*
 ---> get all parameters in alias  ( u can get only one parameter $1)
 -->OR u can use up to 10 parameters in terminl from $1 to $9
@@ -85,6 +90,12 @@ xxd filename.extention
 --> to memory view the file in hexadecimal dump (for bash only + cmder)
 xxd filename.extention | vim - 
 --> same as previous put to open it inside vim
+
+ tasklist | grep *your running process name*
+ --> this will only search and echo the runing tasks that has same name if there is any
+ --> (user defined alias for tasklist command is 'tsk' or 'task'
+ 
+
 
 *Tab manipulation
 Ctrl + T : New tab dialog (maybe you want to open cmd as admin?)

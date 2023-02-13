@@ -1077,3 +1077,5 @@ chex=xxd -c 16 -i $*
 gl=git log --oneline --all --graph --decorate  
 cpp= g++ $* -Wall -Wextra -g -o active $t C:\Users\OmarPc\repo_CPP_COMP_study\cmder\config\check_file_exist.bat  
 cpplng=clang++ $* -Wall -Wextra -g -o active $t C:\Users\OmarPc\repo_CPP_COMP_study\cmder\config\check_file_exist.bat  
+tsk=tasklist  
+find= tasklist $b grep $*  
