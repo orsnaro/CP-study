@@ -95,6 +95,8 @@ xxd filename.extention | vim -
  --> this will only search and echo the runing tasks that has same name if there is any
  --> (user defined alias for tasklist command is 'tsk' or 'task'
  
+ taskkill /im runing_task_name 
+--> kill task using image name (omit /im to kill task by process number PID) 
 
 
 *Tab manipulation
