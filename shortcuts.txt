@@ -315,4 +315,14 @@ ctrl+# = commit
 ctr+shift+l= shortcut menu
 
 
+
+
+
+  ################Jupyter in vs code #############IMPORTANT only
   
+  ```c++
+  
+    YOUR BLOCK OF CODE 
+    
+  ```
+  ---> to write any block of code  in jupyter markdown of any language just replace C++ with your language

@@ -1079,3 +1079,4 @@ cpp= g++ $* -Wall -Wextra -g -o active $t C:\Users\OmarPc\repo_CPP_COMP_study\cm
 cpplng=clang++ $* -Wall -Wextra -g -o active $t C:\Users\OmarPc\repo_CPP_COMP_study\cmder\config\check_file_exist.bat  
 tsk=tasklist  
 find= tasklist $b grep $*  
+jptohtml= jupyter nbconvert $*  --to html  --template classic  
