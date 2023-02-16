@@ -78,6 +78,12 @@ start filename.exe (
 ctrl + r 
 --> reverse search command histroy ( if ur wanted command is before found one just PRESS ctr + r again until u found it )
  
+ 
+winget list 
+--> list all installed programs versions and if there is newer available version for upgrade
+
+winget upgrade --all 
+--> update all programs installed 
 
 dir  "\*part_of_filename*"  /s
 --> searches for ur file (for linux and cmder u can use 'find' also try find --help)
