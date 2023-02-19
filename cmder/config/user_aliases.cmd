@@ -1080,3 +1080,4 @@ cpplng=clang++ $* -Wall -Wextra -g -o active $t C:\Users\OmarPc\repo_CPP_COMP_st
 tsk=tasklist  
 find= tasklist $b grep $*  
 jptohtml= jupyter nbconvert $*  --to html  --template classic  
+hddf= cd /d f:  
