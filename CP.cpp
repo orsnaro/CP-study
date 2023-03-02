@@ -18,6 +18,7 @@ int main(void) {
 		// cin >> t ;
 		while (t--) {  
 		// CODE HERE 
+		cout << "omar";
 		}
 		return 0;
 }
