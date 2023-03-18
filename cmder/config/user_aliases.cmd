@@ -3248,3 +3248,4 @@ grp= grep  -i -n -H -G  $*
 allcode=E:\omar-work\all_local_repo_vs.code-workspace  
 parkorg=cd /d C:\Users\OmarPc\repo_Smart_parking_project  
 embedorg=cd /d C:\Users\OmarPc\repo_embedded-C  
+oldorg=cd /d C:\Users\OmarPc\repo_Old_projects_stash  
