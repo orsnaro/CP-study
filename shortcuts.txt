@@ -104,6 +104,14 @@ xxd filename.extention | vim -
  taskkill /im runing_task_name 
 --> kill task using image name (omit /im to kill task by process number PID) 
 
+python -m venv virtual_env_name
+--> make new python virtual env 
+
+vritual_env_path/Scripts/activate
+--> start your virtual env
+
+deactivate
+--> go back to master env (windows)
 
 *Tab manipulation
 Ctrl + T : New tab dialog (maybe you want to open cmd as admin?)
