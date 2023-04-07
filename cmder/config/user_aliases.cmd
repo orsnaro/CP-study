@@ -3252,3 +3252,4 @@ oldorg=cd /d C:\Users\OmarPc\repo_Old_projects_stash
 sqlite= sqlite3  
 sql= sqlite3  
 env= cd /d C:\Users\OmarPc\py_env\  
+gpt= start https://poe.com/ChatGPT  
