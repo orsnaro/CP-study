@@ -1,4 +1,8 @@
-g ################VS code#############IMPORTANT only
+
+
+~~~F10 to toggle notepad++ bar~~~
+
+################VS code#############IMPORTANT only
 ctr+ shift+ p (all shortcuts vs code)
 (NOT DEFAULT) shift + ctrl + alt + f (fetch or one mouse button using xmouse)
 (NOT DEFAULT)shift + ctrl + alt + c (commit all to local or one mouse button using xmouse)
@@ -42,6 +46,14 @@ ctrl + alt + N (to build and run  using code runner in terminal <no debugging> )
 
 
 
+cmd 
+--> to run/nest new cmd inside cmder/cmd/powershell ( not cmder alias is windows default argument)
+
+ps
+-->(NOT DEFAULT)(cmder alias)  to run powershell inside the current cmd/cmder/powershell and nest them 
+
+set 
+--> to echo all windaws deafult arguments and variables  
 
 code
 --> opens vs code
@@ -259,7 +271,9 @@ for /l %x in (1, 1, 100) do echo %x
 'Measure-Command {start-process 'FILE U WANT TO EXECUTE no qoutes!' -Wait}'
 ----> to calc execution time taken in this .exe file runtime.
 
-
+====> on echo new line either using echo. or envisible 255 arg using alt+255 
+ https://stackoverflow.com/questions/132799/how-can-i-echo-a-newline-in-a-batch-file#:~:text=You%20can%20insert%20an%20invisible,top%20of%20the%20querty%20keyboard!
+ 
 ====> for more usefull  general 'power shell' and 'cmd' commands : https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
 
 ====> crash CLI course : https://youtube.com/playlist?list=PLDoPjvoNmBAxzNO8ixW83Sf8FnLy_MkUT
