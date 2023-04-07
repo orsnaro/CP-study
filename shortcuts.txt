@@ -42,7 +42,7 @@ ctrl + alt + N (to build and run  using code runner in terminal <no debugging> )
 
 
 
-################ (Cmder ( bash + CMD + powershell) ############# IMPORTANT only
+################ (Cmder + bash + CMD + powershell) ############# IMPORTANT only
 
 
 
@@ -353,4 +353,4 @@ ctr+shift+l= shortcut menu
     YOUR BLOCK OF CODE 
     
   ```
-  ---> to write any block of code  in jupyter markdown of any language just replace C++ with your language
+  ---> to write any block of code  in (jupyter markdown - md - discord ... etc )of any language just replace C++ with your language
