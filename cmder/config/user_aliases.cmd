@@ -3242,7 +3242,6 @@ find= tasklist $b grep $*
 jptohtml= jupyter nbconvert $*  --to html  --template classic  
 hddf= cd /d f:  
 grp= grep  -i -n -H -G  $*  
-parkorg=cd /d C:\Users\OmarPc\repo_Smart_parking_project  
 embedorg=cd /d C:\Users\OmarPc\repo_embedded-C  
 oldorg=cd /d C:\Users\OmarPc\repo_Old_projects_stash  
 sqlite= sqlite3  
@@ -3255,3 +3254,4 @@ allgitstat= set oldPath=%cd% $t echo ###########################################
 allcode= E:\omar-work\all_local_repo_vs.code-workspace $t C:\Users\OmarPc\win_trm_mnmzd.exe  
 inspct=CrowdInspect64.exe  
 cm=cmder  
+parkorg= cd /d C:\Users\OmarPc\repo_Smart_parking_system\  
