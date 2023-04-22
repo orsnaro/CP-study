@@ -89,6 +89,8 @@ start filename.exe (
 
 ctrl + r 
 --> reverse search command histroy ( if ur wanted command is before found one just PRESS ctr + r again until u found it )
+ctrl + s
+--> forward search in cmder
  
  
 winget list 
