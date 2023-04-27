@@ -65,7 +65,6 @@ sqlite= sqlite3
 sql= sqlite3  
 env= cd /d C:\Users\OmarPc\py_env\  
 gpt= start https://poe.com/ChatGPT  
-allgitall=set oldPath=%cd% $t echo ############################################### $t echo. $t echo (MSG: MSP_ML_study adding commiting pushing all) $t cd c:\Users\%USERNAME%\repo_MSP_ML_study $t git add --all $t git commit -m "# $*" $t git push $t echo ###############################################  $t echo. $t echo (MSG: CPP_COMP_study adding commiting pushing all) $t cd c:\Users\%USERNAME%\repo_CPP_COMP_study $t git add --all $t git commit -m "# $*" $t git push $t echo ############################################### $t echo. $t echo (MSG: CHORMA_BMP_proj adding commiting pushing all) $t cd c:\Users\%USERNAME%\repo_CHROMA_BMP_proj $t git add --all $t git commit -m "# $*" $t git push  $t echo ############################################### $t echo. $t echo (MSG: Embedded-C adding commiting pushing all) $t cd c:\Users\%USERNAME%\repo_Embedded-C  $t git add --all $t git commit -m "# $*" $t git push $t echo ############################################### $t echo. $t echo (MSG: Old_projects_stash  adding commiting pushing all) $t cd c:\Users\%USERNAME%\repo_Old_projects_stash $t git add --all $t git commit -m "# $*" $t git push $t echo ############################################### $t echo. $t echo (MSG: Crafting_INTERPTRETERS_study adding commiting pushing all)  $t cd c:\Users\%USERNAME%\repo_CRAFTING_INTERPRETERS_study  $t git add --all $t git commit -m "# $*" $t git push origin HEAD:main $t echo ############################################### $t echo. $t echo (MSG: MSP_College_system_mini_proj adding commiting pushing all)  $t cd c:\Users\%USERNAME%\repo_MSP_College_system_mini_proj  $t git add --all $t git commit -m "# $*" $t git push $t cd %oldPath%  
 allcode=E:\omar-work\all_local_repo_vs.code-workspace $t C:\Users\OmarPc\win_trm_mnmzd.exe  
 inspct=CrowdInspect64.exe  
 cm=cmder  
@@ -82,3 +81,4 @@ jp= start C:\Users\OmarPc\win_trm_mnmzd.exe $t jupyter-lab
 cpp=g++ $* -Wall -Wextra -g -o active $t check_file_exist.bat  
 allgitstat= allgitstat.bat  
 allgitdiff= allgitdiff.bat  
+allgitall= allgitall.bat  
