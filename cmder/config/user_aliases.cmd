@@ -3257,3 +3257,4 @@ cm=cmder
 parkorg= cd /d C:\Users\OmarPc\repo_Smart_parking_system\  
 swb= start https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 phporg= cd c:\xampp\htdocs\  
+st=start $*  
