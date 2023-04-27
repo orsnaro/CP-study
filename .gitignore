@@ -27,10 +27,9 @@ Debug/
 .ipynb_checkpoints/
 
 
-#comming lines just to ignore /cmder but  'track user_aliases.cmd' only
+#comming lines just to ignore /cmder but  'track user_aliases.cmd' , bin/* only
 #tried shortcuts but this only worked
 tempCodeRunnerFile.java
-cmder/bin
 cmder/opt
 cmder/icons
 cmder/vendor
@@ -40,3 +39,4 @@ cmder/Version 1.3.19.1181
 cmder/vlc-help.txt
 cmder/config/*
 !cmder/config/*.cmd
+!cmder/bin/*
