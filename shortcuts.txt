@@ -44,6 +44,12 @@ ctrl + alt + N (to build and run  using code runner in terminal <no debugging> )
 
 ################ (Cmder + bash + CMD + powershell) ############# IMPORTANT only
 
+(WIN TERMINAL PREVIEW)  alt + shift + d 
+--> duplicate pane ( split ) (ctrl instead of alt to duplicate whole tab not good in quake mode)
+
+
+(WIN TERMINAL PREVIEW)  alt + (right /lift / up / down) 
+--> change focaus between pans
 
 
 cmd 
