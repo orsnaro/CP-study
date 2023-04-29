@@ -83,3 +83,4 @@ allcode=E:\omar-work\all_local_repo_vs.code-workspace
 ls=ls --show-control-chars -F --color $*  
 parkremote=start https://github.com/Gehad-AboElmagd/smart_parking_system  
 find=tasklist  $b sort $b  grep -i  "$* *"  
+kltsk=taskkill /im $* /f  
