@@ -6,7 +6,6 @@
 ;= Add aliases below here
 
 unalias=alias /d $1
-ls=ls --show-control-chars -F --color $*
 ~1=~0,-1  
 e.=explorer .
 pwd=cd
@@ -74,11 +73,13 @@ st=start $*
 d=exit  
 en=echo $*  
 tsk=tasklist $1 $b sort  
-find= tasklist  $b grep -i  "$* *"  
 klterm= taskkill /im WindowsTerminal.exe /f  
 jp= start C:\Users\OmarPc\win_trm_mnmzd.exe $t jupyter-lab  
 cpp=g++ $* -Wall -Wextra -g -o active $t check_file_exist.bat  
 allgitstat= allgitstat.bat  
 allgitdiff= allgitdiff.bat  
 allgitall= allgitall.bat  
-allcode=E:\omar-work\all_local_repo_vs.code-workspace $t win_trm_mnmzd.exe  
+allcode=E:\omar-work\all_local_repo_vs.code-workspace  
+ls=ls --show-control-chars -F --color $*  
+parkremote=start https://github.com/Gehad-AboElmagd/smart_parking_system  
+find=tasklist  $b sort $b  grep -i  "$* *"  
