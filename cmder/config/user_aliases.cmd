@@ -67,7 +67,6 @@ gpt= start https://poe.com/ChatGPT
 inspct=CrowdInspect64.exe  
 cm=cmder  
 parkorg= cd /d C:\Users\OmarPc\repo_Smart_parking_system\  
-swb= start https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 phporg= cd c:\xampp\htdocs\  
 st=start $*  
 d=exit  
@@ -84,3 +83,4 @@ ls=ls --show-control-chars -F --color $*
 parkremote=start https://github.com/Gehad-AboElmagd/smart_parking_system  
 find=tasklist  $b sort $b  grep -i  "$* *"  
 kltsk=taskkill /im $* /f  
+s=start https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
