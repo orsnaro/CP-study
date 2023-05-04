@@ -87,3 +87,4 @@ exe-keyrec=pyinstaller --name=KeyRec-Asda --specpath=C:\Users\OmarPc\repo_KeyRec
 asdarec= KeyRec-Asda  
 kltsk=taskkill /im "$*"  /f  
 py=python  $*.py  
+ffind= dir  "\*$**"  /s  
