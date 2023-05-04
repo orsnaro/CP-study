@@ -156,6 +156,9 @@ Shift + Mouse : Select and copy text from buffer
 
 ################ (Git) ############# IMPORTANT only
 
+https://kbroman.org/github_tutorial/pages/first_time.html
+--> connect and auth git with github acc for push 
+
 create-shortcut "source path" "destination path"
 --> create a shortcut (must apend destination path with "ShortcutName.lnk")
 
