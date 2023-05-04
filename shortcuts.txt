@@ -130,8 +130,8 @@ deactivate
 
 
 *Pan manipulation
-(WIN TERMINAL PREVIEW)  alt + shift + d 
---> duplicate pane ( split ) (ctrl instead of alt to duplicate whole tab not good in quake mode)
+(WIN TERMINAL PREVIEW)  alt + shift + d/s 
+--> duplicate pane ( split horz / vertically ) (ctrl instead of alt to duplicate whole tab not good in quake mode)
 
 (WIN TERMINAL PREVIEW)  alt + right /lift / up / down
 --> change focaus between pans
