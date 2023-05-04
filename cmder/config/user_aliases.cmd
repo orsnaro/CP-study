@@ -46,7 +46,6 @@ cporg=cd /d C:\Users\%USERNAME%\repo_CPP_COMP_study
 org2=cd c:\Users\%USERNAME%\repo_CRAFTING_INTERPRETERS_study\  
 shorts=start C:\Users\%USERNAME%\repo_CPP_COMP_study\shortcuts.txt  
 comp=cd /d c:\users\%USERNAME%\repo_CPP_COMP_study $t start  https://codeforces.com/contests $t code cp.cpp $t start  C:\Users\%USERNAME%\AppData\Local\Programs\pomotroid\Pomotroid $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t calcshift+ctrl+/ (jmp to matching bracket  
-py=python -u $*.py  
 jptopdf= jupyter-nbconvert --to pdfviahtml $*  
 bmporg= cd /d C:\Users\%USERNAME%\repo_CHROMA_BMP_proj  
 msporg=cd /d C:\Users\%USERNAME%\repo_MSP_ML_study  
@@ -87,3 +86,4 @@ keyorg= cd /d C:\Users\OmarPc\repo_KeyRec_tool
 exe-keyrec=pyinstaller --name=KeyRec-Asda --specpath=C:\Users\OmarPc\repo_KeyRec_tool\dump --distpath=C:\Users\OmarPc\repo_KeyRec_tool\KeyRec-tool\KeyRec-Asda_V2.1.0B\ --onefile --icon=C:\Users\OmarPc\repo_KeyRec_tool\dump\KeyRec.ico C:\Users\OmarPc\repo_KeyRec_tool\source\keyrec_1window_V2.1.0B.py  
 asdarec= KeyRec-Asda  
 kltsk=taskkill /im "$*"  /f  
+py=python  $*.py  
