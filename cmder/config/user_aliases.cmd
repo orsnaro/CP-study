@@ -66,7 +66,6 @@ gpt= start https://poe.com/ChatGPT
 inspct=CrowdInspect64.exe  
 cm=cmder  
 parkorg= cd /d C:\Users\OmarPc\repo_Smart_parking_system\  
-phporg= cd c:\xampp\htdocs\  
 st=start $*  
 d=exit  
 en=echo $*  
@@ -86,5 +85,7 @@ keyorg= cd /d C:\Users\OmarPc\repo_KeyRec_tool
 exe-keyrec=pyinstaller --name=KeyRec-Asda --specpath=C:\Users\OmarPc\repo_KeyRec_tool\dump --distpath=C:\Users\OmarPc\repo_KeyRec_tool\KeyRec-tool\KeyRec-Asda_V2.1.0B\ --onefile --icon=C:\Users\OmarPc\repo_KeyRec_tool\dump\KeyRec.ico C:\Users\OmarPc\repo_KeyRec_tool\source\keyrec_1window_V2.1.0B.py  
 asdarec= KeyRec-Asda  
 kltsk=taskkill /im "$*"  /f  
-py=python  $*.py  
 ffind= dir  "\*$**"  /s  
+remotes=start https://github.com/  
+py=python  $*  
+phporg=cd c:\xampp\htdocs\repo_ps_site\  
