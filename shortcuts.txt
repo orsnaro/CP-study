@@ -202,6 +202,16 @@ https://www.atlassian.com/git/tutorials/using-branches/git-checkout#:~:text=New%
 https://www.w3docs.com/snippets/git.html
 
 
+get letter meaning :
+
+M: The file has been modified.
+A: The file has been added to the index.
+D: The file has been deleted from the working tree.
+R: The file has been renamed.
+C: The file has been copied.
+U: The file is unmerged, meaning it has conflicts that need to be resolved.
+!: file has merge conflict that need to be manually done ( both modified in local and remote)
+
 
 ################ (CMD & power shell) ############# IMPORTANT only
 
