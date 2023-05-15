@@ -88,4 +88,7 @@ remotes=start https://github.com/
 py=python  $*  
 log=git log --all --graph --decorate --oneline  
 allcode=code E:\omar-work\all_local_repo_vs.code-workspace  
-phporg=cd c:\xampp\htdocs\repo_ps_site\ $t code c:\xampp\htdocs\repo_Ps_site $t C:\xampp\xampp-control.exe $t start http://localhost/repo_ps_site/index.php $t start http://localhost/phpmyadmin  
+phporga=cd c:\xampp\htdocs\repo_ps_site\ $t code c:\xampp\htdocs\repo_Ps_site $t C:\xampp\xampp-control.exe $t start http://localhost/repo_ps_site/index.php $t start http://localhost/phpmyadmin  
+phporg=cd /d c:\xampp\htdocs\repo_ps_site\  
+loga=git log --all --graph --decorate --stat  
+logme=git log --all --graph  --decorate --stat --author="Omar Rashad Salem"  

@@ -92,6 +92,9 @@ ctrl + r
 --> reverse search command histroy ( if ur wanted command is before found one just PRESS ctr + r again until u found it )
 ctrl + s
 --> forward search in cmder
+
+arrow right
+--> get the found search to terminal
  
  
 winget list 
