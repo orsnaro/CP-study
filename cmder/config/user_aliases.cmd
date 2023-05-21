@@ -61,7 +61,6 @@ oldorg=cd /d C:\Users\OmarPc\repo_Old_projects_stash
 sqlite= sqlite3  
 sql= sqlite3  
 env= cd /d C:\Users\OmarPc\py_env\  
-gpt= start https://poe.com/ChatGPT  
 inspct=CrowdInspect64.exe  
 cm=cmder  
 parkorg= cd /d C:\Users\OmarPc\repo_Smart_parking_system\  
@@ -92,3 +91,4 @@ phporga=cd c:\xampp\htdocs\repo_ps_site\ $t code c:\xampp\htdocs\repo_Ps_site $t
 phporg=cd /d c:\xampp\htdocs\repo_ps_site\  
 loga=git log --all --graph --decorate --stat  
 logme=git log --all --graph  --decorate --stat --author="Omar Rashad Salem"  
+gpt=start  https://chat.forefront.ai/  
