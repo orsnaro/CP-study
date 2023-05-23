@@ -92,3 +92,4 @@ phporg=cd /d c:\xampp\htdocs\repo_ps_site\
 loga=git log --all --graph --decorate --stat  
 logme=git log --all --graph  --decorate --stat --author="Omar Rashad Salem"  
 gpt=start  https://chat.forefront.ai/  
+gptp= start https://poe.com/ChatGPT  
