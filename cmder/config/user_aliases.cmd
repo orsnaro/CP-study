@@ -76,7 +76,6 @@ keyorg= cd /d C:\Users\OmarPc\repo_KeyRec_tool
 exe-keyrec=pyinstaller --name=KeyRec-Asda --specpath=C:\Users\OmarPc\repo_KeyRec_tool\dump --distpath=C:\Users\OmarPc\repo_KeyRec_tool\KeyRec-tool\KeyRec-Asda_V2.1.0B\ --onefile --icon=C:\Users\OmarPc\repo_KeyRec_tool\dump\KeyRec.ico C:\Users\OmarPc\repo_KeyRec_tool\source\keyrec_1window_V2.1.0B.py  
 asdarec= KeyRec-Asda  
 kltsk=taskkill /im "$*"  /f  
-ffind= dir  "\*$**"  /s  
 remotes=start https://github.com/  
 py=python  $*  
 log=git log --all --graph --decorate --oneline  
@@ -87,3 +86,6 @@ loga=git log --all --graph --decorate --stat
 logme=git log --all --graph  --decorate --stat --author="Omar Rashad Salem"  
 gpt=start  https://chat.forefront.ai/  
 gptp= start https://poe.com/ChatGPT  
+ffind=dir "\*$**" /s  
+ffindhere=dir "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\*$**" /s  
+dis=opendiscord_2nd_monitor.bat $t  mmt /MoveWindow 1 Process Discord.exe  
