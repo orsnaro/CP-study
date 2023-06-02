@@ -115,6 +115,10 @@ xxd filename.extention
 xxd filename.extention | vim - 
 --> same as previous put to open it inside vim
 
+
+starz github-username
+--> to install 'npm install -g starz' . it's an CMD tool that shows total gihub account stars
+
  tasklist | grep *your running process name*
  --> this will only search and echo the runing tasks that has same name if there is any
  --> (user defined alias for tasklist command is 'tsk' or 'task'

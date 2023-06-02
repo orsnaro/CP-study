@@ -1,5 +1,1 @@
-# Replace "YourDiscordPath" with the path to the Discord executable
-$discordPath = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Discord.lnk"
-
-# Start Discord
-Start-Process $discordPath
+Start-Process -FilePath "C:\Users\OmarPc\AppData\Local\Discord\app-1.0.9013\Discord.exe" -ArgumentList "--processStart Discord.exe" -WindowStyle Maximized
