@@ -25,6 +25,10 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 #dirs
 Debug/
 .ipynb_checkpoints/
+.vs/
+.vs/*
+.vscode/
+.vscode/*
 
 
 #comming lines just to ignore /cmder but  'track user_aliases.cmd' , bin/* only
@@ -40,3 +44,4 @@ cmder/vlc-help.txt
 cmder/config/*
 !cmder/config/*.cmd
 !cmder/bin/*
+

@@ -11,7 +11,6 @@ e.=explorer .
 pwd=cd
 clear=cls
 vi=vim $*
-brave= start brave  
 eoff=@echo echo off  
 ps=powershell  
 cmderr=cd /d "%CMDER_ROOT%"
@@ -31,7 +30,6 @@ cpremote=start https://github.com/orsnaro/CPP_bgnrCOMP_Study
 com=git commit -m"# $*"  
 chk=git checkout $*  
 bye=git push $t shutdown /s  
-tele=  "C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe"  
 stube=start https://www.youtube.com/results?search_query=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 bmpremote= start https://github.com/orsnaro/Static_chroma_bmp  
 allgit=git add --all $t git commit -m "# $*" $t git push  
@@ -69,7 +67,6 @@ allgitall= allgitall.bat
 ls=ls --show-control-chars -F --color $*  
 parkremote=start https://github.com/Gehad-AboElmagd/smart_parking_system  
 find=tasklist  $b sort $b  grep -i  "$* *"  
-s=start https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 keyorg= cd /d C:\Users\OmarPc\repo_KeyRec_tool  
 exe-keyrec=pyinstaller --name=KeyRec-Asda --specpath=C:\Users\OmarPc\repo_KeyRec_tool\dump --distpath=C:\Users\OmarPc\repo_KeyRec_tool\KeyRec-tool\KeyRec-Asda_V2.1.0B\ --onefile --icon=C:\Users\OmarPc\repo_KeyRec_tool\dump\KeyRec.ico C:\Users\OmarPc\repo_KeyRec_tool\source\keyrec_1window_V2.1.0B.py  
 asdarec= KeyRec-Asda  
@@ -82,13 +79,20 @@ phporga=cd c:\xampp\htdocs\repo_ps_site\ $t code c:\xampp\htdocs\repo_Ps_site $t
 phporg=cd /d c:\xampp\htdocs\repo_ps_site\  
 loga=git log --all --graph --decorate --stat  
 logme=git log --all --graph  --decorate --stat --author="Omar Rashad Salem"  
-gpt=start  https://chat.forefront.ai/  
 gptp= start https://poe.com/ChatGPT  
 ffind=dir "\*$**" /s  
 ffindhere=dir "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\*$**" /s  
 movdis= mmt /MoveWindow 1 Process Discord.exe  
 orsorg= cd C:\Users\OmarPc\repo_Orsnaro  
-spot= "C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.210.760.0_x86__zpdnekdrzrea0\Spotify.exe"  
-dis=powershell.exe -Command "Start-Process powershell -WindowStyle Hidden -ArgumentList 'Start-Process opendiscord_2nd_monitor.bat -WindowStyle Hidden'" $t mmt /MoveWindow 1 Process "Discord.exe"  /WindowLeft 0  /WindowTop 0  /WindowWidth 500  /WindowHeight 1410  
-what= chrome https://web.whatsapp.com/  
-chrome=chrome "https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9"  
+phone="C:\Program Files\WindowsApps\SAMSUNGELECTRONICSCoLtd.SamsungFlux_4.9.704.0_x64__wyx1vj98g3asy\SamsungFlow.exe"  
+dis=powershell.exe -Command "Start-Process powershell -WindowStyle Hidden -ArgumentList 'Start-Process opendiscord_2nd_monitor.bat -WindowStyle Hidden'" $t mmt /MoveWindow 1 Process "Discord.exe"  /WindowLeft -5  /WindowTop 0  /WindowWidth 900   /WindowHeight 1580  
+twt=start https://www.twitch.tv/  
+gmail= start https://www.gmail.com  
+brave="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
+bravecog="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --incognito https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
+s=start https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
+what=chrome https://web.whatsapp.com/ $t mmt /MoveWindow 1  Process "chrome.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
+chrome=chrome "https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9" $t mmt /MoveWindow 1  Process "chrome.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
+tele="C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe" $t mmt  /MoveWindow 1  Process "Telegram.exe" /WindowTop -10 /WindowLeft 0 /WindowWidth 910 /WindowHeight 1600  
+gpt="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --incognito https://chat.forefront.ai/ $t mmt /MoveWindow 1 Title "Forefront Chat - Brave" /WindowLeft -10 /WindowTop 0 /WindowWidth 917 /WindowHeight 1600  
+spot="C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.210.760.0_x86__zpdnekdrzrea0\Spotify.exe" $t  mmt /MoveWindow 1  Process "Spotify.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  

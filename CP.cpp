@@ -3,8 +3,8 @@
 using namespace std;
 
 #define fastio                                                              \
-	ios_base::sync_with_stdio(false);                                        \
-	cin.tie(nullptr);                                                        \
+	ios_base::sync_with_stdio(false);                                       \
+	cin.tie(nullptr);                                                       \
 	cout.tie(nullptr);
 #define F first
 #define S second
@@ -20,9 +20,9 @@ int main(void) {
 	int t = 1;
 	// cin >> t ;
 
-	cout << pq.size() << endl;
 
 	while (t--) {  
+		
 		
 	}
 
