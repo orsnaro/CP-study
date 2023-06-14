@@ -24,7 +24,6 @@ games= cd /d "C:\Users\OmarPc\Documents\game fast\" $t explorer .
 link= cd /d C:\ProgramData\Microsoft\Windows\Start Menu\Programs  
 monk= start https://monkeytype.com/  
 in= cat input.txt  
-sound= start https://soundcloud.com  
 cprn=g++ CP.cpp -o CP.exe $t @echo  CP.exe is running .. $t CP.exe  $t del CP.exe  
 cpremote=start https://github.com/orsnaro/CPP_bgnrCOMP_Study  
 com=git commit -m"# $*"  
@@ -48,12 +47,10 @@ cpplng=clang++ $* -Wall -Wextra -g -o active $t C:\Users\OmarPc\repo_CPP_COMP_st
 hddf= cd /d f:  
 grp= grep  -i -n -H -G  $*  
 embedorg=cd /d C:\Users\OmarPc\repo_embedded-C  
-oldorg=cd /d C:\Users\OmarPc\repo_Old_projects_stash  
 sqlite= sqlite3  
 sql= sqlite3  
 env= cd /d C:\Users\OmarPc\py_env\  
 cm=cmder  
-parkorg= cd /d C:\Users\OmarPc\repo_Smart_parking_system\  
 st=start $*  
 d=exit  
 en=echo $*  
@@ -79,7 +76,6 @@ phporga=cd c:\xampp\htdocs\repo_ps_site\ $t code c:\xampp\htdocs\repo_Ps_site $t
 phporg=cd /d c:\xampp\htdocs\repo_ps_site\  
 loga=git log --all --graph --decorate --stat  
 logme=git log --all --graph  --decorate --stat --author="Omar Rashad Salem"  
-gptp= start https://poe.com/ChatGPT  
 ffind=dir "\*$**" /s  
 ffindhere=dir "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\*$**" /s  
 movdis= mmt /MoveWindow 1 Process Discord.exe  
@@ -92,7 +88,14 @@ brave="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" https
 bravecog="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --incognito https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 s=start https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 what=chrome https://web.whatsapp.com/ $t mmt /MoveWindow 1  Process "chrome.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
-chrome=chrome "https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9" $t mmt /MoveWindow 1  Process "chrome.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
 tele="C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe" $t mmt  /MoveWindow 1  Process "Telegram.exe" /WindowTop -10 /WindowLeft 0 /WindowWidth 910 /WindowHeight 1600  
-gpt="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --incognito https://chat.forefront.ai/ $t mmt /MoveWindow 1 Title "Forefront Chat - Brave" /WindowLeft -10 /WindowTop 0 /WindowWidth 917 /WindowHeight 1600  
 spot="C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.210.760.0_x86__zpdnekdrzrea0\Spotify.exe" $t  mmt /MoveWindow 1  Process "Spotify.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
+schrome=chrome "https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9" $t mmt /MoveWindow 1  Process "chrome.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
+gpt4="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --incognito --app=https://chat.forefront.ai/ $t mmt /MoveWindow 1 Title "Forefront Chat" /WindowLeft -10 /WindowTop 0 /WindowWidth 917 /WindowHeight 1600  
+gpt="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://chat.forefront.ai/ $t mmt /MoveWindow 0 Title "Forefront Chat"  /WindowWidth 1365 /WindowHeight 767  
+sound=chrome https://soundcloud.com  
+bard="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://bard.google.com/  
+gptp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://poe.com/ChatGPT  
+botorg=cd /d C:\Users\OmarPc\repo_Discord_gpt_bot\  
+parkorg=cd /d C:\Users\OmarPc\repo_Smart_parking_system\  
+oldorg=cd /d C:\Users\OmarPc\repo_Old_projects_stash  
