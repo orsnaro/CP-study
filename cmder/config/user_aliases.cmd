@@ -99,3 +99,5 @@ gptp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=
 botorg=cd /d C:\Users\%USERNAME%\repo_Discord_gpt_bot\  
 parkorg=cd /d C:\Users\%USERNAME%\repo_Smart_parking_system\  
 oldorg=cd /d "C:\Users\%USERNAME%\repo_Old_projects_stash"  
+speed=speedtest.exe  
+netlimit=nbcmd.exe application service start  
