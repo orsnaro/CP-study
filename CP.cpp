@@ -1,4 +1,4 @@
-// prob: https://codeforces.com/contest/1843/problem/A (joined last 24)
+// prob: https://www.codechef.com/START95D/problems/DONDRIVE
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -10,7 +10,7 @@ using namespace std;
 #define S second
 using ll = long long;
 const int N = 1e6, M = 1e8;
-int arr[N];
+// int arr[N];
 
 int main(void) {
    // freopen("in.txt","r",stdin);
@@ -20,18 +20,9 @@ int main(void) {
    cin >> t;
 
    while (t--) {
-		int sum = 0;
-      int n;
-      cin >> n;
-      for (int i = 0; i < n; i++) {
-	 		int temp;
-			cin >> temp;
-	 		arr[i] = temp;
-      }
-		sort(arr , arr + n);
-		for(int i = 0; i < ( n - i - 1) ; i++)
-			sum += arr[n - i - 1] - arr[i];
-		cout << sum << '\n';
+		int n , x; cin >> n >> x;
+		cout << n - x << '\n';
+
    }
 
    return 0;
