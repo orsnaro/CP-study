@@ -89,17 +89,16 @@ s=start https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9
 spot="C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.210.760.0_x86__zpdnekdrzrea0\Spotify.exe" $t  mmt /MoveWindow 1  Process "Spotify.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
 schrome=chrome "https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9" $t mmt /MoveWindow 1  Process "chrome.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
 gpt4="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --incognito --app=https://chat.forefront.ai/ $t mmt /MoveWindow 1 Title "Forefront Chat" /WindowLeft -10 /WindowTop 0 /WindowWidth 917 /WindowHeight 1600  
-gpt="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://chat.forefront.ai/ $t mmt /MoveWindow 0 Title "Forefront Chat"  /WindowWidth 1365 /WindowHeight 767  
 sound=chrome https://soundcloud.com  
 bard="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://bard.google.com/  
 gptp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://poe.com/ChatGPT  
-botorg=cd /d C:\Users\%USERNAME%\repo_Discord_gpt_bot\  
 parkorg=cd /d C:\Users\%USERNAME%\repo_Smart_parking_system\  
 oldorg=cd /d "C:\Users\%USERNAME%\repo_Old_projects_stash"  
 speed=speedtest.exe  
 netlimit=nbcmd.exe application service start  
 grep= grep -i "$*"  
 tele="C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe" $t mmt  /MoveWindow 1  Process "Telegram.exe" /WindowTop -10 /WindowLeft 0 /WindowWidth 900 /WindowHeight 1600  
-what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 1  Process "chrome.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
 comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t start  https://codeforces.com/contests $t code . $t start  C:\Users\OmarPc\AppData\Local\Programs\pomotroid\Pomotroid $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t start https://en.cppreference.com/w/cpp/language/operator_precedence  
-code=code -r $*  
+gpt="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://chat.forefront.ai/ $t timeout /t 2 /nobreak $t mmt /MoveWindow 0 Title "Forefront Chat"  /WindowWidth 1365 /WindowHeight 767  
+botorg=cd /d C:\Users\OmarPc\repo_Discord_bot_ai\  
+what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 1  Title  "web.whatsapp.com" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  

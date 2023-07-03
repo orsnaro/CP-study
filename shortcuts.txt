@@ -197,6 +197,10 @@ git push -u  ur_local_branch_name
 git push -f to final update the commit histroy at remote  
 -- > all commits u done 'd' before them gone for ever !
 
+
+git merge branch_to_merge -m "Merge msg"
+--> to merge a branch with another branch (will not delete any of the two brancheds)
+
 --> to copy already made local repo to already made remote repo please use either gh commands or github desktop
 --> PLEASE DONT MAKE LOCAL AND REMOTE BRANCHES WITH DIFF NAMES PLEASE!! 
 .....THIS IS NOT GIT DEFAULT AND CAUSESE MAMY HEADEACHES LATER ON IF U MANAGED TO DO IT IN FIRST PLACE
