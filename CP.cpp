@@ -1,5 +1,4 @@
-// prob: https://codeforces.com/contest/236/problem/A
-
+// prob: https://codeforces.com/contest/263/problem/A
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -23,10 +22,19 @@ int main(void) {
 
 
    while (t--) {
-		set <char> st;
-		string tmp; cin >> tmp;
-		for ( auto &c : tmp) st.insert(c);
-		cout << (st.size() % 2 == 0 ? "CHAT WITH HER!" : "IGNORE HIM!") << '\n';
+		bool flag = false;
+		int stps = 0;
+		for (int i = 0; i < 5; i++){
+			for (int j = 0; j < 5; j++)
+			{
+				int tmp; cin >> tmp; 
+				if ( tmp == 1)
+					stps += abs( j - 2 ) + abs( i - 2 );
+			}
+		}
+		cout << stps << '\n';
+			
+
    }
 
    return 0;
