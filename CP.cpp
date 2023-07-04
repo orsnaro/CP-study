@@ -1,4 +1,4 @@
-// prob: https://codeforces.com/contest/225/problem/A
+// prob: https://codeforces.com/contest/682/problem/A
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -16,24 +16,27 @@ int main(void) {
    fastio;
    int t = 1;
    // cin >> t;
+	
+
 
    while (t--) {
-	int n; cin >> n;
-	int x; cin >> x;
-	int a; cin >> a;
-	int b; cin >> b;
-	bool ok = true;
-	for (size_t i = 1; i < n; i++)
-	{
-			cin >> a >> b;
-		if ( a == x or a == 7 - x or b == x or b == 7 - x ) {
-			ok = false;
-			break;
-		}
+	ll n; cin >> n;
+	ll m; cin >> m;
+	vector <ll> a(5 ,0) , b(5,0);
 
+	for (size_t i = 1; i <= n; i++)
+		a[ (i) % 5]++;
+	for (size_t i = 1; i <= m; i++)
+		b[ (i) % 5]++;
+
+	ll ans = a[0] * b[0];
+	for (size_t i = 1; i <=4; i++)
+	{
+		ans += a[i] * b[ 5 - i ];
 	}
-	cout << (ok ? "YES" : "NO") << '\n';	
+		cout << ans << '\n';
+
    }
 
    return 0;
-}
+}//done 
