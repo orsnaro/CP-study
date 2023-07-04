@@ -1,4 +1,4 @@
-// prob: https://codeforces.com/contest/263/problem/A
+// prob: https://codeforces.com/contest/268/problem/A
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,29 +11,28 @@ using namespace std;
 using ll = long long;
 const int N = 1e5, M = 1e8;
 // int arr[N];
-ll arr[2*N + 10];
 
 int main(void) {
    // freopen("in.txt","r",stdin);
    fastio;
    int t = 1;
    // cin >> t;
-	
-
-
    while (t--) {
-		bool flag = false;
-		int stps = 0;
-		for (int i = 0; i < 5; i++){
-			for (int j = 0; j < 5; j++)
-			{
-				int tmp; cin >> tmp; 
-				if ( tmp == 1)
-					stps += abs( j - 2 ) + abs( i - 2 );
-			}
+		int n; cin >> n;
+		vector <int> freqa(N , 0) , freqb(N , 0);
+		for (size_t i = 0; i < n; i++)
+		{
+			pair<int , int> tmp; cin >> tmp.F >> tmp.S;
+			freqa[tmp.F]++; freqb[tmp.S]++;
 		}
-		cout << stps << '\n';
-			
+		int sz = freqa.size();
+		int ans = 0;
+		for (size_t i = 0; i < sz ; i++)
+		{
+			if ( freqa[i] > 0 and freqb[i] > 0)
+				ans += max (freqa[i] , freqb[i]) * min(freqa[i] , freqb[i]);
+		}
+		cout << ans << '\n';
 
    }
 
