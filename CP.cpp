@@ -1,4 +1,4 @@
-// prob: https://codeforces.com/contest/405/problem/A
+// prob: https://codeforces.com/contest/136/problem/A
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -22,12 +22,14 @@ int main(void) {
 
    while (t--) {
 		int n; cin >> n;
-		int arr[n] = {};
-		for (size_t i = 0; i < n; i++) cin >> arr[i];
-		sort(arr , arr + n)	;
-		 for ( int x : arr) cout << x << " ";
-		 cout << '\n';
-
+		int freq [n] = {};
+		for (size_t i = 1; i <=n; i++)
+		{
+			int tmp; cin>> tmp;
+			freq[tmp - 1] = i;
+		}
+		for ( int x : freq) cout << x << ' ';
+		cout << '\n';
    }
 
    return 0;
