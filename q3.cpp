@@ -20,26 +20,17 @@ int main(void) {
    cin >> t;
    while (t--) {
 
-    int n; cin >> n;
-    string s , t , u ; cin >> s >> t >> u;
+		int n; cin >> n;
+		string s , t , u ; cin >> s >> t >> u;
+		int k;
+		if ( s[0] > t[0])k = ('z'- s[0]) + (s[0] - 'a') + 1;
+		else k = abs(s[0] - t[0]);
 
-		int k = -1;
-		if ( s[0] > t[0]){
-			k = ('z'- s[0]) + (s[0] - 'a') + 1;
-		}else{
-			k = abs(s[0] - t[0])
+		for (int  i = 0; i < n; i++){
+			if ( (u[i] + k)  % 'z' == 0 ) u[i] = u[i] + k ;
+			else u[i] = 'a' + ( (u[i] + k) % 'z' ) - 1 ;
 		}
-
-    for (int  i = 0; i < n; i++)
-    {
-        if ( (u[i] + k) <=  'z') {
-          u[i] = u[i] + k ;
-        }else {
-          int z = (u[i] + k) % 'z';
-          u[i] = 'a' + (z-1);
-        }
-    }
-    cout << u << '\n';
+		cout << u << '\n';
     
    }
 
