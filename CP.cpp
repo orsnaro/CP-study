@@ -1,4 +1,3 @@
-// https://www.codechef.com/problems/CAESAR
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,8 +8,10 @@ using namespace std;
 #define F first
 #define S second
 using ll = long long;
-const int N = 1e5, M = 1e8;
-// int arr[N];
+const int N = 1e5, M = 1e9;
+int arr[N];
+int arr2[N]; //indx 0 -> 1e5 + 1
+vector <ll> v;
 
 int main(void) {
    // freopen("in.txt","r",stdin);
@@ -19,27 +20,29 @@ int main(void) {
    cin >> t;
    while (t--) {
 		int n; cin >> n;
-		string s , t , u ; cin >> s >> t >> u;
-		string ans;
-		int k;
-		if ( s[0] > t[0])k = ('z'- s[0]) + (s[0] - 'a') + 1;
-		else k = abs(s[0] - t[0]);
+		set <ll> st;
+		for (size_t i = 0; i < n; i++)
+		{
+			ll tmp; cin >> tmp;
+			if (tmp >= N) arr2[(tmp - 1e5)ll]++;
+			else arr[tmp]++;
+			st.insert(tmp);
+		}
+		for ( &x : st)
+			v.push_back(x);
 
+		int ans = 0;
+		for (ll i = 1; i < n - 1; i++)
+		{
+			if ( v[i] >= N ){
+				ans += v[i] * arr2[v[i] - 1e5];
 
-
-
-		for (int  i = 0; i < n; i++){
-			int mod = (u[i] + k)  % 'z';
-			if ( mod == 0 ) ans += char(u[i] + k) ;
-			else {
-				if ( u[i] + k  < 'z' )
-				ans += char(u[i] + k) ; 
-				else 
-				ans += char('a' + mod - 1);
+			}else{
+				ans += v[i] * arr[v[i]];
 			}
 		}
+
 		cout << ans << '\n';
-    
    }
 
    return 0;
