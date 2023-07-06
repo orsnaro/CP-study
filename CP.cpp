@@ -1,6 +1,5 @@
-// https://codeforces.com/contest/768/my
 
-
+// https://codeforces.com/contest/520/problem/A
 
 
 #include <bits/stdc++.h>
@@ -25,28 +24,12 @@ int main(void) {
    // cin >> t;
    while (t--) {
 		int n; cin >> n;
-		set <ll> st;
+		string s; cin >> s;
+		set <char> st;
 		for (size_t i = 0; i < n; i++)
-		{
-			ll tmp; cin >> tmp;
-			if ( mp.find(tmp) != mp.end() )
-				mp[tmp]++;
-			else
-				mp[tmp] = 1;
-
-			st.insert(tmp);
-		}
-		for ( auto &x : st)
-			v.push_back(x);
-
-		int ans = 0;
-		int sz = v.size();
-		for (ll i = 1; i < v.size() - 1; i++)
-		{
-				ans += mp[v[i]];
-		}
-
-		cout << ans << '\n';
+			st.insert(tolower(s[i]));
+		
+	 	cout << (st.size() >= 26 ? "YES" : "NO") << '\n';
    }
 
    return 0;
