@@ -1,3 +1,8 @@
+// https://codeforces.com/contest/768/my
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,37 +14,36 @@ using namespace std;
 #define S second
 using ll = long long;
 const int N = 1e5, M = 1e9;
-int arr[N];
-int arr2[N]; //indx 0 -> 1e5 + 1
+// int arr[N];
 vector <ll> v;
+map <ll , int> mp;
 
 int main(void) {
    // freopen("in.txt","r",stdin);
    fastio;
    int t = 1;
-   cin >> t;
+   // cin >> t;
    while (t--) {
 		int n; cin >> n;
 		set <ll> st;
 		for (size_t i = 0; i < n; i++)
 		{
 			ll tmp; cin >> tmp;
-			if (tmp >= N) arr2[(tmp - 1e5)ll]++;
-			else arr[tmp]++;
+			if ( mp.find(tmp) != mp.end() )
+				mp[tmp]++;
+			else
+				mp[tmp] = 1;
+
 			st.insert(tmp);
 		}
-		for ( &x : st)
+		for ( auto &x : st)
 			v.push_back(x);
 
 		int ans = 0;
-		for (ll i = 1; i < n - 1; i++)
+		int sz = v.size();
+		for (ll i = 1; i < v.size() - 1; i++)
 		{
-			if ( v[i] >= N ){
-				ans += v[i] * arr2[v[i] - 1e5];
-
-			}else{
-				ans += v[i] * arr[v[i]];
-			}
+				ans += mp[v[i]];
 		}
 
 		cout << ans << '\n';
