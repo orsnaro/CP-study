@@ -1,4 +1,16 @@
-// https://codeforces.com/contest/266/problem/A
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,17 +31,6 @@ int main(void) {
    int t = 1;
    // cin >> t;
    while (t--) {
-      int n;
-      cin >> n;
-      int ans = 0;
-      string s;
-      cin >> s;
-
-      for (int i = 1; i < n; i++) 
-			 if ( s[i] == s[i - 1])
-				ans ++;
-
-	cout << ans << '\n';
    }
 
    return 0;
