@@ -101,4 +101,4 @@ tele="C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe" $t mmt  /Mo
 comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t start  https://codeforces.com/contests $t code . $t start  C:\Users\OmarPc\AppData\Local\Programs\pomotroid\Pomotroid $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t start https://en.cppreference.com/w/cpp/language/operator_precedence  
 gpt="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://chat.forefront.ai/ $t timeout /t 2 /nobreak $t mmt /MoveWindow 0 Title "Forefront Chat"  /WindowWidth 1365 /WindowHeight 767  
 botorg=cd /d C:\Users\OmarPc\repo_Discord_bot_ai\  
-what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 1  Title  "web.whatsapp.com" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
+what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 2  Title  "web.whatsapp.com" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  

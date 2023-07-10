@@ -1,5 +1,8 @@
 
-// https://codeforces.com/contest/520/problem/A
+// https://codeforces.com/contest/265/problem/A
+
+
+
 
 
 #include <bits/stdc++.h>
@@ -23,13 +26,27 @@ int main(void) {
    int t = 1;
    // cin >> t;
    while (t--) {
-		int n; cin >> n;
-		string s; cin >> s;
-		set <char> st;
-		for (size_t i = 0; i < n; i++)
-			st.insert(tolower(s[i]));
-		
-	 	cout << (st.size() >= 26 ? "YES" : "NO") << '\n';
+		string s , t ; cin >> s >> t;
+		deque <char>  st1 ,st2 ;
+
+		int ssz = s.size();
+		int tsz = t.size();
+
+		for (int i = 0; i < ssz; i++)st1.push_back(s[i]);
+		for (int i = 0; i < tsz; i++)st2.push_back(t[i]);
+
+		int ans = 1;
+		while ( !st2.empty() ){
+
+			if ( st1.front() == st2.front() ){
+				st1.pop_front();
+				ans ++;
+			}
+
+			st2.pop_front();
+		}
+		cout << ans << '\n';
+
    }
 
    return 0;
