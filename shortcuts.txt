@@ -78,6 +78,8 @@ $*
 -->OR u can use up to 10 parameters in terminl from $1 to $9
 --> SOME TERMINALS CAN ACCEPT MORE USING ${NUM OF PARAMS}
 
+--> more special chars for cmder alias : https://stackoverflow.com/a/59397138
+
 
 command | clip   OR clip < filename.txt
 --->   copy terminal o\p or any .txt to the clipboard
