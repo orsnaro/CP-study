@@ -15,9 +15,9 @@ for /d %%b in ("%sourcedir%\%target%*") do (
 	
 	rem special format for coloring echo output (find full list in cmder/bin/colors.bat)
 	echo.
-    echo [93m [93m===================================================================[0m
-	echo [93m [93m= MSG: getting difference  Remote Repo <-BETWEEN-> Local "[96m%%~nxb [93m"[0m 
-	echo [93m [93m===================================================================[0m	
+    echo [93m [93m==================================================================================[0m
+	echo [93m [93m=      Remote [96mRepo[93m [91m^<-[93mDifference Between[91m-^>[93m Local "[96m%%~nxb[93m"[0m 
+	echo [93m [93m==================================================================================[0m	
 	echo.
 	
 	cd %%b 
@@ -26,3 +26,15 @@ for /d %%b in ("%sourcedir%\%target%*") do (
 
 CD %oldPath%
 ENDLOCAL
+
+rem This is a label that will be used to exit the batch file.
+:exit
+
+rem Set the exit code to 0.
+set ERRORLEVEL=0
+
+rem Exit the batch file.
+exit /b
+
+rem This is a catch-all for Ctrl+C.
+if "%errorlevel%"=="0" goto exit
