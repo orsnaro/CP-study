@@ -17,9 +17,9 @@ for /d %%b in ("%sourcedir%\%target%*") do (
 	
 	rem special format for coloring echo output (find full list in cmder/bin/colors.bat)
 	echo.
-    echo [93m [93m===================================================================[0m
+    echo [93m [93m==================================================================================[0m
 	echo [93m [93m= MSG: adding commiting pushing ALL from "[96m%%~nxb[93m" to remote..
-	echo [93m [93m===================================================================[0m	
+	echo [93m [93m==================================================================================[0m	
 	echo.
 	
 	cd %%b
