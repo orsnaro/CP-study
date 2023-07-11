@@ -1,2 +1,30 @@
-@echo off
-set oldPath=%cd% & echo ############################################### & echo. &t echo (MSG: MSP_ML_study adding commiting pushing all) & cd c:\Users\%USERNAME%\repo_MSP_ML_study && git add --all && git commit -m "# $*" && git push && echo ###############################################  & echo. & echo (MSG: CPP_COMP_study adding commiting pushing all) & cd c:\Users\%USERNAME%\repo_CPP_COMP_study & git add --all & git commit -m "# $*" & git push & echo ############################################### & echo. & echo (MSG: CHORMA_BMP_proj adding commiting pushing all) & cd c:\Users\%USERNAME%\repo_CHROMA_BMP_proj & git add --all & git commit -m "# $*" & git push  & echo ############################################### & echo. & echo (MSG: Embedded-C adding commiting pushing all) & cd c:\Users\%USERNAME%\repo_Embedded-C  & git add --all & git commit -m "# $*" & git push & echo ############################################### & echo. & echo (MSG: Old_projects_stash  adding commiting pushing all) & cd c:\Users\%USERNAME%\repo_Old_projects_stash & git add --all & git commit -m "# $*" & git push & echo ############################################### & echo. & echo (MSG: Crafting_INTERPTRETERS_study adding commiting pushing all)  & cd c:\Users\%USERNAME%\repo_CRAFTING_INTERPRETERS_study  & git add --all & git commit -m "# $*" & git push origin HEAD:main & echo ############################################### & echo. & echo (MSG: MSP_College_system_mini_proj adding commiting pushing all)  & cd c:\Users\%USERNAME%\repo_MSP_College_system_mini_proj  & git add --all & git commit -m "# $*" & git push & cd %oldPath%  
+@ECHO off
+SETLOCAL 
+
+SET oldPath=%cd% 
+
+rem Set the current directory as the source directory.
+set "sourcedir=c:\Users\%USERNAME%"
+
+rem set your own target token to detect a repo dir
+set "target=repo" 
+
+set /p commitMsg=Enter global commit message: || set commitMsg=THIS COMMIT DONE VIA GLOBAL COMMIT and PUSH COMMAND allgitall 
+
+rem Iterate through all the subdirectories of the source directory.
+for /d %%b in ("%sourcedir%\%target%*") do (
+	rem DO WHATEVER YOU WANT INSIDE REPO DIR HERE: 
+	
+	rem special format for coloring echo output (find full list in cmder/bin/colors.bat)
+	echo.
+    echo [93m [93m===================================================================[0m
+	echo [93m [93m= MSG: adding commiting pushing ALL from "[96m%%~nxb [93m" to remote.. [m0
+	echo [93m [93m===================================================================[0m	
+	echo.
+	
+	cd %%b
+	git add --all && git commit -m "# %commitMsg% #" && git push	
+)
+
+CD %oldPath% 
+ENDLOCAL  

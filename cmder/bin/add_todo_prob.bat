@@ -17,10 +17,14 @@ set /a FILECOUNT=0
 for /f %%a in ('dir /b /a-d-s-h "%todoFolder%"') do set /a FILECOUNT+=1
 
 
+rem enter the link of problem to be added to git commit message (optional)
+set /p commitMsg=paste problem link:  || set commitMsg=NoLinkProvided
+
 rem change the file that you solve CP in it 
 copy CP.cpp  %todoFolder%\prob_no_%FILECOUNT%.cpp
 
-git add .\CP.cpp .\todo_probs\ & git commit -m "#todo: $*" & git push
+rem add commit then push the new problem in todo folder
+git add .\CP.cpp .\todo_probs\ & git commit -m "#todo: %commitMsg% #" & git push
 
 
 cd %oldpath%

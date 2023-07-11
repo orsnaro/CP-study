@@ -1,2 +1,28 @@
-@echo off
-set oldPath=%cd% & echo ############################################### & echo. & echo (MSG: MSP_ML_study  status) & cd c:\Users\%USERNAME%\repo_MSP_ML_study & git status & echo ###############################################  & echo. & echo (MSG: CPP_COMP_study  status) & cd c:\Users\%USERNAME%\repo_CPP_COMP_study & git status & echo ############################################### & echo. & echo (MSG: CHORMA_BMP_proj  status) & cd c:\Users\%USERNAME%\repo_CHROMA_BMP_proj & git status & echo ############################################### & echo. & echo (MSG: Embedded-C adding  status) & cd "c:\Users\%USERNAME%\repo_Embedded-C" & git status & echo ############################################### & echo. & echo (MSG: Old_projects_stash   status) & cd c:\Users\%USERNAME%\repo_Old_projects_stash & git status & echo ############################################### & echo. & echo (MSG: Crafting_INTERPTRETERS_study  status)  & cd c:\Users\%USERNAME%\repo_CRAFTING_INTERPRETERS_study  & git status & echo ############################################### & echo. & echo (MSG: MSP_College_system_mini_proj  status)  & cd c:\Users\%USERNAME%\repo_MSP_College_system_mini_proj  & git status  & cd %oldPath%
+@ECHO off
+SETLOCAL
+
+SET oldPath=%cd% 
+
+rem Set the current directory as the source directory.
+set "sourcedir=c:\Users\%USERNAME%"
+
+rem set your own target token to detect a repo dir
+set "target=repo"
+
+rem Iterate through all the subdirectories of the source directory.
+for /d %%b in ("%sourcedir%\%target%*") do (
+	rem DO WHATEVER YOU WANT INSIDE REPO DIR HERE: 
+
+	rem special format for coloring echo output (find full list in cmder/bin/colors.bat)
+	echo.
+    echo [93m [93m===================================================================[0m
+	echo [93m [93m=    MSG: Getting "[96m%%~nxb[93m" status..[0m
+	echo [93m [93m===================================================================[0m	
+	echo.
+	
+	cd %%b 
+	git status 
+)
+
+CD %oldPath%
+ENDLOCAL
