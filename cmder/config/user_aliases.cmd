@@ -104,4 +104,6 @@ what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 2  Title  "web.wh
 clock=start ms-clock:  
 doneprob=save_N_push_solved_prob.bat  
 addtodo=add_todo_prob.bat  
-comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t code . $t start ms-clock: $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t start https://en.cppreference.com/w/cpp/language/operator_precedence $t start  https://docs.google.com/spreadsheets/d/1Dz4BqGn9Ddc3ptAw4J8kwXHsRU_hLtaBuioPbCCkScw/edit#gid=855203541  
+ntype=start https://www.nitrotype.com/  
+typer=start https://play.typeracer.com/  
+comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t code . $t start ms-clock: $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t start https://en.cppreference.com/w/cpp/language/operator_precedence $t https://www.calculatorsoup.com/calculators/math/modulo-calculator.php $t start  https://docs.google.com/spreadsheets/d/1Dz4BqGn9Ddc3ptAw4J8kwXHsRU_hLtaBuioPbCCkScw/edit#gid=855203541  
