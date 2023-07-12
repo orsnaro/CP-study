@@ -1,5 +1,7 @@
 
-// https://codeforces.com/contest/740/problem/C
+
+
+
 
 
 
@@ -16,8 +18,7 @@ using namespace std;
 #define F first
 #define S second
 using ll = long long;
-const int N = 1e5, M = INT_MAX;
-const ll llm = LONG_LONG_MAX;
+const int N = 1e5, M = 1e9;
 // int arr[N];
 
 int main(void) {
@@ -26,18 +27,40 @@ int main(void) {
    int t = 1;
    // cin >> t;
    while (t--) {
-		int n , m; cin >> n >> m;
-		ll mn = llm; // min interval is also maximum possible mes that is min between all sub arr mexes
-		for (int  i = 0; i < m; i++){
-			int tmp1 , tmp2; cin >> tmp1 >> tmp2;
-			mn = min(mn , ll(tmp2 - tmp1 + 1) );
+		int n; cin >> n;
+
+		vector <int> v1;
+		for (int i = 0; i < n; i++)
+		{
+			int tmp; cin >> tmp;
+			v1.push_back(tmp);
 		}
-		cout << mn << '\n';
-		for (int i = 0 , j= 0; i < n; i++ , j++){
-			if (j == mn)j = 0;
+		unordered_map <int , int> mp;
+		for (int i = 0; i < n; i++)
+		{
+			int tmp; cin >> tmp;
+			mp[tmp] = i;
+		}
+
+
+		int ans = 0;
+		for (int i = 0; i < n - 1; i++)
+		{
+			int crnt = v1[i];
+			int aft = v1[i+1];
 			
-			cout << j << ' ';
+			int pos1 = mp[crnt];
+			int pos2 = mp[aft];
+			if ( pos1 > pos2 ){
+				ans++;
+				v1[i] = aft;
+				v1[i+1] = crnt;
+			}
+
 		}
+
+		cout << ans  << '\n';
+
 
    }
 
