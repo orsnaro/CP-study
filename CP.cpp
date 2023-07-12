@@ -1,4 +1,5 @@
-// https://www.codechef.com/START98D/problems/BLAST3 (NOT COMPLETED)
+// https://www.codechef.com/START98D/problems/AIRM
+
 
 
 
@@ -23,30 +24,20 @@ int main(void) {
    int t = 1;
    cin >> t;
    while (t--) {
-		int n; cin >> n;
-		string s; cin >> s;
-
-		if ( s.size() % 2 == 0){
-			int half = s.size() / 2 ;
-			string s1 = s.substr(0, half);
-			stringg s2 = s.substr(half , half);
-			if ( s1 == s2 ) {cout << "YES"; continue;}
-			else{
-				if (s.size() <= 3){cout << "NO"; continue;}
-
-			}
-		}else{
-			int half = s.size() / 2 ;
-			string s1 = s.substr(0, half);
-			string s2 = s.substr(half + 1 , half);
-
-			if ( s1 == s2){cout << "YES"; continue;}
-			else{
-				if (s.size() <= 3){cout << "NO"; continue;}
-			}
-		}
-		
-		
+        int arr[1500] = {};
+        int n; cin >> n;
+        for (int i = 0; i < n*2; i++)
+        {
+            int tmp; cin >> tmp;
+            arr[tmp]++; 
+        }
+        priority_queue <int> pq;
+        for (int i = 0; i < 1500; i++)
+            pq.push(arr[i]);
+        
+        int ans = pq.top();
+        cout << ans << '\n';
+        
    }
 
    return 0;

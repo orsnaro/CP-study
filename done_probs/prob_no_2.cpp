@@ -1,7 +1,4 @@
-
-// https://codeforces.com/contest/740/problem/C
-
-
+// https://www.codechef.com/START98D/problems/AIRM
 
 
 
@@ -16,29 +13,31 @@ using namespace std;
 #define F first
 #define S second
 using ll = long long;
-const int N = 1e5, M = INT_MAX;
-const ll llm = LONG_LONG_MAX;
-// int arr[N];
+const int N = 1e5 + 5, M = INT_MAX;
+const ll LM= LONG_LONG_MAX;
+
+
 
 int main(void) {
    // freopen("in.txt","r",stdin);
    fastio;
    int t = 1;
-   // cin >> t;
+   cin >> t;
    while (t--) {
-		int n , m; cin >> n >> m;
-		ll mn = llm; // min interval is also maximum possible mes that is min between all sub arr mexes
-		for (int  i = 0; i < m; i++){
-			int tmp1 , tmp2; cin >> tmp1 >> tmp2;
-			mn = min(mn , ll(tmp2 - tmp1 + 1) );
-		}
-		cout << mn << '\n';
-		for (int i = 0 , j= 0; i < n; i++ , j++){
-			if (j == mn)j = 0;
-			
-			cout << j << ' ';
-		}
-
+        int arr[1500] = {};
+        int n; cin >> n;
+        for (int i = 0; i < n*2; i++)
+        {
+            int tmp; cin >> tmp;
+            arr[tmp]++; 
+        }
+        priority_queue <int> pq;
+        for (int i = 0; i < 1500; i++)
+            pq.push(arr[i]);
+        
+        int ans = pq.top();
+        cout << ans << '\n';
+        
    }
 
    return 0;
