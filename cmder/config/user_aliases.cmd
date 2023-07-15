@@ -18,7 +18,6 @@ adda= git add --all
 upa= git push --all  
 g= git $*  
 a= alias $*  
-fb= start https://www.facebook.com/  
 desk= chdir /d c:\Users\%USERNAME%\Desktop\ $t explorer .  
 games= cd /d "C:\Users\%USERNAME%\Documents\game fast\" $t explorer .  
 link= cd /d C:\ProgramData\Microsoft\Windows\Start Menu\Programs  
@@ -83,7 +82,6 @@ phone="C:\Program Files\WindowsApps\SAMSUNGELECTRONICSCoLtd.SamsungFlux_4.9.704.
 dis=powershell.exe -Command "Start-Process powershell -WindowStyle Hidden -ArgumentList 'Start-Process opendiscord_2nd_monitor.bat -WindowStyle Hidden'" $t mmt /MoveWindow 1 Process "Discord.exe"  /WindowLeft -5  /WindowTop 0  /WindowWidth 900   /WindowHeight 1580  
 twt=start https://www.twitch.tv/  
 gmail= start https://www.gmail.com  
-brave="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 bravecog="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --incognito https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 s=start https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 spot="C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.210.760.0_x86__zpdnekdrzrea0\Spotify.exe" $t  mmt /MoveWindow 1  Process "Spotify.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
@@ -106,4 +104,7 @@ doneprob=save_N_push_solved_prob.bat
 addtodo=add_todo_prob.bat  
 ntype=start https://www.nitrotype.com/  
 typer=start https://play.typeracer.com/  
-comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t code . $t start ms-clock: $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t start https://en.cppreference.com/w/cpp/language/operator_precedence $t https://www.calculatorsoup.com/calculators/math/modulo-calculator.php $t start  https://docs.google.com/spreadsheets/d/1Dz4BqGn9Ddc3ptAw4J8kwXHsRU_hLtaBuioPbCCkScw/edit#gid=855203541  
+stat=git status  
+comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t code . $t start ms-clock: $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t start https://en.cppreference.com/w/cpp/language/operator_precedence $t start  https://www.calculatorsoup.com/calculators/math/modulo-calculator.php $t start  https://docs.google.com/spreadsheets/d/1Dz4BqGn9Ddc3ptAw4J8kwXHsRU_hLtaBuioPbCCkScw/edit#gid=855203541  
+sbrave="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
+botenv= c:\Users\OmarPc\py_env\discord_bot\Scripts\activate.bat  
