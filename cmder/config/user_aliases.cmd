@@ -88,7 +88,6 @@ spot="C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.210.760.0_x86__zpdne
 schrome=chrome "https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9" $t mmt /MoveWindow 1  Process "chrome.exe" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
 gpt4="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --incognito --app=https://chat.forefront.ai/ $t mmt /MoveWindow 1 Title "Forefront Chat" /WindowLeft -10 /WindowTop 0 /WindowWidth 917 /WindowHeight 1600  
 sound=chrome https://soundcloud.com  
-bard="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://bard.google.com/  
 gptp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://poe.com/ChatGPT  
 parkorg=cd /d C:\Users\%USERNAME%\repo_Smart_parking_system\  
 oldorg=cd /d "C:\Users\%USERNAME%\repo_Old_projects_stash"  
@@ -108,3 +107,5 @@ stat=git status
 comp=cd /d c:\users\OmarPc\repo_CPP_COMP_study $t code . $t start ms-clock: $t start  https://commons.wikimedia.org/wiki/File:Ascii-proper-color.svg#/media/File:Ascii-proper-color.svg $t start https://en.cppreference.com/w/cpp/language/operator_precedence $t start  https://www.calculatorsoup.com/calculators/math/modulo-calculator.php $t start  https://docs.google.com/spreadsheets/d/1Dz4BqGn9Ddc3ptAw4J8kwXHsRU_hLtaBuioPbCCkScw/edit#gid=855203541  
 sbrave="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" https://www.google.com/search?q=$1+$2+$3+$4+$5+$6+$7+$8+$9  
 botenv= c:\Users\OmarPc\py_env\discord_bot\Scripts\activate.bat  
+bard=bard-cli $*  
+bardapp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://bard.google.com/  
