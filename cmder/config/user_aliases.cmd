@@ -109,3 +109,4 @@ sbrave="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" http
 botenv= c:\Users\OmarPc\py_env\discord_bot\Scripts\activate.bat  
 bard=bard-cli $*  
 bardapp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://bard.google.com/  
+mx=sndvol.exe  
