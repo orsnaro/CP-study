@@ -26,15 +26,3 @@ for /d %%b in ("%sourcedir%\%target%*") do (
 
 CD %oldPath%
 ENDLOCAL
-
-rem This is a label that will be used to exit the batch file.
-:exit
-
-rem Set the exit code to 0.
-set ERRORLEVEL=0
-
-rem Exit the batch file.
-exit /b
-
-rem This is a catch-all for Ctrl+C.
-if "%errorlevel%"=="0" goto exit

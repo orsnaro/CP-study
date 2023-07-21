@@ -15,7 +15,7 @@ using namespace std;
 using ll = long long;
 const int N = 2e5 + 5, M = INT_MAX;
 const ll LM= LONG_LONG_MAX;
-// int arr[N];
+// int arr[];
 
 int main(void) {
    // freopen("in.txt","r",stdin);
@@ -25,11 +25,12 @@ int main(void) {
    while (t--) {
 		int n; cin >> n;
 		vector < ll > v;
-		ll sum[n + 5]  = {};
+		ll sum[n + 5] = {};
 		for (int i = 0; i < n; i++){
 			ll tmp; cin >> tmp;
 			v.push_back(tmp);
 		}
+		
 		sort(v.begin() , v.end()  , greater<ll>());
 		
 

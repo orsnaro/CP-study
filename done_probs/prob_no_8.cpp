@@ -32,7 +32,7 @@ int main(void) {
 		{
 			int tmp; cin >> tmp;
 			arr[tmp] = !arr[tmp];
-			if (arr[tmp] == true){
+			if (arr[tmp] == true){11
 				cnt ++;
 			}else if ( arr[tmp] == false){
 				cnt --;

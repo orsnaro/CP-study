@@ -97,7 +97,6 @@ grep= grep -i "$*"
 tele="C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe" $t mmt  /MoveWindow 1  Process "Telegram.exe" /WindowTop -10 /WindowLeft 0 /WindowWidth 900 /WindowHeight 1600  
 gpt="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://chat.forefront.ai/ $t timeout /t 2 /nobreak $t mmt /MoveWindow 0 Title "Forefront Chat"  /WindowWidth 1365 /WindowHeight 767  
 botorg=cd /d C:\Users\OmarPc\repo_Discord_bot_ai\  
-what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 2  Title  "web.whatsapp.com" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
 clock=start ms-clock:  
 doneprob=save_N_push_solved_prob.bat  
 addtodo=add_todo_prob.bat  
@@ -110,3 +109,4 @@ botenv= c:\Users\OmarPc\py_env\discord_bot\Scripts\activate.bat
 bard=bard-cli $*  
 bardapp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://bard.google.com/  
 mx=sndvol.exe  
+what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 1  Title  "web.whatsapp.com" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
