@@ -3,7 +3,7 @@
 ################################################################################
 cpp_comp_vs.vcxproj.FileListAbsolute.txt
 sheet_V7.0.xlsx
-"~$sheet_V7.0.xlsx"
+~$sheet_V7.0.xlsx
 *.exe
 *.sqlite
 *.db
