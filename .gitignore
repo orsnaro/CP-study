@@ -2,8 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 cpp_comp_vs.vcxproj.FileListAbsolute.txt
-omar rs's  Junior Training Sheet V7.0.xlsx
-"omar rs's  Junior Training Sheet V7.0.xlsx"
+sheet_V7.0.xlsx
+"~$sheet_V7.0.xlsx"
 *.exe
 *.sqlite
 *.db
