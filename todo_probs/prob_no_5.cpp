@@ -32,9 +32,7 @@ ll solve ( ll a , ll b  , ll c){
 		  return x1;
     }
 
-    else {
-		return -1 ;
-    }
+    
 }
 
 int main(void) {

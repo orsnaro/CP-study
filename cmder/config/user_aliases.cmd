@@ -92,7 +92,6 @@ gptp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=
 parkorg=cd /d C:\Users\%USERNAME%\repo_Smart_parking_system\  
 oldorg=cd /d "C:\Users\%USERNAME%\repo_Old_projects_stash"  
 speed=speedtest.exe  
-netlimit=nbcmd.exe application service start  
 grep= grep -i "$*"  
 tele="C:\Users\OmarPc\AppData\Roaming\Telegram Desktop\Telegram.exe" $t mmt  /MoveWindow 1  Process "Telegram.exe" /WindowTop -10 /WindowLeft 0 /WindowWidth 900 /WindowHeight 1600  
 gpt="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://chat.forefront.ai/ $t timeout /t 2 /nobreak $t mmt /MoveWindow 0 Title "Forefront Chat"  /WindowWidth 1365 /WindowHeight 767  
