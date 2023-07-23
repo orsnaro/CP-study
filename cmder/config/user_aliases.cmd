@@ -49,7 +49,6 @@ sqlite= sqlite3
 sql= sqlite3  
 env= cd /d C:\Users\%USERNAME%\py_env\  
 cm=cmder  
-st=start $*  
 d=exit  
 en=echo $*  
 tsk=tasklist $1 $b sort  
