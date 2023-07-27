@@ -73,7 +73,6 @@ phporga=cd c:\xampp\htdocs\repo_ps_site\ $t code c:\xampp\htdocs\repo_Ps_site $t
 phporg=cd /d c:\xampp\htdocs\repo_ps_site\  
 loga=git log --all --graph --decorate --stat  
 logme=git log --all --graph  --decorate --stat --author="Omar Rashad Salem"  
-ffind=dir "\*$**" /s  
 ffindhere=dir "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\*$**" /s  
 movdis= mmt /MoveWindow 1 Process Discord.exe  
 orsorg= cd C:\Users\%USERNAME%\repo_Orsnaro  
@@ -108,3 +107,5 @@ bard=bard-cli $*
 bardapp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=https://bard.google.com/  
 mx=sndvol.exe  
 what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 1  Title  "web.whatsapp.com" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
+bothost=bothost.lnk  
+ffind=ffind.bat  
