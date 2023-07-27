@@ -4,7 +4,7 @@ setlocal EnableDelayedExpansion
 set oldpath=%cd%
 
 set "toFind=%1"
-set "strtMsg=Start Searching in Drive"
+set "strtMsg=Started Searching in Drive"
 set "endMsg=Done Searching in Drive"
 set "alphabet=ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   
@@ -21,7 +21,7 @@ for /L %%a in (0,1,25) do (
 	
 		echo.
 		echo [93m [93m===================================================================[0m
-		echo [93m [93m=                   [91m%strtMsg%[96m'!crntDrive!'[93m                    =[0m        
+		echo [93m [93m=                   [91m%strtMsg%[96m'!crntDrive!'[93m                 =[0m        
 		echo [93m [93m===================================================================[0m	
 		echo.
 		

@@ -108,4 +108,4 @@ bardapp="C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --a
 mx=sndvol.exe  
 what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 1  Title  "web.whatsapp.com" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
 bothost=bothost.lnk  
-ffind=ffind.bat  
+ffind=ffind.bat $*  
