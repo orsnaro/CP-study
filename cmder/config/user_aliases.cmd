@@ -23,7 +23,6 @@ games= cd /d "C:\Users\%USERNAME%\Documents\game fast\" $t explorer .
 link= cd /d C:\ProgramData\Microsoft\Windows\Start Menu\Programs  
 monk= start https://monkeytype.com/  
 in= cat input.txt  
-cprn=g++ CP.cpp -o CP.exe $t @echo  CP.exe is running .. $t CP.exe  $t del CP.exe  
 cpremote=start https://github.com/orsnaro/CPP_bgnrCOMP_Study  
 com=git commit -m"# $*"  
 chk=git checkout $*  
@@ -109,3 +108,4 @@ mx=sndvol.exe
 what=chrome --app=https://web.whatsapp.com/ $t mmt /MoveWindow 1  Title  "web.whatsapp.com" /WindowTop 0 /WindowLeft -10 /WindowWidth 910 /WindowHeight 1600  
 bothost=bothost.lnk  
 ffind=ffind.bat $*  
+cprn=g++ cp.cpp -o CP.exe $t @echo  CP.exe is running .. $t CP.exe  $t del CP.exe  
