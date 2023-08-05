@@ -1,5 +1,6 @@
 
 // https://codeforces.com/problemset/problem/467/B
+// 5m read - 3m think - 3m code - 1st submit - alone
 
 
 
