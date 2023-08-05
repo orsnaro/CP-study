@@ -1,6 +1,4 @@
-// https://codeforces.com/problemset/problem/1843/C
-// 5min read - 15+3min think - 7.5min code - 1st submit - alone
-
+// https://codeforces.com/problemset/problem/579/A
 
 
 
@@ -26,15 +24,11 @@ int main(void) {
    // freopen("in.txt","r",stdin);
    fastio; // disable with 'printf() , scanf()'
    int t = 1;
-   cin >> t;
+   // cin >> t;
    while (t--) {
-		ll n; cin >> n;
-		ll sm = n;
-		while(n){
-			n >>= 1;
-			sm += n;
-		}
-		cout << sm << '\n';
+		int n; cin >> n;
+		int ans = __builtin_popcount(n);
+		cout << ans << '\n';
    }     
 	return 0;  
 }
