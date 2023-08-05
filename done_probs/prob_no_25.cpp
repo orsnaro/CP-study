@@ -1,5 +1,5 @@
-// https://codeforces.com/problemset/problem/579/A
-//3min read - 4min think - 2 min coding - 0 debug - alone - 1st submit
+
+// https://codeforces.com/problemset/problem/467/B
 
 
 
@@ -25,8 +25,15 @@ int main(void) {
    int t = 1;
    // cin >> t;
    while (t--) {
-		int n; cin >> n;
-		int ans = __builtin_popcount(n);
+		int n , m ,k; cin >> n >> m >> k;
+		int arr[m+1];
+		for (int i = 0; i <= m; i++) cin >> arr[i];
+		int ans = 0;
+		for (int i = 0; i < m; i++)
+		{
+			int tmp = arr[m] ^ arr[i];
+			ans += (__builtin_popcount(tmp) <= k ? 1 : 0);
+		}
 		cout << ans << '\n';
    }     
 	return 0;  
