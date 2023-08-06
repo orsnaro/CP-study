@@ -26,6 +26,7 @@ helpers/collect_for_acm.md
 *.obj
 
 #dirs
+helpers/
 resourses/
 Debug/
 .ipynb_checkpoints/
