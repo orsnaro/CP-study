@@ -1,10 +1,11 @@
 
+// https://codeforces.com/contest/1857/problem/C
 
-// https://codeforces.com/contest/1850/problem/E
-#include <bits/stdc++.h>
+
 // #include <stdio.h>
+#include <bits/stdc++.h>
 using namespace std;
-
+#define Txtio   freopen("input.txt","r",stdin); freopen("output.txt","w",stdout);
 #define fastio                                                                 \
    ios_base::sync_with_stdio(false);                                           \
    cin.tie(nullptr);                                                           \
@@ -13,51 +14,58 @@ using namespace std;
 #define F first
 #define S second
 using ll = long long;
-const int N = 2e5 + 5, M = INT_MAX;
-const ll LM= LONG_LONG_MAX;
+using ull = unsigned long long;
+const ll LM = LONG_LONG_MAX;
+const int N = 2e6 + 5, M = INT32_MAX;
 // int arr[N];
-ll solve ( ll a , ll b  , ll c){
-    ll discriminant = b*b - 4*a*c;
-    double x1 = 0;
-	 double x2 = 0;
-    if (discriminant > 0) {
-        x1 = (-b + sqrt(discriminant)) / (2*a);
-        x2 = (-b - sqrt(discriminant)) / (2*a);
-		  return (x1 > x2 ? x1 : x2);
-        
-    }
-    
-    else if (discriminant == 0) {
-        x1 = -b/(2*a);
-		  return x1;
-    }
-
-    
-}
 
 int main(void) {
-   // freopen("in.txt","r",stdin);
-   fastio; // disable when using 'printf() , scanf()'
+	// Txtio;
+   fastio; // disable with 'printf() , scanf()'
    int t = 1;
    cin >> t;
    while (t--) {
 		int n; cin >> n;
-		ll c; cin >> c;
-		ll p_sum = 0;
-		ll sqrt_sum = 0;
-		for (int i = 0; i < n; i++)
+		int b = (n(n-1))/2;	
+		map<int,int> mp;
+		for (int i = 0; i < b; i++)
 		{
-			ll tmp; cin >> tmp;
-			p_sum += tmp;
-			sqrt_sum += sqrt(tmp);
+			int tmp; cin >> tmp;
+			mp[tmp]++;
 		}
-		ll a = 4*n;
-		ll C = p_sum - c;
-		ll b = 4 * sqrt_sum;
-		ll ans = solve ( a, b, C);
-		cout << ans << '\n';
+		auto bi = mp.begin()
+		auto ei = mp.end()
+		auto end = ei;
+		end--;
+		int j = 0;
+		int big = 0;
+		for (auto i = bi; i != ei; i++ , j++){
+			mp[i->F] = min(1 , (i->S)-j);
+			if (i == end){
+				big = i->F;
+			}
+		}
+		
 
+		for (auto i = bi; i != ei; i++)
+		{
+			int cnt = i->S;
+			auto j = i;
+			j++;
+			cout << i->F << ' ';
+			while(i->S != 0)
+			{
+				if(j != ei){
+					cout <<  <<' ';
+				}
+				mp[i->F]--;
+			}
 
-   }
-   return 0;
+		}
+		
+		
+		
+   }     
+	return 0;  
 }
+
