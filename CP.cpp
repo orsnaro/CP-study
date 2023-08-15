@@ -1,8 +1,7 @@
-// https://codeforces.com/contest/1858/problem/A
 
 
 
-
+// https://codeforces.com/contest/1858/problem/B
 
 
 
@@ -24,7 +23,7 @@ using ll = long long;
 using ull = unsigned long long;
 const ll LM = LONG_LONG_MAX;
 const int N = 2e6 + 5, M = INT32_MAX;
-// int arr[N];
+int v[N];
 
 int main(void) {
 	// Txtio;
@@ -32,19 +31,37 @@ int main(void) {
    int t = 1;
    cin >> t;
    while (t--) {
-		int a ,b ,c; cin >> a >> b >> c;
-		int an = 0 , k = 0 ;
-		if ( c & 1 == 1){
-			k =1; an = 0;
+		int n , m , d; cin >> n >> m >> d;
+		ll c_cnt = 0;
+		ll s_cnt = 0;
+
+		cin >> v[0];
+		if (v[0] == 1)
+			c_cnt = m;
+		else c_cnt = m + 1;
+
+		if ( ((v[0] - 1  - 1)  / d) > 0 ){
+			c_cnt += ((v[0] - 1)  - 1)  / d;
 		}else{
-			an = 1 ; k =0;
+			s_cnt ++;
 		}
 
-		if ( a == b){
-			cout << (k < an ? "Second" : "First") << '\n';
-		}else{
-			cout << (a > b ? "First" : "Second") << '\n';
+		for (int i = 1; i < m; i++)
+		{
+			cin >> v[i];
+			int ans = ((v[i]-1) - v[i - 1]) / d;
+			if ( ans > 0 ){
+				c_cnt += ans;
+			}else{
+				s_cnt ++;
+			}
+
 		}
+
+		if ( s_cnt == 0){s_cnt = m; cout << c_cnt << ' ' << s_cnt << '\n';}
+		else {cout << c_cnt - 1 << ' ' << s_cnt << '\n';}
+
+		
 
    }     
 	return 0;  

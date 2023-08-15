@@ -1,5 +1,11 @@
 
-// https://codeforces.com/contest/1857/problem/C
+
+
+// https://codeforces.com/contest/1858/problem/B
+
+
+
+
 
 
 // #include <stdio.h>
@@ -17,7 +23,7 @@ using ll = long long;
 using ull = unsigned long long;
 const ll LM = LONG_LONG_MAX;
 const int N = 2e6 + 5, M = INT32_MAX;
-// int arr[N];
+int v[N];
 
 int main(void) {
 	// Txtio;
@@ -25,46 +31,38 @@ int main(void) {
    int t = 1;
    cin >> t;
    while (t--) {
-		int n; cin >> n;
-		int b = (n(n-1))/2;	
-		map<int,int> mp;
-		for (int i = 0; i < b; i++)
-		{
-			int tmp; cin >> tmp;
-			mp[tmp]++;
-		}
-		auto bi = mp.begin()
-		auto ei = mp.end()
-		auto end = ei;
-		end--;
-		int j = 0;
-		int big = 0;
-		for (auto i = bi; i != ei; i++ , j++){
-			mp[i->F] = min(1 , (i->S)-j);
-			if (i == end){
-				big = i->F;
-			}
-		}
-		
+		int n , m , d; cin >> n >> m >> d;
+		ll c_cnt = 0;
+		ll s_cnt = 0;
 
-		for (auto i = bi; i != ei; i++)
+		cin >> v[0];
+		if (v[0] == 1)
+			c_cnt = m;
+		else c_cnt = m + 1;
+
+		if ( ((v[0] - 1  - 1)  / d) > 0 ){
+			c_cnt += ((v[0] - 1)  - 1)  / d;
+		}else{
+			s_cnt ++;
+		}
+
+		for (int i = 1; i < m; i++)
 		{
-			int cnt = i->S;
-			auto j = i;
-			j++;
-			cout << i->F << ' ';
-			while(i->S != 0)
-			{
-				if(j != ei){
-					cout <<  <<' ';
-				}
-				mp[i->F]--;
+			cin >> v[i];
+			int ans = ((v[i]-1) - v[i - 1]) / d;
+			if ( ans > 0 ){
+				c_cnt += ans;
+			}else{
+				s_cnt ++;
 			}
 
 		}
+
+		if ( s_cnt == 0){s_cnt = m; cout << c_cnt << ' ' << s_cnt << '\n';}
+		else {cout << c_cnt - 1 << ' ' << s_cnt << '\n';}
+
 		
-		
-		
+
    }     
 	return 0;  
 }
