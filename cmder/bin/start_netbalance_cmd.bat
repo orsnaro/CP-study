@@ -1,1 +1,0 @@
-nbcmd.exe application service start
