@@ -1,7 +1,7 @@
 
 
 
-
+// https://codeforces.com/contest/268/problem/A
 
 // #include <stdio.h>
 #include <bits/stdc++.h>
@@ -37,7 +37,7 @@ int main(void) {
 			g[tmp]++;
 		}
 		int s = 0;
-		for (size_t i = 0; i < 100; i++)
+		for (size_t i = 0; i <= 100; i++)
 		{
 			s += (h[i] * g[i]);
 		}
