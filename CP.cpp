@@ -1,4 +1,3 @@
-// https://codeforces.com/contest/770/problem/A
 
 
 
@@ -25,23 +24,6 @@ int main(void) {
    int t = 1;
    // cin >> t;
    while (t--) {
-		int n; cin >> n;
-		int k; cin >> k;
-
-		string sub;
-		string ans;
-		for (int i = 0; i < k; i++){
-			const char c = 'a' + i;
-			sub += c;
-		}
-
-		int ful = (n / k);
-		int r   = n % k;
-
-		while ( ful-- ) cout << sub;
-		for (size_t i = 0; i < r; i++) cout << sub[i];
-		
-		cout << '\n';
    }     
 	return 0;  
 }
