@@ -30,5 +30,5 @@ Debug/
 .vs/*
 .vscode/
 .vscode/*
-tour_of_c++/
-tour_of_c++/*
+"tour_of_c++/"
+"tour_of_c++/*"
