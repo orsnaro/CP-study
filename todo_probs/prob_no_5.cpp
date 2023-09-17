@@ -1,8 +1,7 @@
+  
 
 
 
-
-// https://codeforces.com/contest/1858/problem/C
 
 
 
@@ -25,13 +24,10 @@ int arr[N];
 
 int main(void) {
 	// Txtio;
-   fastio; // disable with 'printf() , scanf()'
+   fastio; // disable fastio when using 'printf() , scanf()'
    int t = 1;
-   cin >> t;
+   // cin >> t;
    while (t--) {
-
-		
-
    }     
 	return 0;  
 }
