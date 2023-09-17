@@ -20,6 +20,7 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.pdb
 *.tlog
 *.obj
+*.exe
 
 #dirs
 resourses/
@@ -29,5 +30,3 @@ Debug/
 .vs/*
 .vscode/
 .vscode/*
-cmder_old/
-cmder_old/*
