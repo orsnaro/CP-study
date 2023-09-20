@@ -1,5 +1,5 @@
-  
-
+// https://www.codechef.com/problems/OFFBY1
+// tot time >5min ~
 
 
 
