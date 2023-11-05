@@ -21,6 +21,8 @@ cpp_comp_vs.vcxproj.FileListAbsolute.txt
 *.tlog
 *.obj
 *.exe
+*.csproj
+
 
 #dirs
 resourses/
@@ -32,3 +34,6 @@ Debug/
 .vscode/*
 tour_of_c++/
 tour_of_c++/*
+CS_study/obj/
+CS_study/obj/
+CS_study/.vs/
