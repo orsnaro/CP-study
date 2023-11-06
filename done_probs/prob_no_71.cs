@@ -32,17 +32,14 @@ class Result
     public static int diagonalDifference(List<List<int>> arr)
     {
         int n = arr[0].Count();
-        int ans = 0;
         int sd1 = 0, sd2 = 0;
-        
-        for(int i = 0; i < n; i++)
+
+        for (int i = 0; i < n; i++) {
             sd1 += arr[i][i];
-        
-        for(int i = 0; i < n; i++)
-            sd2 += arr[i][n-i-1];
-        
-        ans = Math.Abs(sd1 - sd2);
-        return ans;
+            sd2 += arr[i][n - i - 1];
+        }
+
+        return Math.Abs(sd1 - sd2);
     }
 
 }
