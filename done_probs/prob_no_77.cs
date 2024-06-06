@@ -1,4 +1,4 @@
-﻿//prob: https://www.hackerrank.com/challenges/staircase/submissions/code/386055469
+﻿//prob: https://www.hackerrank.com/challenges/staircase/
 
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
