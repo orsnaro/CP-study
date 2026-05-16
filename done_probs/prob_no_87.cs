@@ -9,7 +9,6 @@ class Cp
 {
     static public string MergeAlternately(string word1, string word2) {
         string bigW = (word1.Length >= word2.Length ? word1 : word2);
-        string smallW = (bigW == word1 ? word2 : word1);
 
         int w1Len = word1.Length;
         int w2Len = word2.Length;
@@ -19,7 +18,7 @@ class Cp
         string res = default;
 
 
-        for (int i = 0, a =0, b=0; i < maxLen; i++) {
+        for (int i = 0; i < maxLen; i++) {
             if(i >= minLen) {
                 res += bigW[minLen..maxLen];
                 break;
