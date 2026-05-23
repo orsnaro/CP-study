@@ -13,7 +13,7 @@ public class Solution {
         for(int i = s.Length - 1; i >= 0; i--){
             if(s[i] != ' ' && idx == -1){
                 idx = i; // we found word-end -> continue until you arrive to where it starts then append to the res
-            } else if (s[i] == ' ' && idx != -1) {//reached where word start or whole s starts with non-whitechar
+            } else if (s[i] == ' ' && idx != -1) {//reached where word starts
                 //current (i+1) is word start, current idx is word end
                 res += isFirstWord ? "" : " ";
                 isFirstWord = false;
