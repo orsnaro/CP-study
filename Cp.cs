@@ -1,37 +1,14 @@
-﻿// https://leetcode.com/problems/removing-stars-from-a-string/?envType=study-plan-v2&envId=leetcode-75
+﻿//https://leetcode.com/problems/reverse-degree-of-a-string/?envType=daily-question&envId=2026-09-20
 
 public class Solution {
-    public string RemoveStars(string s) {
-        //create empty stack
-        //counter to keep track of how many stars arent processed yet
-        //fill the stack with the string 
+    public int ReverseDegree(string s) {
+        int mx_char = 123;
+        int sz = s.Length;
 
-        string res = "";
-        int pending_star_cnt = 0;
+        int res = 0;
+        for(int i = 0; i < sz; i++)
+            res += ((mx_char - Convert.ToInt32(s[i])) * (i+1));
 
-        var str_stk = new Stack<char>();
-
-        foreach(var c in s)
-            str_stk.Push(c);
-
-        while(str_stk.Count != 0){
-            char tmp = str_stk.Pop();
-            if(tmp == '*'){
-                pending_star_cnt++;
-            } else {
-                if(pending_star_cnt == 0){
-                    res += tmp;
-                } else {
-                    pending_star_cnt--;
-                    //discarding the character also
-                }
-            }
-        }
-        
-        char[] charRes = res.ToCharArray();
-        Array.Reverse(charRes);
-
-
-        return new string(charRes);
+        return res;
     }
 }
