@@ -1,14 +1,20 @@
-﻿//https://leetcode.com/problems/reverse-degree-of-a-string/?envType=daily-question&envId=2026-09-20
+﻿//https://leetcode.com/problems/sum-of-squares-of-special-elements/
+
+//this is O(sqrt(n)), simple looping will be O(n) 
 
 public class Solution {
-    public int ReverseDegree(string s) {
-        int mx_char = 123;
-        int sz = s.Length;
-
+    public int SumOfSquares(int[] nums) {
         int res = 0;
-        for(int i = 0; i < sz; i++)
-            res += ((mx_char - Convert.ToInt32(s[i])) * (i+1));
+        int n = nums.Length;
+        int sqrt = (int)Math.Sqrt(n);
+        for(int i = 1; i <= sqrt; i++){
+            if(n%i == 0){
+                res += (int)Math.Pow(nums[i-1],2);
 
+                int tmp = (int)n/i;
+                res += (tmp == i ? 0 : (int)Math.Pow(nums[tmp-1],2) );
+            }
+        }
         return res;
     }
 }
