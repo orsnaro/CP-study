@@ -1,14 +1,11 @@
-﻿//https://leetcode.com/problems/contains-duplicate/
-
-
+﻿
+//https://leetcode.com/problems/find-words-containing-character/
 public class Solution {
-    public bool ContainsDuplicate(int[] nums) {
-        // //Normal solution 
-        // int sz1 = nums.Length;
-        // int sz2 = nums.ToHashSet<int>().Count;
-        // return sz1==sz2 ? false : true;
-
-        //LINQ
-        return nums.Distinct().Count() != nums.Length ? false : true; 
+    public IList<int> FindWordsContaining(string[] words, char x) {
+        var res = words
+                    .Select((word, index) => (word, index))
+                    .Where(tpl => tpl.word.Contains(x))
+                    .Select(tpl => tpl.index);
+        return res.ToList();
     }
 }
