@@ -1,49 +1,48 @@
-﻿
-//https://leetcode.com/problems/asteroid-collision/submissions/2192702451/?envType=study-plan-v2&envId=leetcode-75
+﻿//https://leetcode.com/problems/decode-string/?envType=study-plan-v2&envId=leetcode-75
+
 public class Solution {
-    public int[] AsteroidCollision(int[] asteroids) {
+    public string DecodeString(string s) {
+        var stk = new Stack<(int idx, int cnt, int dLen)>();
+        StringBuilder res = new StringBuilder(s); //mutable -> faster to update/modify than string class
+        int sz = res.Length;
 
-        Stack<int> res = new Stack<int>();
-        res.Push(asteroids[0]);
-        int sz = asteroids.Length;
-        int i = 1;
+        int dSt = -1;
 
-        while(i < sz && res.Count > 0){
-            int crnt = asteroids[i];
-            int peek = res.Peek(); 
-            if(IsRight(peek) && !IsRight(crnt)){
+        for(int i = 0; i < sz; i++){
+            //open bracket (put it idx,cnt)
+            //on close bracket dont push it and pop only one tuble from stack
+            //update res string accordingly
+
+            if(char.IsDigit(res[i])){
+                dSt = dSt == -1 ? i : dSt;
+            }   
+
+            if(res[i] == '['){
+                //join all digits then convert to int and save digs length
+                int cnt = Convert.ToInt32(res.ToString(dSt, i-dSt));
+                stk.Push((i, cnt, i-dSt));
 
 
-                if(peek == Math.Abs(crnt)){
-                    res.Pop();
-                    if(res.Count == 0 && i + 1 < sz){
-                        res.Push(asteroids[++i]);
-                    } 
-                    i++;
-                }
+                dSt = -1;
+            } 
 
-                if(peek < Math.Abs(crnt)){
-                    res.Pop();
-                    if(res.Count == 0){
-                        res.Push(asteroids[i]);
-                        i++;
-                    } 
-                }
+            if(res[i] == ']'){
+                var tpl = stk.Pop();
 
-                if(peek > Math.Abs(crnt)){i++;}
+                //get the string that will be repeated 
+                var  substr = String.Concat(Enumerable.Repeat(res.ToString(tpl.idx + 1, i - tpl.idx - 1), tpl.cnt)) ;
+                Console.WriteLine(substr);
 
-            } else {//stable: can add this asteroid
-                res.Push(crnt);
-                i++;                
+                //replace the encoded substr with its actual substr after decoding (in-place)
+                res.Replace(res.ToString(tpl.idx - tpl.dLen, i - (tpl.idx - tpl.dLen) + 1), substr);
+
+                //update our loop pointer and string length (cuz the string we are looping on is being decoded substr by substr dynamically not one time at end)
+                var diff = sz - res.Length;
+                i -= diff;
+                sz = res.Length;
             }
         }
-
-       var resA = res.ToArray();
-        Array.Reverse(resA);
-        return resA; //those 3 lines are faster than res.Reverse().ToArray()
-    }
-
-    bool IsRight(int ast){
-        return ast > 0 ? true : false; //gauranteed not to be zero
+        
+        return res.ToString();
     }
 }
